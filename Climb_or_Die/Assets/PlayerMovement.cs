@@ -41,8 +41,8 @@ public class PlayerMovement : MonoBehaviour
 
     Rigidbody rb;
 
-    public MovementState state;
-    public enum MovementState {
+    private MovementState state;
+    private enum MovementState {
         walking,
         sprinting,
         crouching,
