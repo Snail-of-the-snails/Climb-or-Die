@@ -32,11 +32,11 @@ public class TerrainMeshGenerator : MonoBehaviour
         }
         
         HeightMapGenerator heightmapGenerator = new HeightMapGenerator(meshVariables, heightmapVariables, _gradientColorArray);
-        heightmapGenerator.Schedule(meshVariables.TotalVerts, 10000).Complete();
+        heightmapGenerator.Schedule(meshVariables.TotalVerts, 100000).Complete();
         Maps _maps = heightmapGenerator.ReturnAndDispose();
 
         MeshGenerator meshGenerator = new MeshGenerator(meshVariables, _maps);
-        meshGenerator.Schedule(meshVariables.terrainMeshDetail * meshVariables.terrainMeshDetail, 10000).Complete();
+        meshGenerator.Schedule(meshVariables.terrainMeshDetail * meshVariables.terrainMeshDetail, 100000).Complete();
         
         meshFilter.mesh = meshGenerator.DisposeAndGetMesh();
         
@@ -69,7 +69,7 @@ public struct HeightMapGenerator : IJobParallelFor {
         float y = threadIndex % (_meshVariables.terrainMeshDetail+1);
         float2 pos = new float2(x, y);
 
-        float h = Mathf.Clamp((OctavedSimplexNoise(pos) + OctavedRidgeNoise(pos))/2f * FalloffMap(pos) * _meshVariables.height, _heightmapVariables.waterLevel, 1000);
+        float h = Mathf.Clamp((OctavedSimplexNoise(pos) + OctavedRidgeNoise(pos))/2f * FalloffMap(pos) * _meshVariables.height, _heightmapVariables.waterLevel, 100000);
 
         _heightMap[threadIndex] = h / _meshVariables.TileEdgeLength;
         _colMap[threadIndex] = _gradient[Mathf.Clamp(Mathf.RoundToInt(h), 0, 99)];
