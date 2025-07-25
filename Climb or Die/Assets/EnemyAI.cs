@@ -16,17 +16,17 @@ public class EnemyAI : MonoBehaviour
 
     void Update()
     {
-        Vector2 point;
-        if (Vector3.Distance(player.transform.position, transform.position) < AgentWanderRadius)
-        {
-            point = Random.insideUnitSphere* AgentWanderRadius;
-        }
-        else
-        {
-            point = new Vector2(player.transform.position.x, player.transform.position.z);
-        }
+        // Vector2 point;
+        // if (Vector3.Distance(player.transform.position, transform.position) < AgentWanderRadius)
+        // {
+        //     point = Random.insideUnitSphere* AgentWanderRadius;
+        // }
+        // else
+        // {
+        //     point = new Vector2(player.transform.position.x, player.transform.position.z);
+        // }
 
-        goToPosition(new Vector3(point.x, transform.position.y, point.y));
+        goToPosition(player.transform.position);
     }
 
     private void goToPosition(Vector3 locaton)
