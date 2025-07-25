@@ -830,3 +830,201 @@ Memory consumption went from 162.1 MB to 155.8 MB.
 Total: 6.621200 ms (FindLiveObjects: 0.436600 ms CreateObjectMapping: 0.293500 ms MarkObjects: 3.489000 ms  DeleteObjects: 2.400900 ms)
 
 Prepare: number of updated asset objects reloaded= 0
+========================================================================
+Received Prepare
+Begin MonoManager ReloadAssembly
+- Loaded All Assemblies, in  0.616 seconds
+Refreshing native plugins compatible for Editor in 1.40 ms, found 3 plugins.
+Native extension for WindowsStandalone target not found
+Native extension for WebGL target not found
+Mono: successfully reloaded assembly
+- Finished resetting the current domain, in  0.572 seconds
+Domain Reload Profiling: 1183ms
+	BeginReloadAssembly (169ms)
+		ExecutionOrderSort (0ms)
+		DisableScriptedObjects (5ms)
+		BackupInstance (0ms)
+		ReleaseScriptingObjects (0ms)
+		CreateAndSetChildDomain (36ms)
+	RebuildCommonClasses (28ms)
+	RebuildNativeTypeToScriptingClass (9ms)
+	initialDomainReloadingComplete (27ms)
+	LoadAllAssembliesAndSetupDomain (378ms)
+		LoadAssemblies (321ms)
+		RebuildTransferFunctionScriptingTraits (0ms)
+		AnalyzeDomain (144ms)
+			TypeCache.Refresh (12ms)
+				TypeCache.ScanAssembly (0ms)
+			BuildScriptInfoCaches (122ms)
+			ResolveRequiredComponents (8ms)
+	FinalizeReload (572ms)
+		ReleaseScriptCaches (0ms)
+		RebuildScriptCaches (0ms)
+		SetupLoadedEditorAssemblies (424ms)
+			LogAssemblyErrors (0ms)
+			InitializePlatformSupportModulesInManaged (3ms)
+			SetLoadedEditorAssemblies (4ms)
+			BeforeProcessingInitializeOnLoad (90ms)
+			ProcessInitializeOnLoadAttributes (273ms)
+			ProcessInitializeOnLoadMethodAttributes (46ms)
+			AfterProcessingInitializeOnLoad (8ms)
+			EditorAssembliesLoaded (0ms)
+		ExecutionOrderSort2 (0ms)
+		AwakeInstancesAfterBackupRestoration (14ms)
+Refreshing native plugins compatible for Editor in 1.60 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 35 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 5964 unused Assets / (6.1 MB). Loaded Objects now: 6728.
+Memory consumption went from 162.1 MB to 156.0 MB.
+Total: 8.260400 ms (FindLiveObjects: 0.801300 ms CreateObjectMapping: 0.450700 ms MarkObjects: 4.540200 ms  DeleteObjects: 2.466600 ms)
+
+Prepare: number of updated asset objects reloaded= 0
+========================================================================
+Received Prepare
+Begin MonoManager ReloadAssembly
+- Loaded All Assemblies, in  0.606 seconds
+Refreshing native plugins compatible for Editor in 1.09 ms, found 3 plugins.
+Native extension for WindowsStandalone target not found
+Native extension for WebGL target not found
+Mono: successfully reloaded assembly
+- Finished resetting the current domain, in  0.565 seconds
+Domain Reload Profiling: 1167ms
+	BeginReloadAssembly (161ms)
+		ExecutionOrderSort (0ms)
+		DisableScriptedObjects (4ms)
+		BackupInstance (0ms)
+		ReleaseScriptingObjects (0ms)
+		CreateAndSetChildDomain (36ms)
+	RebuildCommonClasses (31ms)
+	RebuildNativeTypeToScriptingClass (9ms)
+	initialDomainReloadingComplete (28ms)
+	LoadAllAssembliesAndSetupDomain (371ms)
+		LoadAssemblies (303ms)
+		RebuildTransferFunctionScriptingTraits (0ms)
+		AnalyzeDomain (148ms)
+			TypeCache.Refresh (8ms)
+				TypeCache.ScanAssembly (0ms)
+			BuildScriptInfoCaches (130ms)
+			ResolveRequiredComponents (7ms)
+	FinalizeReload (566ms)
+		ReleaseScriptCaches (0ms)
+		RebuildScriptCaches (0ms)
+		SetupLoadedEditorAssemblies (414ms)
+			LogAssemblyErrors (0ms)
+			InitializePlatformSupportModulesInManaged (2ms)
+			SetLoadedEditorAssemblies (5ms)
+			BeforeProcessingInitializeOnLoad (85ms)
+			ProcessInitializeOnLoadAttributes (274ms)
+			ProcessInitializeOnLoadMethodAttributes (40ms)
+			AfterProcessingInitializeOnLoad (7ms)
+			EditorAssembliesLoaded (0ms)
+		ExecutionOrderSort2 (0ms)
+		AwakeInstancesAfterBackupRestoration (15ms)
+Refreshing native plugins compatible for Editor in 1.89 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 35 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 5968 unused Assets / (5.7 MB). Loaded Objects now: 6734.
+Memory consumption went from 162.2 MB to 156.5 MB.
+Total: 8.686800 ms (FindLiveObjects: 0.560200 ms CreateObjectMapping: 0.350800 ms MarkObjects: 4.721100 ms  DeleteObjects: 3.053200 ms)
+
+Prepare: number of updated asset objects reloaded= 0
+========================================================================
+Received Import Request.
+  Time since last request: 1483.236983 seconds.
+  path: Assets/Forst/Conifers [BOTD]
+  artifactKey: Guid(1ffdceb4d47182147b99eef1de650a5b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Forst/Conifers [BOTD] using Guid(1ffdceb4d47182147b99eef1de650a5b) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '9118d04fab3d465bf1d3804302887d38') in 0.1037186 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 0
+
+========================================================================
+Received Import Request.
+  Time since last request: 16.790890 seconds.
+  path: Assets/Forst/Conifers [BOTD]/Sources
+  artifactKey: Guid(a159082cb7e8e402c8240da353f7fcd9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Forst/Conifers [BOTD]/Sources using Guid(a159082cb7e8e402c8240da353f7fcd9) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '3f1aa44e4e28786b41fce3ab90cb76b1') in 0.0006754 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 0
+
+========================================================================
+Received Import Request.
+  Time since last request: 1.376551 seconds.
+  path: Assets/Forst/Conifers [BOTD]/Sources/Conifer Bare
+  artifactKey: Guid(21faa6a9805db8642903786298e8b1f4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Forst/Conifers [BOTD]/Sources/Conifer Bare using Guid(21faa6a9805db8642903786298e8b1f4) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '299e487fce4d362064f7e459b8c8a989') in 0.000588 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 0
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.054417 seconds.
+  path: Assets/Forst/Conifers [BOTD]/Sources/Conifer Bare/SM Conifer Bare LOD0.asset
+  artifactKey: Guid(e35c83466d09544088eaf0d3fa826b0c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Forst/Conifers [BOTD]/Sources/Conifer Bare/SM Conifer Bare LOD0.asset using Guid(e35c83466d09544088eaf0d3fa826b0c) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '24b2d5ee44ce2f5ba7677bb0c9f8c8f2') in 0.067503 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 2
+
+========================================================================
+Received Import Request.
+  Time since last request: 1.800708 seconds.
+  path: Assets/Forst/Conifers [BOTD]/Sources/Conifer Medium/SM Conifer Medium LOD0.asset
+  artifactKey: Guid(8edab6f6d01b34b44bc0dc2a7ff8ea7d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Forst/Conifers [BOTD]/Sources/Conifer Medium/SM Conifer Medium LOD0.asset using Guid(8edab6f6d01b34b44bc0dc2a7ff8ea7d) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: 'b6294fa39abda252a133f030c72e023a') in 0.010621 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 2
+
+========================================================================
+Received Import Request.
+  Time since last request: 1.544771 seconds.
+  path: Assets/Forst/Conifers [BOTD]/Sources/Conifer Small/SM Conifer Small LOD0.asset
+  artifactKey: Guid(aaf76b55071db41b0bde5e2ebb830601) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Forst/Conifers [BOTD]/Sources/Conifer Small/SM Conifer Small LOD0.asset using Guid(aaf76b55071db41b0bde5e2ebb830601) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: 'd42209151636835aef34907634df9e02') in 0.011604 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 2
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.353398 seconds.
+  path: Assets/Forst/Conifers [BOTD]/Sources/Conifer Tall/SM Conifer Tall LOD0.asset
+  artifactKey: Guid(92c53119942ac4923b00037455001238) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Forst/Conifers [BOTD]/Sources/Conifer Tall/SM Conifer Tall LOD0.asset using Guid(92c53119942ac4923b00037455001238) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '28dc38523a93e0bfb80c5d7d7dead8d6') in 0.0164929 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 2
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.415918 seconds.
+  path: Assets/Forst/Conifers [BOTD]/Sources/Textures/BODT Conifer  Branches [Albedo] [Alpha].tif
+  artifactKey: Guid(5597dc21a8aed4e7ba2c0f93dc4b1d98) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Forst/Conifers [BOTD]/Sources/Textures/BODT Conifer  Branches [Albedo] [Alpha].tif using Guid(5597dc21a8aed4e7ba2c0f93dc4b1d98) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '926154a16e543730ff6cae057515582f') in 0.0471961 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 2
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000015 seconds.
+  path: Assets/Forst/Conifers [BOTD]/Sources/Textures/BODT Conifer Bark Array [Normal] [AO] [Specular].asset
+  artifactKey: Guid(14f4181ca612e43c9b344f073e03a7c6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Forst/Conifers [BOTD]/Sources/Textures/BODT Conifer Bark Array [Normal] [AO] [Specular].asset using Guid(14f4181ca612e43c9b344f073e03a7c6) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '564f0d21e277ac14c7779bc30425df20') in 0.2030989 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 1
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000024 seconds.
+  path: Assets/Forst/Conifers [BOTD]/Sources/Textures/BODT Conifer x Stump [Albedo] [Smoothness].tif
+  artifactKey: Guid(d7e1060759db04260bbeb12bc11664bd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Forst/Conifers [BOTD]/Sources/Textures/BODT Conifer x Stump [Albedo] [Smoothness].tif using Guid(d7e1060759db04260bbeb12bc11664bd) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: 'd1fc1ef5f3e92aa43d8d6fcaa549fc4e') in 0.0106686 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 2
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000030 seconds.
+  path: Assets/Forst/Conifers [BOTD]/Sources/Textures/BODT Conifer Branches_Normal combined.tif
+  artifactKey: Guid(d7dcdeeae2a5d4c6f8e5328e09728b47) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Forst/Conifers [BOTD]/Sources/Textures/BODT Conifer Branches_Normal combined.tif using Guid(d7dcdeeae2a5d4c6f8e5328e09728b47) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '9fe38a32e9a9df8001d13e640387e03b') in 0.0250431 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 2
+
+========================================================================
+Received Import Request.
+  Time since last request: 30.718146 seconds.
+  path: Assets/Forst/Conifers [BOTD]/Render Pipeline Support/URP/Prefabs/PF Conifer Medium BOTD URP.prefab
+  artifactKey: Guid(78f6b68ad931a824c920d7b953612370) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Forst/Conifers [BOTD]/Render Pipeline Support/URP/Prefabs/PF Conifer Medium BOTD URP.prefab using Guid(78f6b68ad931a824c920d7b953612370) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '8c2cffd8c64bfcd30b426fabd0ea2535') in 6.286224 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 44
+
+Editor requested this worker to shutdown with reason: Scaling down because of idle timeout
+AssetImportWorker is now disconnected from the server
+Process exiting
+Exiting without the bug reporter. Application will terminate with return code 0
