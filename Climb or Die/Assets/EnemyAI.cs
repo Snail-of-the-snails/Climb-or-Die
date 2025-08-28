@@ -11,7 +11,7 @@ public class EnemyAI : MonoBehaviour
     {
         rb = gameObject.GetComponent<Rigidbody>();
         rb.linearDamping = 1f;
-        rb.angularDamping = 0.5f;
+        rb.angularDamping = 0.25f;
     }
 
     void Update()
