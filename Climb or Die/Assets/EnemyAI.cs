@@ -3,34 +3,36 @@ using UnityEngine.AI;
 
 public class EnemyAI : MonoBehaviour
 {
-    private NavMeshAgent agent;
-
     public float AgentWanderRadius;
-
     public GameObject player;
+    private Rigidbody rb;
 
     void Start()
     {
-        agent = gameObject.GetComponent<NavMeshAgent>();
+        rb = gameObject.GetComponent<Rigidbody>();
+        rb.linearDamping = 1f;
+        rb.angularDamping = 0.25f;
     }
 
     void Update()
     {
-        // Vector2 point;
-        // if (Vector3.Distance(player.transform.position, transform.position) < AgentWanderRadius)
-        // {
-        //     point = Random.insideUnitSphere* AgentWanderRadius;
-        // }
-        // else
-        // {
-        //     point = new Vector2(player.transform.position.x, player.transform.position.z);
-        // }
+        Vector3 playerLocation = SetDestination();
+        float distanceToPlayer = Vector3.Distance(player.transform.position, transform.position);
 
-        goToPosition(player.transform.position);
+        if (distanceToPlayer > 50f)
+        {
+            rb.AddForce(playerLocation * 1000, ForceMode.Force);
+            rb.linearDamping = 0f;
+            rb.angularDamping = 0f;
+        }
+        else
+        {
+            rb.AddForce(playerLocation * 2f, ForceMode.Force);
+        }
     }
 
-    private void goToPosition(Vector3 locaton)
+    private Vector3 SetDestination()
     {
-        agent.SetDestination(locaton);
+        return (player.transform.position - transform.position).normalized;
     }
 }
