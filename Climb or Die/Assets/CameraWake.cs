@@ -24,7 +24,8 @@ public class CameraWake : MonoBehaviour
             float step = rotationSpeed * Time.deltaTime;
             currentAngle = Mathf.Max(currentAngle - step, targetAngle);
             cameraTransform.rotation = Quaternion.Euler(currentAngle, 0, 0);
-            rotationSpeed -=0.05f; // Gradually decrease speed
+            if(rotationSpeed > 0)   
+                rotationSpeed -=0.05f; // Gradually decrease speed
 
         }
     }

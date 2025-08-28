@@ -404,8 +404,8 @@ GameObject:
   - component: {fileID: 1045961890}
   - component: {fileID: 1045961889}
   - component: {fileID: 1045961888}
-  - component: {fileID: 1045961893}
   - component: {fileID: 1045961892}
+  - component: {fileID: 1045961893}
   m_Layer: 5
   m_Name: MainMenu
   m_TagString: Untagged
@@ -508,6 +508,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1d67d395b605cd241ba47a122b617420, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  canvas: {fileID: 1045961890}
+  alpha: 0
+  canvasGroup: {fileID: 0}
 --- !u!225 &1045961893
 CanvasGroup:
   m_ObjectHideFlags: 0
@@ -519,7 +522,7 @@ CanvasGroup:
   m_Alpha: 0
   m_Interactable: 1
   m_BlocksRaycasts: 1
-  m_IgnoreParentGroups: 0
+  m_IgnoreParentGroups: 1
 --- !u!1 &1225715211
 GameObject:
   m_ObjectHideFlags: 0
