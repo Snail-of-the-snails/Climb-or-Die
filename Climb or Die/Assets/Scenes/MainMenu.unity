@@ -392,6 +392,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   rotationSpeed: 15
   targetAngle: -30
+  canvasWake: {fileID: 1045961892}
 --- !u!1 &1045961887
 GameObject:
   m_ObjectHideFlags: 0
@@ -509,7 +510,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   canvas: {fileID: 1045961890}
-  alpha: 0
   canvasGroup: {fileID: 0}
 --- !u!225 &1045961893
 CanvasGroup:
