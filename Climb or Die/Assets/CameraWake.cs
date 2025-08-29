@@ -1,5 +1,5 @@
 using UnityEngine;
-
+using System;
 public class CameraWake : MonoBehaviour
 {
     [SerializeField] private float rotationSpeed = 30f;
@@ -37,10 +37,7 @@ public class CameraWake : MonoBehaviour
                 currentAngle = targetAngle;
             }
 
-        }
-        
-        if (currentAngle == targetAngle)
-        {
+
             canvasWake.UpdateCanvasGroup();
         }
     }

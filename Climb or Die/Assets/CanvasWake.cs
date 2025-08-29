@@ -15,7 +15,7 @@ public class CanvasWake : MonoBehaviour
     {
         if (canvasGroup.alpha < 1f)
         {
-            canvasGroup.alpha += 0.01f;
+            canvasGroup.alpha += Time.deltaTime * 0.45f;
         }
     }
 }
