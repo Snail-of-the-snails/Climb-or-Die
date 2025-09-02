@@ -4,18 +4,24 @@ using UnityEngine.UI;
 public class CanvasWake : MonoBehaviour
 {
     public Canvas canvas; // Reference to the Canvas component
-    public CanvasGroup canvasGroup;
+    public float alpha;
+    public CanvasGroup canvasGroup; 
 
+    // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
         canvasGroup = gameObject.GetComponent<CanvasGroup>();
+        alpha = canvasGroup.alpha;
     }
 
-    public void UpdateCanvasGroup()
-    {
-        if (canvasGroup.alpha < 1f)
+    // Update is called once per frame
+    void Update()
+    {  
+        if(alpha < 1)
         {
-            canvasGroup.alpha += Time.deltaTime * 0.45f;
+            alpha += Time.deltaTime*0.5f; // Increase alpha over time
         }
+        canvasGroup.alpha = alpha;
+        canvasGroup.interactable = false;
     }
 }
