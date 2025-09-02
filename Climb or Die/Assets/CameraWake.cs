@@ -1,10 +1,12 @@
 using UnityEngine;
-
+using System;
 public class CameraWake : MonoBehaviour
 {
-    [SerializeField] private float rotationSpeed = 30f; // degrees per second
+    [SerializeField] private float rotationSpeed = 30f;
     private float OriginalSpeed;
     [SerializeField] private float targetAngle = 90f;
+
+    [SerializeField] private CanvasWake canvasWake;
 
     private Transform cameraTransform;
     private float currentAngle = 0f;
@@ -24,9 +26,19 @@ public class CameraWake : MonoBehaviour
             float step = rotationSpeed * Time.deltaTime;
             currentAngle = Mathf.Max(currentAngle - step, targetAngle);
             cameraTransform.rotation = Quaternion.Euler(currentAngle, 0, 0);
-            if(rotationSpeed > 0)   
-                rotationSpeed -=0.05f; // Gradually decrease speed
+            if (rotationSpeed > 0)
+            {
+                rotationSpeed -= 0.025f;
+            }
 
+            if (rotationSpeed < 0)
+            {
+                rotationSpeed = 0;
+                currentAngle = targetAngle;
+            }
+
+
+            canvasWake.UpdateCanvasGroup();
         }
     }
 }
