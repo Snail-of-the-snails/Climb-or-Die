@@ -38,7 +38,6 @@ public class CameraWake : MonoBehaviour
             }
 
 
-            canvasWake.UpdateCanvasGroup();
         }
     }
 }
