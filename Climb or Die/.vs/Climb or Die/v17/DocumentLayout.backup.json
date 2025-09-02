@@ -32,7 +32,7 @@
               "RelativeDocumentMoniker": "Assets\\CanvasWake.cs",
               "ToolTip": "C:\\Users\\gwhse\\OneDrive\\Documents\\GitHub\\Climb-or-Die\\Climb or Die\\Assets\\CanvasWake.cs",
               "RelativeToolTip": "Assets\\CanvasWake.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAKAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-08-27T17:18:43.05Z",
               "EditorCaption": ""
@@ -47,8 +47,7 @@
               "RelativeToolTip": "Assets\\PlayWendigoSounds.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-27T16:25:46.172Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-08-27T16:25:46.172Z"
             },
             {
               "$type": "Document",
@@ -60,8 +59,7 @@
               "RelativeToolTip": "Assets\\CameraWake.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABoAAAAhAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-27T16:25:12.47Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-08-27T16:25:12.47Z"
             }
           ]
         }
