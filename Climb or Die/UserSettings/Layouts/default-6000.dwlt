@@ -119,7 +119,7 @@ MonoBehaviour:
   m_MinSize: {x: 300, y: 100}
   m_MaxSize: {x: 24288, y: 16192}
   vertical: 0
-  controlID: 1715
+  controlID: 41
   draggingID: 0
 --- !u!114 &6
 MonoBehaviour:
@@ -145,7 +145,7 @@ MonoBehaviour:
   m_MinSize: {x: 200, y: 100}
   m_MaxSize: {x: 16192, y: 16192}
   vertical: 1
-  controlID: 1716
+  controlID: 42
   draggingID: 0
 --- !u!114 &7
 MonoBehaviour:
@@ -171,7 +171,7 @@ MonoBehaviour:
   m_MinSize: {x: 200, y: 50}
   m_MaxSize: {x: 16192, y: 8096}
   vertical: 0
-  controlID: 1717
+  controlID: 43
   draggingID: 0
 --- !u!114 &8
 MonoBehaviour:
@@ -209,7 +209,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 1
   m_Script: {fileID: 12006, guid: 0000000000000000e000000000000000, type: 0}
-  m_Name: GameView
+  m_Name: SceneView
   m_EditorClassIdentifier: 
   m_Children: []
   m_Position:
@@ -220,12 +220,12 @@ MonoBehaviour:
     height: 649
   m_MinSize: {x: 202, y: 226}
   m_MaxSize: {x: 4002, y: 4026}
-  m_ActualView: {fileID: 12}
+  m_ActualView: {fileID: 14}
   m_Panes:
   - {fileID: 14}
   - {fileID: 12}
-  m_Selected: 1
-  m_LastSelected: 0
+  m_Selected: 0
+  m_LastSelected: 1
 --- !u!114 &10
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -300,8 +300,8 @@ MonoBehaviour:
     m_TextWithWhitespace: "Game\u200B"
   m_Pos:
     serializedVersion: 2
-    x: 365
-    y: 24
+    x: 364
+    y: 79
     width: 1166
     height: 623
   m_SerializedDataModeController:
@@ -402,7 +402,7 @@ MonoBehaviour:
   m_Pos:
     serializedVersion: 2
     x: 0
-    y: 24
+    y: 79
     width: 363
     height: 623
   m_SerializedDataModeController:
@@ -419,9 +419,9 @@ MonoBehaviour:
   m_SceneHierarchy:
     m_TreeViewState:
       scrollPos: {x: 0, y: 0}
-      m_SelectedIDs: 
+      m_SelectedIDs: 14aa0000
       m_LastClickedID: 0
-      m_ExpandedIDs: 06dfffff0adfffff18dfffff4af5ffff22fbffff26a9000042a90000
+      m_ExpandedIDs: 62dcffff32e1ffff20fbffff
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 
@@ -470,7 +470,7 @@ MonoBehaviour:
     x: 364
     y: 79
     width: 1166
-    height: 591
+    height: 623
   m_SerializedDataModeController:
     m_DataMode: 0
     m_PreferredDataMode: 0
@@ -1083,7 +1083,7 @@ MonoBehaviour:
   m_Position:
     m_Target: {x: 596.6142, y: 364.77402, z: 91.971634}
     speed: 2
-    m_Value: {x: 3.3615246, y: 22.199917, z: 182.44792}
+    m_Value: {x: 596.6142, y: 364.77402, z: 91.971634}
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -1131,11 +1131,11 @@ MonoBehaviour:
   m_Rotation:
     m_Target: {x: 0.1901283, y: 0.18922928, z: -0.037374765, w: 0.9626261}
     speed: 2
-    m_Value: {x: -0.1901283, y: -0.1892293, z: 0.037374765, w: -0.96262616}
+    m_Value: {x: 0.19012807, y: 0.18922906, z: -0.03737472, w: 0.96262497}
   m_Size:
-    m_Target: 1042.4346
+    m_Target: 626.40967
     speed: 2
-    m_Value: 67.25003
+    m_Value: 626.40967
   m_Ortho:
     m_Target: 0
     speed: 2
@@ -1188,7 +1188,7 @@ MonoBehaviour:
   m_Pos:
     serializedVersion: 2
     x: 0
-    y: 673
+    y: 728
     width: 1531
     height: 306
   m_SerializedDataModeController:
@@ -1213,7 +1213,7 @@ MonoBehaviour:
     m_SkipHidden: 0
     m_SearchArea: 1
     m_Folders:
-    - Assets
+    - Assets/Scenes
     m_Globs: []
     m_ProductIds: 
     m_AnyWithAssetOrigin: 0
@@ -1223,16 +1223,16 @@ MonoBehaviour:
   m_ViewMode: 1
   m_StartGridSize: 64
   m_LastFolders:
-  - Assets
+  - Assets/Scenes
   m_LastFoldersGridSize: -1
-  m_LastProjectPath: C:\Users\Student 1\Documents\GitHub\Climb-or-Die\Climb or Die
+  m_LastProjectPath: F:\Games\Climb-or-Die\Climb or Die
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
     scrollPos: {x: 0, y: 72}
-    m_SelectedIDs: a6a50000
-    m_LastClickedID: 42406
-    m_ExpandedIDs: 0000000060a70000
+    m_SelectedIDs: 9aa90000
+    m_LastClickedID: 43418
+    m_ExpandedIDs: 0000000060a7000000ca9a3bffffff7f
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -1289,7 +1289,7 @@ MonoBehaviour:
   m_ListAreaState:
     m_SelectedInstanceIDs: 
     m_LastClickedInstanceID: 0
-    m_HadKeyboardFocusLastEvent: 0
+    m_HadKeyboardFocusLastEvent: 1
     m_ExpandedInstanceIDs: c6230000140a0100ac27010044ed0000a2a80000fca80000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
@@ -1376,8 +1376,8 @@ MonoBehaviour:
     m_TextWithWhitespace: "Inspector\u200B"
   m_Pos:
     serializedVersion: 2
-    x: 1533
-    y: 24
+    x: 1532
+    y: 79
     width: 387
     height: 955
   m_SerializedDataModeController:
