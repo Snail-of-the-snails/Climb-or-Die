@@ -17,6 +17,11 @@ public class CanvasWake : MonoBehaviour
     // Update is called once per frame
     void Update()
     {  
-           alpha += 0.05f;
+        if(alpha < 1)
+        {
+            alpha += Time.deltaTime*0.5f; // Increase alpha over time
+        }
+        canvasGroup.alpha = alpha;
+        canvasGroup.interactable = false;
     }
 }
