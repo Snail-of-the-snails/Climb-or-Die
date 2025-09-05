@@ -3,6 +3,10 @@
   "WorkspaceRootPath": "C:\\Users\\gwhse\\OneDrive\\Documents\\GitHub\\Climb-or-Die\\Climb or Die\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\gwhse\\OneDrive\\Documents\\GitHub\\Climb-or-Die\\Climb or Die\\Assets\\CanvasWake.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Assets\\CanvasWake.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\gwhse\\OneDrive\\Documents\\GitHub\\Climb-or-Die\\Climb or Die\\Library\\PackageCache\\com.unity.ugui@24b10291b18f\\Editor\\TMP\\TMPro_FontAssetCreatorWindow.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Library\\PackageCache\\com.unity.ugui@24b10291b18f\\Editor\\TMP\\TMPro_FontAssetCreatorWindow.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -13,10 +17,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\gwhse\\OneDrive\\Documents\\GitHub\\Climb-or-Die\\Climb or Die\\Library\\PackageCache\\com.unity.render-pipelines.universal@a394fe607f89\\Editor\\BuildProcessors\\URPProcessScene.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Library\\PackageCache\\com.unity.render-pipelines.universal@a394fe607f89\\Editor\\BuildProcessors\\URPProcessScene.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\gwhse\\OneDrive\\Documents\\GitHub\\Climb-or-Die\\Climb or Die\\Assets\\CanvasWake.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Assets\\CanvasWake.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\gwhse\\OneDrive\\Documents\\GitHub\\Climb-or-Die\\Climb or Die\\Assets\\PlayWendigoSounds.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -30,11 +30,11 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 2,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 1,
               "Title": "TMPro_FontAssetCreatorWindow.cs",
               "DocumentMoniker": "C:\\Users\\gwhse\\OneDrive\\Documents\\GitHub\\Climb-or-Die\\Climb or Die\\Library\\PackageCache\\com.unity.ugui@24b10291b18f\\Editor\\TMP\\TMPro_FontAssetCreatorWindow.cs",
               "RelativeDocumentMoniker": "Library\\PackageCache\\com.unity.ugui@24b10291b18f\\Editor\\TMP\\TMPro_FontAssetCreatorWindow.cs",
@@ -47,7 +47,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 3,
               "Title": "URPProcessScene.cs",
               "DocumentMoniker": "C:\\Users\\gwhse\\OneDrive\\Documents\\GitHub\\Climb-or-Die\\Climb or Die\\Library\\PackageCache\\com.unity.render-pipelines.universal@a394fe607f89\\Editor\\BuildProcessors\\URPProcessScene.cs",
               "RelativeDocumentMoniker": "Library\\PackageCache\\com.unity.render-pipelines.universal@a394fe607f89\\Editor\\BuildProcessors\\URPProcessScene.cs",
@@ -55,20 +55,20 @@
               "RelativeToolTip": "Library\\PackageCache\\com.unity.render-pipelines.universal@a394fe607f89\\Editor\\BuildProcessors\\URPProcessScene.cs",
               "ViewState": "AgIAAAMAAAAAAAAAAIBJwDkAAAAZAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-29T16:55:02.303Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-08-29T16:55:02.303Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 0,
               "Title": "CanvasWake.cs",
               "DocumentMoniker": "C:\\Users\\gwhse\\OneDrive\\Documents\\GitHub\\Climb-or-Die\\Climb or Die\\Assets\\CanvasWake.cs",
               "RelativeDocumentMoniker": "Assets\\CanvasWake.cs",
               "ToolTip": "C:\\Users\\gwhse\\OneDrive\\Documents\\GitHub\\Climb-or-Die\\Climb or Die\\Assets\\CanvasWake.cs",
               "RelativeToolTip": "Assets\\CanvasWake.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAAA2AAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABgAAAAIAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-27T17:18:43.05Z"
+              "WhenOpened": "2025-08-27T17:18:43.05Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
@@ -84,7 +84,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 2,
               "Title": "CameraWake.cs",
               "DocumentMoniker": "C:\\Users\\gwhse\\OneDrive\\Documents\\GitHub\\Climb-or-Die\\Climb or Die\\Assets\\CameraWake.cs",
               "RelativeDocumentMoniker": "Assets\\CameraWake.cs",
@@ -92,8 +92,7 @@
               "RelativeToolTip": "Assets\\CameraWake.cs",
               "ViewState": "AgIAAAkAAAAAAAAAAAAAwCgAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-27T16:25:12.47Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-08-27T16:25:12.47Z"
             }
           ]
         }
