@@ -2,16 +2,17 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 public class MainMenuScript : MonoBehaviour
 {
-    private Canvas startCanvas;
-    private Canvas optionsCanvas;
+    [SerializeField] private Canvas startCanvas;
+    [SerializeField] private Canvas optionsCanvas;
+    [SerializeField] private Canvas creditsCanvas;
 
     public void Start()
     {
-        
-        startCanvas = GetComponent<Canvas>();
+
         startCanvas.enabled = true;
-        optionsCanvas = GetComponent<Canvas>();
         optionsCanvas.enabled = false;
+        creditsCanvas.enabled = false;
+
 
     }
     public void PlayGame()
@@ -29,6 +30,26 @@ public class MainMenuScript : MonoBehaviour
     {
         optionsCanvas.enabled = true;
         startCanvas.enabled = false;
+
+        // Add logic to load the settings menu, e.g., open a settings panel
+
+
+    }
+    public void OptionsBack()
+    {
+        optionsCanvas.enabled = false;
+        startCanvas.enabled = true;
+        creditsCanvas.enabled = false;
+
+        // Add logic to load the settings menu, e.g., open a settings panel
+
+
+    }
+    public void creditsPressed()
+    {
+        optionsCanvas.enabled = false;
+        startCanvas.enabled = false;
+        creditsCanvas.enabled = true;
 
         // Add logic to load the settings menu, e.g., open a settings panel
 
