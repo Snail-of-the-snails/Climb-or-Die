@@ -16,6 +16,7 @@ public class EnemyAI : MonoBehaviour
 
     void Update()
     {
+
         Vector3 playerLocation = SetDestination();
         float distanceToPlayer = Vector3.Distance(player.transform.position, transform.position);
 

@@ -1,10 +1,13 @@
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.Audio;
+
 public class MainMenuScript : MonoBehaviour
 {
     [SerializeField] private Canvas startCanvas;
     [SerializeField] private Canvas optionsCanvas;
     [SerializeField] private Canvas creditsCanvas;
+    public AudioMixer audioMixer;
 
     public void Start()
     {
@@ -34,6 +37,10 @@ public class MainMenuScript : MonoBehaviour
         // Add logic to load the settings menu, e.g., open a settings panel
 
 
+    }
+    public void setVolume(float volume)
+    {
+        audioMixer.SetFloat("volume", volume);
     }
     public void OptionsBack()
     {
