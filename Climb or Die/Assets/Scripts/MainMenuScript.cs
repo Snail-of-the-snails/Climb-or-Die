@@ -42,6 +42,10 @@ public class MainMenuScript : MonoBehaviour
     {
         audioMixer.SetFloat("volume", volume);
     }
+    public void setQuality(int index)
+    {
+        QualitySettings.SetQualityLevel(index);
+    }
     public void OptionsBack()
     {
         optionsCanvas.enabled = false;
@@ -59,7 +63,5 @@ public class MainMenuScript : MonoBehaviour
         creditsCanvas.enabled = true;
 
         // Add logic to load the settings menu, e.g., open a settings panel
-
-
     }
 }

@@ -36,4 +36,5 @@ public class EnemyAI : MonoBehaviour
     {
         return (player.transform.position - transform.position).normalized;
     }
+    
 }
