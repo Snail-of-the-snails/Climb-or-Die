@@ -102,3 +102,5 @@ MonoBehaviour:
     m_ColorSpace: -1
     m_NumColorKeys: 3
     m_NumAlphaKeys: 2
+  DaySkybox: {fileID: 2100000, guid: 1326ba0b8c8c052418b7d7c2478b5bb1, type: 2}
+  NightSkybox: {fileID: 2100000, guid: eac2ef371405749e0bd050b4c3272f16, type: 2}
