@@ -46,6 +46,10 @@ public class MainMenuScript : MonoBehaviour
     {
         QualitySettings.SetQualityLevel(index);
     }
+    public void setFullscreen(bool isFullscreen)
+    {
+        Screen.fullScreen = isFullscreen;
+    }
     public void OptionsBack()
     {
         optionsCanvas.enabled = false;
