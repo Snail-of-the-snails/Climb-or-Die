@@ -3,6 +3,7 @@ using UnityEngine;
 using System.Collections;
 using UnityEngine.UI;
 using UnityEngine.Audio;
+using TMPro;
 
 public class KillPlayer : MonoBehaviour
 {
@@ -11,12 +12,15 @@ public class KillPlayer : MonoBehaviour
     public GameObject crosshairAndStamina;
     public AudioMixer audioMixer;
     public Button button;
+    public TextMeshProUGUI text;
+    public GameObject jeff;
 
     void Start()
     {
         rb = transform.GetComponent<Rigidbody>();
         button.enabled = false;
-
+        deathScreen.SetActive(false);
+        text.enabled = false;
     }
 
     void Update()
@@ -31,26 +35,40 @@ public class KillPlayer : MonoBehaviour
         if (layerNum == LayerMask.NameToLayer("Jeff"))
         {
             ActivateDeathScreen();
+            
         }
     }
 
     void ActivateDeathScreen()
     {
+        jeff.SetActive(false);
+        Cursor.lockState = CursorLockMode.None;
         deathScreen.SetActive(true);
         crosshairAndStamina.SetActive(false);
         audioMixer.SetFloat("volume", -80);
-        button.enabled = true;
         button.image.color = new Color(1, 0, 0, 0);
+        text.color = new Color(.196f, .196f, .196f, 0f);
+        text.enabled = true;
+        button.enabled = true;
+        
         StartCoroutine(fadeButton());
-
+        
     }
     IEnumerator fadeButton()
     {
-        while(button.image.color.a < 1)
+        yield return new WaitForSeconds(1);
+        while (button.image.color.a < 1)
         {
+            text.color = new Color(.196f, .196f, .196f, button.image.color.a + 0.1f);
             button.image.color = new Color(1, 0, 0, button.image.color.a + 0.1f);
             Debug.Log(button.image.color.a);
             yield return new WaitForSeconds(0.2f);
         }
+        
+    }
+    public void RestartLevel()
+    {
+        Debug.Log("Restarting Level");
+        UnityEngine.SceneManagement.SceneManager.LoadScene(UnityEngine.SceneManagement.SceneManager.GetActiveScene().buildIndex);
     }
 }
