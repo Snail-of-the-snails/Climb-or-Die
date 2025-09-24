@@ -2877,7 +2877,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   canvas: {fileID: 1045961890}
   alpha: 0.58
-  canvasGroup: {fileID: 0}
+  canvasGroup: {fileID: 1045961893}
 --- !u!225 &1045961893
 CanvasGroup:
   m_ObjectHideFlags: 0

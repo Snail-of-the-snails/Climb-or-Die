@@ -14,6 +14,7 @@ public class KillPlayer : MonoBehaviour
     public Button button;
     public TextMeshProUGUI text;
     public GameObject jeff;
+    public FirstPersonController FirstPersonControllerScript;
 
     void Start()
     {
@@ -41,6 +42,8 @@ public class KillPlayer : MonoBehaviour
 
     void ActivateDeathScreen()
     {
+
+        FirstPersonControllerScript.enabled = false;
         jeff.SetActive(false);
         Cursor.lockState = CursorLockMode.None;
         deathScreen.SetActive(true);
@@ -48,11 +51,8 @@ public class KillPlayer : MonoBehaviour
         audioMixer.SetFloat("volume", -80);
         button.image.color = new Color(1, 0, 0, 0);
         text.color = new Color(.196f, .196f, .196f, 0f);
-        text.enabled = true;
-        button.enabled = true;
-        
+       
         StartCoroutine(fadeButton());
-        
     }
     IEnumerator fadeButton()
     {
@@ -64,7 +64,8 @@ public class KillPlayer : MonoBehaviour
             Debug.Log(button.image.color.a);
             yield return new WaitForSeconds(0.2f);
         }
-        
+        text.enabled = true;
+        button.enabled = true;
     }
     public void RestartLevel()
     {
