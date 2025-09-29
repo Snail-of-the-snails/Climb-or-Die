@@ -246,3 +246,23 @@ Memory consumption went from 156.5 MB to 152.2 MB.
 Total: 8.581000 ms (FindLiveObjects: 0.704100 ms CreateObjectMapping: 0.381500 ms MarkObjects: 5.321900 ms  DeleteObjects: 2.172400 ms)
 
 Prepare: number of updated asset objects reloaded= 0
+========================================================================
+Received Import Request.
+  Time since last request: 1131.081318 seconds.
+  path: Assets/Poliigon_GrassPatchyGround_4585/2K/Poliigon_GrassPatchyGround_4585_BaseColor.jpg
+  artifactKey: Guid(715d9c4572e0f3643b105225c07a2f2a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Poliigon_GrassPatchyGround_4585/2K/Poliigon_GrassPatchyGround_4585_BaseColor.jpg using Guid(715d9c4572e0f3643b105225c07a2f2a) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '425205a605d89ad66a39952bd3ee43f4') in 0.0502993 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 2
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000013 seconds.
+  path: Assets/Poliigon_GrassPatchyGround_4585/2K/Poliigon_GrassPatchyGround_4585_Roughness.jpg
+  artifactKey: Guid(b3d785288b9d4214eacf398c4432ba19) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Poliigon_GrassPatchyGround_4585/2K/Poliigon_GrassPatchyGround_4585_Roughness.jpg using Guid(b3d785288b9d4214eacf398c4432ba19) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '6130612e58d4811c2c5c704fc9c06c07') in 0.0410185 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 2
+
+Editor requested this worker to shutdown with reason: Scaling down because of idle timeout
+AssetImportWorker is now disconnected from the server
+Process exiting
+Exiting without the bug reporter. Application will terminate with return code 0
