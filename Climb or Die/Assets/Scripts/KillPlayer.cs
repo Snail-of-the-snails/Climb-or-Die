@@ -16,12 +16,15 @@ public class KillPlayer : MonoBehaviour
     public GameObject jeff;
     public FirstPersonController FirstPersonControllerScript;
 
+
     void Start()
     {
         rb = transform.GetComponent<Rigidbody>();
         button.enabled = false;
         deathScreen.SetActive(false);
         text.enabled = false;
+        crosshairAndStamina.SetActive(true);
+        audioMixer.SetFloat("volume",MainMenuScript.volume);
     }
 
     void Update()
