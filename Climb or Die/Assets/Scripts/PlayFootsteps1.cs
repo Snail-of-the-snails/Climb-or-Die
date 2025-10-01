@@ -5,7 +5,7 @@ public class PlayFootsteps : MonoBehaviour
 {
     public AudioClip[] audioClips;
     private AudioSource audioSource;
-    [HideInInspector] public bool playedFootstep;
+    [HideInInspector] public bool playedFootstep = false;
 
     void Start() {
         audioSource = transform.GetComponent<AudioSource>();

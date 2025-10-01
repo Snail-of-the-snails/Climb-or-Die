@@ -1,3 +1,9 @@
+﻿// CHANGE LOG
+// 
+// CHANGES || version VERSION
+//
+// "Enable/Disable Headbob, Changed look rotations - should result in reduced camera jitters" || version 1.0.1
+
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -8,7 +14,7 @@ using UnityEngine.UI;
     using System.Net;
 #endif
 
-public class FPSController : MonoBehaviour
+public class FirstPersonController : MonoBehaviour
 {
     private Rigidbody rb;
 
@@ -118,7 +124,6 @@ public class FPSController : MonoBehaviour
     public Transform joint;
     public float bobSpeed = 10f;
     public Vector3 bobAmount = new Vector3(.15f, .05f, 0f);
-    public PlayFootsteps footstepPlayer;
 
     // Internal Variables
     private Vector3 jointOriginalPos;
@@ -494,10 +499,10 @@ public class FPSController : MonoBehaviour
 
     private void HeadBob()
     {
-        if (isWalking)
+        if(isWalking)
         {
             // Calculates HeadBob speed during sprint
-            if (isSprinting)
+            if(isSprinting)
             {
                 timer += Time.deltaTime * (bobSpeed + sprintSpeed);
             }
@@ -513,16 +518,6 @@ public class FPSController : MonoBehaviour
             }
             // Applies HeadBob movement
             joint.localPosition = new Vector3(jointOriginalPos.x + Mathf.Sin(timer) * bobAmount.x, jointOriginalPos.y + Mathf.Sin(timer) * bobAmount.y, jointOriginalPos.z + Mathf.Sin(timer) * bobAmount.z);
-
-            if (jointOriginalPos.y + Mathf.Sin(timer) * bobAmount.y < 0)
-            {
-                footstepPlayer.Footstep();
-                footstepPlayer.playedFootstep = true;
-            }
-            else if (jointOriginalPos.y + Mathf.Sin(timer) * bobAmount.y >= 0)
-            {
-                footstepPlayer.playedFootstep = false;
-            }
         }
         else
         {
@@ -537,15 +532,15 @@ public class FPSController : MonoBehaviour
 
 // Custom Editor
 #if UNITY_EDITOR
-    [CustomEditor(typeof(FPSController)), InitializeOnLoadAttribute]
-    public class FPSControllerEditor : Editor
+    [CustomEditor(typeof(FirstPersonController)), InitializeOnLoadAttribute]
+    public class FirstPersonControllerEditor : Editor
     {
-    FPSController fpc;
+    FirstPersonController fpc;
     SerializedObject SerFPC;
 
     private void OnEnable()
     {
-        fpc = (FPSController)target;
+        fpc = (FirstPersonController)target;
         SerFPC = new SerializedObject(fpc);
     }
 
@@ -729,7 +724,6 @@ public class FPSController : MonoBehaviour
         fpc.joint = (Transform)EditorGUILayout.ObjectField(new GUIContent("Camera Joint", "Joint object position is moved while head bob is active."), fpc.joint, typeof(Transform), true);
         fpc.bobSpeed = EditorGUILayout.Slider(new GUIContent("Speed", "Determines how often a bob rotation is completed."), fpc.bobSpeed, 1, 20);
         fpc.bobAmount = EditorGUILayout.Vector3Field(new GUIContent("Bob Amount", "Determines the amount the joint moves in both directions on every axes."), fpc.bobAmount);
-        fpc.footstepPlayer = (PlayFootsteps)EditorGUILayout.ObjectField(new GUIContent("Footstep Player", "References the script PlayFootsteps to play a footstep sound whenever the player takes a step."), fpc.footstepPlayer, typeof(PlayFootsteps), true);;
         GUI.enabled = true;
 
         #endregion
