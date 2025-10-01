@@ -8,6 +8,7 @@ public class PlayWendigoSounds : MonoBehaviour
     private AudioSource audioSource;
     [SerializeField] private int playedSound = 0;
 
+
     void Start()
     {
         playedSound = 0;
@@ -27,11 +28,19 @@ public class PlayWendigoSounds : MonoBehaviour
         {
             playedSound = 0;
         }
+        if (Time.deltaTime == 0)
+        {
+            audioSource.Pause();
+        }
+        else if(Time.deltaTime > 0 && !audioSource.isPlaying)
+        {
+            audioSource.UnPause();
+        }
     }
 
     IEnumerator playSound()
     {
-        if (!audioSource.isPlaying)
+        if (!audioSource.isPlaying && Time.deltaTime >0)
         {
             audioSource.clip = audioClips[Random.Range(0, audioClips.Length)];
             audioSource.Play();

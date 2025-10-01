@@ -8,6 +8,7 @@ public class MainMenuScript : MonoBehaviour
     [SerializeField] private Canvas optionsCanvas;
     [SerializeField] private Canvas creditsCanvas;
     public AudioMixer audioMixer;
+    public static float volume = 0f;
 
     public void Start()
     {
@@ -38,9 +39,11 @@ public class MainMenuScript : MonoBehaviour
 
 
     }
-    public void setVolume(float volume)
+    public void setVolume(float vol)
     {
-        audioMixer.SetFloat("volume", volume);
+        audioMixer.SetFloat("volume", vol);
+        volume = vol;
+        Debug.Log(volume);
     }
     public void setQuality(int index)
     {

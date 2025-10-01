@@ -14,6 +14,8 @@ public class KillPlayer : MonoBehaviour
     public Button button;
     public TextMeshProUGUI text;
     public GameObject jeff;
+    public float volume = MainMenuScript.volume;
+    public static bool isDead = false;
 
     void Start()
     {
@@ -21,6 +23,9 @@ public class KillPlayer : MonoBehaviour
         button.enabled = false;
         deathScreen.SetActive(false);
         text.enabled = false;
+        button.interactable = false;
+        audioMixer.SetFloat("volume",volume);
+        Debug.Log(volume);
     }
 
     void Update()
@@ -41,6 +46,7 @@ public class KillPlayer : MonoBehaviour
 
     void ActivateDeathScreen()
     {
+        isDead = true;
         jeff.SetActive(false);
         Cursor.lockState = CursorLockMode.None;
         deathScreen.SetActive(true);
@@ -62,9 +68,11 @@ public class KillPlayer : MonoBehaviour
             text.color = new Color(.196f, .196f, .196f, button.image.color.a + 0.1f);
             button.image.color = new Color(1, 0, 0, button.image.color.a + 0.1f);
             Debug.Log(button.image.color.a);
-            yield return new WaitForSeconds(0.2f);
+            yield return new WaitForSeconds(0.1f);
+            
         }
-        
+        button.interactable = true;
+
     }
     public void RestartLevel()
     {
