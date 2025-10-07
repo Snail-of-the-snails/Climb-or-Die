@@ -11,7 +11,7 @@ using UnityEngine.UI;
 public class FPSController : MonoBehaviour
 {
     private Rigidbody rb;
-    GameObject menu;
+    public GameObject menu;
     private bool paused = false;
     public bool isDead = KillPlayer.isDead;
 
@@ -149,7 +149,6 @@ public class FPSController : MonoBehaviour
 
     void Start()
     {
-        menu = GameObject.Find("Menu");
         menu.SetActive(false);
         if (lockCursor)
         {
@@ -202,10 +201,10 @@ public class FPSController : MonoBehaviour
 
     private void Update()
     {
+        isDead = KillPlayer.isDead;
         // Opens and closes menu
         if (Input.GetKeyDown(KeyCode.Escape) && (!isDead))
         {
-            Debug.Log(isDead);
             if (Cursor.lockState == CursorLockMode.None)
             {
                 Cursor.lockState = CursorLockMode.Locked;
@@ -601,6 +600,7 @@ public class FPSController : MonoBehaviour
         fpc.playerCamera = (Camera)EditorGUILayout.ObjectField(new GUIContent("Camera", "Camera attached to the controller."), fpc.playerCamera, typeof(Camera), true);
         fpc.fov = EditorGUILayout.Slider(new GUIContent("Field of View", "The camera’s view angle. Changes the player camera directly."), fpc.fov, fpc.zoomFOV, 179f);
         fpc.cameraCanMove = EditorGUILayout.ToggleLeft(new GUIContent("Enable Camera Rotation", "Determines if the camera is allowed to move."), fpc.cameraCanMove);
+        fpc.menu = (GameObject)EditorGUILayout.ObjectField(new GUIContent("Menu", "Menu object that is toggled when pressing the escape key."), fpc.menu, typeof(GameObject), true);
 
         GUI.enabled = fpc.cameraCanMove;
         fpc.invertCamera = EditorGUILayout.ToggleLeft(new GUIContent("Invert Camera Rotation", "Inverts the up and down movement of the camera."), fpc.invertCamera);

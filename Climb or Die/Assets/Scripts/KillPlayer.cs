@@ -67,7 +67,6 @@ public class KillPlayer : MonoBehaviour
         {
             text.color = new Color(.196f, .196f, .196f, button.image.color.a + 0.1f);
             button.image.color = new Color(1, 0, 0, button.image.color.a + 0.1f);
-            Debug.Log(button.image.color.a);
             yield return new WaitForSeconds(0.1f);
             
         }
@@ -77,6 +76,7 @@ public class KillPlayer : MonoBehaviour
     public void RestartLevel()
     {
         Debug.Log("Restarting Level");
+        isDead = false;
         UnityEngine.SceneManagement.SceneManager.LoadScene(UnityEngine.SceneManagement.SceneManager.GetActiveScene().buildIndex);
     }
 }

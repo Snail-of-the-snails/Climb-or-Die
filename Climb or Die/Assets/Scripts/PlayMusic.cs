@@ -13,6 +13,14 @@ public class PlayMusic : MonoBehaviour
     public void Update() 
     {
         StartCoroutine(playSound());
+        if (Time.timeScale == 0)
+        {
+            audioSource.volume = 0.5f;
+        }
+        else
+        {
+            audioSource.volume = 1f;
+        }
     }
 
     IEnumerator playSound()
@@ -21,6 +29,8 @@ public class PlayMusic : MonoBehaviour
         {
             audioSource.clip = audioClips[Random.Range(0, audioClips.Length)];
             audioSource.Play();
+            
+            
         }
 
         yield return new WaitUntil(() => !audioSource.isPlaying);
