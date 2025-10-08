@@ -3,12 +3,11 @@ using UnityEngine;
 public class FlashlightSway : MonoBehaviour
 {
     private Vector3 vectorOffset;
-    private GameObject playerCamera;
+    public GameObject playerCamera;
     [SerializeField] private float speed = 3.0f;
 
     void Start()
     {
-        playerCamera = Camera.main.gameObject;
         vectorOffset = transform.transform.position - playerCamera.transform.position;
     }
 
