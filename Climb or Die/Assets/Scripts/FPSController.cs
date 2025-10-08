@@ -10,10 +10,13 @@ using UnityEngine.UI;
 
 public class FPSController : MonoBehaviour
 {
+    //LayerMask layerMask;
+    public static bool hitGround;
+    public static GameObject terrain;
     private Rigidbody rb;
     public GameObject menu;
     private bool paused = false;
-    public bool isDead = KillPlayer.isDead;
+    public bool isDead;
 
     #region Camera Movement Variables
 
@@ -131,6 +134,7 @@ public class FPSController : MonoBehaviour
 
     private void Awake()
     {
+        //layerMask = LayerMask.GetMask("Terrain");
         rb = GetComponent<Rigidbody>();
 
         crosshairObject = GetComponentInChildren<Image>();
@@ -201,6 +205,11 @@ public class FPSController : MonoBehaviour
 
     private void Update()
     {
+        RaycastHit hit;
+        hitGround = Physics.Raycast(transform.position, transform.TransformDirection(Vector3.down), out hit, Mathf.Infinity);
+        Debug.DrawRay(transform.position, transform.TransformDirection(Vector3.down) * 1000, Color.green);
+        if (hitGround)
+            terrain = hit.collider.gameObject;
         isDead = KillPlayer.isDead;
         // Opens and closes menu
         if (Input.GetKeyDown(KeyCode.Escape) && (!isDead))
