@@ -14,8 +14,8 @@ public class FPSController : MonoBehaviour
     public static bool hitGround;
     public static GameObject terrain;
     private Rigidbody rb;
-    public GameObject menu;
-    private bool paused = false;
+ //   public GameObject menu;
+ //   private bool paused = false;
     public bool isDead;
 
     #region Camera Movement Variables
@@ -153,7 +153,7 @@ public class FPSController : MonoBehaviour
 
     void Start()
     {
-        menu.SetActive(false);
+    //    menu.SetActive(false);
         if (lockCursor)
         {
             Cursor.lockState = CursorLockMode.Locked;
@@ -212,34 +212,36 @@ public class FPSController : MonoBehaviour
             terrain = hit.collider.gameObject;
         isDead = KillPlayer.isDead;
         // Opens and closes menu
-        if (Input.GetKeyDown(KeyCode.Escape) && (!isDead))
-        {
-            if (Cursor.lockState == CursorLockMode.None)
-            {
-                Cursor.lockState = CursorLockMode.Locked;
-                menu.SetActive(false);
-                crosshairObject.gameObject.SetActive(true);
-                paused = false;
-                Time.timeScale = 1;
-            }
-            else
-            {
-                Cursor.lockState = CursorLockMode.None;
-                menu.SetActive(true);
-                crosshairObject.gameObject.SetActive(false);
-                paused = true;
-                Time.timeScale = 0;
-            }
-        }
-        if (!paused)
-        {
-            #region Camera
+        /*        if (Input.GetKeyDown(KeyCode.Escape) && (!isDead))
+                {
+                    if (Cursor.lockState == CursorLockMode.None)
+                    {
+                        Cursor.lockState = CursorLockMode.Locked;
+                        menu.SetActive(false);
+                        crosshairObject.gameObject.SetActive(true);
+                        paused = false;
+                        Time.timeScale = 1;
+                    }
+                    else
+                    {
+                        Cursor.lockState = CursorLockMode.None;
+                        menu.SetActive(true);
+                        crosshairObject.gameObject.SetActive(false);
+                        paused = true;
+                        Time.timeScale = 0;
+                    }
+                }
+
+                if (!paused)
+                {
+        */
+        #region Camera
 
 
 
 
-            // Control camera movement
-            if (cameraCanMove)
+        // Control camera movement
+        if (cameraCanMove)
             {
                 yaw = transform.localEulerAngles.y + Input.GetAxis("Mouse X") * mouseSensitivity;
 
@@ -396,7 +398,7 @@ public class FPSController : MonoBehaviour
             {
                 HeadBob();
             }
-        }
+        //}
     }
 
     void FixedUpdate()
@@ -571,8 +573,13 @@ public class FPSController : MonoBehaviour
             joint.localPosition = new Vector3(Mathf.Lerp(joint.localPosition.x, jointOriginalPos.x, Time.deltaTime * bobSpeed), Mathf.Lerp(joint.localPosition.y, jointOriginalPos.y, Time.deltaTime * bobSpeed), Mathf.Lerp(joint.localPosition.z, jointOriginalPos.z, Time.deltaTime * bobSpeed));
         }
     }
-}
 
+    private void OnGameStateChanged(GameState newGameState)
+    {
+        enabled = newGameState == GameState.Gameplay;
+    }
+
+}
 
 
 
@@ -609,7 +616,7 @@ public class FPSController : MonoBehaviour
         fpc.playerCamera = (Camera)EditorGUILayout.ObjectField(new GUIContent("Camera", "Camera attached to the controller."), fpc.playerCamera, typeof(Camera), true);
         fpc.fov = EditorGUILayout.Slider(new GUIContent("Field of View", "The camera’s view angle. Changes the player camera directly."), fpc.fov, fpc.zoomFOV, 179f);
         fpc.cameraCanMove = EditorGUILayout.ToggleLeft(new GUIContent("Enable Camera Rotation", "Determines if the camera is allowed to move."), fpc.cameraCanMove);
-        fpc.menu = (GameObject)EditorGUILayout.ObjectField(new GUIContent("Menu", "Menu object that is toggled when pressing the escape key."), fpc.menu, typeof(GameObject), true);
+        //fpc.menu = (GameObject)EditorGUILayout.ObjectField(new GUIContent("Menu", "Menu object that is toggled when pressing the escape key."), fpc.menu, typeof(GameObject), true);
 
         GUI.enabled = fpc.cameraCanMove;
         fpc.invertCamera = EditorGUILayout.ToggleLeft(new GUIContent("Invert Camera Rotation", "Inverts the up and down movement of the camera."), fpc.invertCamera);
