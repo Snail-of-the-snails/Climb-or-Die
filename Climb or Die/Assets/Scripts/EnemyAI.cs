@@ -6,35 +6,62 @@ public class EnemyAI : MonoBehaviour
     public float AgentWanderRadius;
     public GameObject player;
     private Rigidbody rb;
+    private NavMeshAgent agent;
+    public LightingManager lightingManager;
 
-    void Start()
+    enum AIState
     {
-        rb = gameObject.GetComponent<Rigidbody>();
-        rb.linearDamping = 1f;
-        rb.angularDamping = 0.25f;
+        Stalking,
+        Wandering,
+        Following,
+        Chasing,
+        Searching,
+        Waiting
     }
 
-    void Update()
+    AIState state;
+
+    void Update ()
     {
+        state = SetAIState();
+        AI(state);
+    }
 
-        Vector3 playerLocation = SetDestination();
-        float distanceToPlayer = Vector3.Distance(player.transform.position, transform.position);
+    AIState SetAIState()
+    {
+        float randomNum = Random.Range(0f, 100f);
 
-        if (distanceToPlayer > 50f)
+        if (randomNum <= 10f)
         {
-            rb.AddForce(playerLocation * 1000, ForceMode.Force);
-            rb.linearDamping = 0f;
-            rb.angularDamping = 0f;
+            return AIState.Following;
+        }
+        else if (randomNum <= 20f)
+        {
+            return AIState.Wandering;
+        }
+        else if (randomNum <= 40f)
+        {
+            return AIState.Stalking;
         }
         else
         {
-            rb.AddForce(playerLocation * 2f, ForceMode.Force);
+            return AIState.Waiting;
         }
     }
 
-    private Vector3 SetDestination()
+    void AI (AIState aiState)
     {
-        return (player.transform.position - transform.position).normalized;
+        if (aiState == AIState.Stalking)
+        {
+            float stalkingDistance = Random.Range(50f, 100f);
+
+            Stalk(stalkingDistance);
+        }
     }
-    
+
+    void Stalk(float distance)
+    {
+        Vector3 detination = new Vector3(player.transform.position.x - distance, player.transform.position.y, player.transform.position.z);
+        agent.SetDestination(detination);
+    }
 }
