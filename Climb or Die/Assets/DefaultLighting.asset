@@ -75,18 +75,18 @@ MonoBehaviour:
   FogColor:
     serializedVersion: 2
     key0: {r: 0, g: 0, b: 0, a: 1}
-    key1: {r: 0.31132078, g: 0.31132078, b: 0.31132078, a: 1}
-    key2: {r: 0, g: 0, b: 0, a: 0}
+    key1: {r: 0, g: 0, b: 0, a: 1}
+    key2: {r: 0.31132078, g: 0.31132078, b: 0.31132078, a: 0}
     key3: {r: 0, g: 0, b: 0, a: 0}
     key4: {r: 0, g: 0, b: 0, a: 0}
     key5: {r: 0, g: 0, b: 0, a: 0}
     key6: {r: 0, g: 0, b: 0, a: 0}
     key7: {r: 0, g: 0, b: 0, a: 0}
     ctime0: 0
-    ctime1: 34888
-    ctime2: 65535
-    ctime3: 0
-    ctime4: 0
+    ctime1: 9830
+    ctime2: 34888
+    ctime3: 55705
+    ctime4: 65535
     ctime5: 0
     ctime6: 0
     ctime7: 0
@@ -100,7 +100,7 @@ MonoBehaviour:
     atime7: 0
     m_Mode: 0
     m_ColorSpace: -1
-    m_NumColorKeys: 3
+    m_NumColorKeys: 5
     m_NumAlphaKeys: 2
   DaySkybox: {fileID: 2100000, guid: 21de7ecfacb3d2746b9d1e84b4743034, type: 2}
   NightSkybox: {fileID: 2100000, guid: 21de7ecfacb3d2746b9d1e84b4743034, type: 2}
