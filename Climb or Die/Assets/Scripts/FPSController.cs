@@ -17,7 +17,11 @@ public class FPSController : MonoBehaviour
  //   public GameObject menu;
  //   private bool paused = false;
     public bool isDead;
+    private Vector3 position;
 
+
+
+    
     #region Camera Movement Variables
 
     public Camera playerCamera;
@@ -149,6 +153,8 @@ public class FPSController : MonoBehaviour
             sprintRemaining = sprintDuration;
             sprintCooldownReset = sprintCooldown;
         }
+
+        GameStateManager.Instance.OnGameStateChanged += OnGameStateChanged;
     }
 
     void Start()
@@ -168,7 +174,7 @@ public class FPSController : MonoBehaviour
         {
             crosshairObject.gameObject.SetActive(false);
         }
-
+        
         #region Sprint Bar
 
         sprintBarCG = GetComponentInChildren<CanvasGroup>();
@@ -205,6 +211,8 @@ public class FPSController : MonoBehaviour
 
     private void Update()
     {
+        rb.constraints = RigidbodyConstraints.None;
+        rb.constraints = RigidbodyConstraints.FreezeRotation;
         RaycastHit hit;
         hitGround = Physics.Raycast(transform.position, transform.TransformDirection(Vector3.down), out hit, Mathf.Infinity);
         Debug.DrawRay(transform.position, transform.TransformDirection(Vector3.down) * 1000, Color.green);
@@ -574,9 +582,17 @@ public class FPSController : MonoBehaviour
         }
     }
 
+    // Enables or disables the script based on game state (Pause menu stuff)
     private void OnGameStateChanged(GameState newGameState)
     {
+        if (newGameState != GameState.Gameplay)
+            rb.constraints = RigidbodyConstraints.FreezePosition | RigidbodyConstraints.FreezeRotation;
+
         enabled = newGameState == GameState.Gameplay;
+    }
+    void OnDestroy()
+    {
+        GameStateManager.Instance.OnGameStateChanged -= OnGameStateChanged;
     }
 
 }

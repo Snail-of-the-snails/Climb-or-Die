@@ -24,7 +24,7 @@ public class TreeBehaviour : MonoBehaviour
         if (hitGround && (terrain.name == objectName))
         {
             GetComponent<TerrainCollider>().enabled = true;
-            Debug.Log("Enabled collider on " + objectName);
+
         }
         else
         {

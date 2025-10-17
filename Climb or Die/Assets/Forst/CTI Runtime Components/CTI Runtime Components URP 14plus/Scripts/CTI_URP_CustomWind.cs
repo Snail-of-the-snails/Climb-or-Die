@@ -47,5 +47,9 @@ namespace CTI {
             Shader.SetGlobalFloat(CTITurbulencedPID, WindTurbulence);
 
 		}
-	}
+        private void OnGameStateChanged(GameState newGameState)
+        {
+            enabled = newGameState == GameState.Gameplay;
+        }
+    }
 }

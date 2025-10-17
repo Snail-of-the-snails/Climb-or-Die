@@ -7,14 +7,19 @@ public class LightingManager : MonoBehaviour
     [SerializeField] private LightingPreset Preset;
     [SerializeField, Range(0, 24)] private float TimeOfDay;
     [HideInInspector] public bool isNight;
+    private bool isPaused = false;
+    private void awake()
+    {
 
+        GameStateManager.Instance.OnGameStateChanged += OnGameStateChanged;
+    }
 
     private void Update()
     {
         if (Preset == null)
             return;
 
-        if (Application.isPlaying)
+        if (Application.isPlaying && !isPaused)
         {
             TimeOfDay += Time.deltaTime / 24f;
             TimeOfDay %= 24;
@@ -38,18 +43,21 @@ public class LightingManager : MonoBehaviour
 
     private void UpdateLighting(float timePercent)
     {
-        RenderSettings.ambientLight = Preset.AmbientColor.Evaluate(timePercent);
-        RenderSettings.fogColor = Preset.FogColor.Evaluate(timePercent);
-        RenderSettings.skybox = UpdateSkybox();
-        DirectionalLight.GetComponent<Light>().enabled = !isNight;
-
-        if (DirectionalLight != null)
+        if (!isPaused)
         {
-            DirectionalLight.color = Preset.DirectionalColor.Evaluate(timePercent);
+            RenderSettings.ambientLight = Preset.AmbientColor.Evaluate(timePercent);
+            RenderSettings.fogColor = Preset.FogColor.Evaluate(timePercent);
+            RenderSettings.skybox = UpdateSkybox();
+            DirectionalLight.GetComponent<Light>().enabled = !isNight;
 
-            DirectionalLight.transform.localRotation = Quaternion.Euler(new Vector3((timePercent * 360f) - 90f, 170f, 0));
+            if (DirectionalLight != null)
+            {
+                DirectionalLight.color = Preset.DirectionalColor.Evaluate(timePercent);
+
+                DirectionalLight.transform.localRotation = Quaternion.Euler(new Vector3((timePercent * 360f) - 90f, 170f, 0));
+            }
+            //Debug.Log(DirectionalLight.transform.localRotation);
         }
-
     }
 
 
@@ -66,5 +74,11 @@ public class LightingManager : MonoBehaviour
         }
 
         return skybox;
+    }
+    private void OnGameStateChanged(GameState newGameState)
+    {
+        isPaused = newGameState == GameState.Paused;
+        Debug.Log(isPaused);
+        enabled = newGameState == GameState.Gameplay;
     }
 }
