@@ -17,5 +17,14 @@ public class PauseMenuController : MonoBehaviour
     private void OnGameStateChanged(GameState newGameState)
     {
         gameObject.SetActive(newGameState == GameState.Paused);
+
+        if (newGameState == GameState.Paused)
+        {
+            Cursor.lockState = CursorLockMode.None;
+        }
+        else
+        {
+            Cursor.lockState = CursorLockMode.Locked;
+        }
     }
 }

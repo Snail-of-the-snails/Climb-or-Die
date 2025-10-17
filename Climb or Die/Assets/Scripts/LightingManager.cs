@@ -6,6 +6,7 @@ public class LightingManager : MonoBehaviour
     [SerializeField] private Light DirectionalLight;
     [SerializeField] private LightingPreset Preset;
     [SerializeField, Range(0, 24)] private float TimeOfDay;
+    [HideInInspector] public bool isNight;
 
 
     private void Update()
@@ -23,6 +24,15 @@ public class LightingManager : MonoBehaviour
         {
             UpdateLighting(TimeOfDay / 24f);
         }
+
+        if (TimeOfDay <= 4.3f || TimeOfDay >= 19.7f)
+        {
+            isNight = true;
+        }
+        else
+        {
+            isNight = false;
+        }
     }
 
 
@@ -31,6 +41,7 @@ public class LightingManager : MonoBehaviour
         RenderSettings.ambientLight = Preset.AmbientColor.Evaluate(timePercent);
         RenderSettings.fogColor = Preset.FogColor.Evaluate(timePercent);
         RenderSettings.skybox = UpdateSkybox();
+        DirectionalLight.GetComponent<Light>().enabled = !isNight;
 
         if (DirectionalLight != null)
         {
@@ -45,7 +56,7 @@ public class LightingManager : MonoBehaviour
     private Material UpdateSkybox() {
         Material skybox;
 
-        if (TimeOfDay <= 4.5 || TimeOfDay >= 19.5)
+        if (isNight)
         {
             skybox = Preset.NightSkybox;
         }

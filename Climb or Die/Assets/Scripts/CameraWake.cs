@@ -36,8 +36,6 @@ public class CameraWake : MonoBehaviour
                 rotationSpeed = 0;
                 currentAngle = targetAngle;
             }
-
-
         }
     }
 }
