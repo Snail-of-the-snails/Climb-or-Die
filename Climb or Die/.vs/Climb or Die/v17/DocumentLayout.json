@@ -3,8 +3,20 @@
   "WorkspaceRootPath": "C:\\Users\\gwhse\\OneDrive\\Documents\\GitHub\\Climb-or-Die\\Climb or Die\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\gwhse\\OneDrive\\Documents\\GitHub\\Climb-or-Die\\Climb or Die\\Assets\\Scripts\\FPSController.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Assets\\Scripts\\FPSController.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\gwhse\\OneDrive\\Documents\\GitHub\\Climb-or-Die\\Climb or Die\\Assets\\Scripts\\Pause Controls\\PauseMenuController.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Assets\\Scripts\\Pause Controls\\PauseMenuController.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\gwhse\\OneDrive\\Documents\\GitHub\\Climb-or-Die\\Climb or Die\\Assets\\Scripts\\Pause Controls\\PauseController.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Assets\\Scripts\\Pause Controls\\PauseController.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\gwhse\\OneDrive\\Documents\\GitHub\\Climb-or-Die\\Climb or Die\\Assets\\Scripts\\Pause Controls\\InputManager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Assets\\Scripts\\Pause Controls\\InputManager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\gwhse\\OneDrive\\Documents\\GitHub\\Climb-or-Die\\Climb or Die\\Assets\\Scripts\\Pause Controls\\GameStateManager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -13,10 +25,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\gwhse\\OneDrive\\Documents\\GitHub\\Climb-or-Die\\Climb or Die\\Assets\\Scripts\\PauseControls\\GameState.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Assets\\Scripts\\PauseControls\\GameState.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\gwhse\\OneDrive\\Documents\\GitHub\\Climb-or-Die\\Climb or Die\\Assets\\Scripts\\FPSController.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Assets\\Scripts\\FPSController.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\gwhse\\OneDrive\\Documents\\GitHub\\Climb-or-Die\\Climb or Die\\Assets\\Scripts\\TreeBehaviour.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -94,24 +102,50 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 8,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 2,
+              "Title": "PauseController.cs",
+              "DocumentMoniker": "C:\\Users\\gwhse\\OneDrive\\Documents\\GitHub\\Climb-or-Die\\Climb or Die\\Assets\\Scripts\\Pause Controls\\PauseController.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\Pause Controls\\PauseController.cs",
+              "ToolTip": "C:\\Users\\gwhse\\OneDrive\\Documents\\GitHub\\Climb-or-Die\\Climb or Die\\Assets\\Scripts\\Pause Controls\\PauseController.cs",
+              "RelativeToolTip": "Assets\\Scripts\\Pause Controls\\PauseController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-10T16:53:49.82Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "InputManager.cs",
+              "DocumentMoniker": "C:\\Users\\gwhse\\OneDrive\\Documents\\GitHub\\Climb-or-Die\\Climb or Die\\Assets\\Scripts\\Pause Controls\\InputManager.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\Pause Controls\\InputManager.cs",
+              "ToolTip": "C:\\Users\\gwhse\\OneDrive\\Documents\\GitHub\\Climb-or-Die\\Climb or Die\\Assets\\Scripts\\Pause Controls\\InputManager.cs",
+              "RelativeToolTip": "Assets\\Scripts\\Pause Controls\\InputManager.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACUAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-10T16:49:57.213Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
               "Title": "PauseMenuController.cs",
               "DocumentMoniker": "C:\\Users\\gwhse\\OneDrive\\Documents\\GitHub\\Climb-or-Die\\Climb or Die\\Assets\\Scripts\\Pause Controls\\PauseMenuController.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\Pause Controls\\PauseMenuController.cs",
               "ToolTip": "C:\\Users\\gwhse\\OneDrive\\Documents\\GitHub\\Climb-or-Die\\Climb or Die\\Assets\\Scripts\\Pause Controls\\PauseMenuController.cs",
               "RelativeToolTip": "Assets\\Scripts\\Pause Controls\\PauseMenuController.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABQAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-10-10T16:48:20.529Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 4,
               "Title": "GameStateManager.cs",
               "DocumentMoniker": "C:\\Users\\gwhse\\OneDrive\\Documents\\GitHub\\Climb-or-Die\\Climb or Die\\Assets\\Scripts\\Pause Controls\\GameStateManager.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\Pause Controls\\GameStateManager.cs",
@@ -124,20 +158,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "GameState.cs",
-              "DocumentMoniker": "C:\\Users\\gwhse\\OneDrive\\Documents\\GitHub\\Climb-or-Die\\Climb or Die\\Assets\\Scripts\\PauseControls\\GameState.cs",
-              "RelativeDocumentMoniker": "Assets\\Scripts\\PauseControls\\GameState.cs",
-              "ToolTip": "C:\\Users\\gwhse\\OneDrive\\Documents\\GitHub\\Climb-or-Die\\Climb or Die\\Assets\\Scripts\\PauseControls\\GameState.cs",
-              "RelativeToolTip": "Assets\\Scripts\\PauseControls\\GameState.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAABAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-10T16:42:52.256Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 6,
               "Title": "TreeBehaviour.cs",
               "DocumentMoniker": "C:\\Users\\gwhse\\OneDrive\\Documents\\GitHub\\Climb-or-Die\\Climb or Die\\Assets\\Scripts\\TreeBehaviour.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\TreeBehaviour.cs",
@@ -149,7 +170,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 9,
               "Title": "PlayFootsteps.cs",
               "DocumentMoniker": "C:\\Users\\gwhse\\OneDrive\\Documents\\GitHub\\Climb-or-Die\\Climb or Die\\Assets\\Scripts\\PlayFootsteps.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\PlayFootsteps.cs",
@@ -161,7 +182,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 11,
               "Title": "PlayMusic.cs",
               "DocumentMoniker": "C:\\Users\\gwhse\\OneDrive\\Documents\\GitHub\\Climb-or-Die\\Climb or Die\\Assets\\Scripts\\PlayMusic.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\PlayMusic.cs",
@@ -173,7 +194,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 8,
               "Title": "FlashlightSway.cs",
               "DocumentMoniker": "C:\\Users\\gwhse\\OneDrive\\Documents\\GitHub\\Climb-or-Die\\Climb or Die\\Assets\\Scripts\\FlashlightSway.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\FlashlightSway.cs",
@@ -185,7 +206,32 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 0,
+              "Title": "FPSController.cs",
+              "DocumentMoniker": "C:\\Users\\gwhse\\OneDrive\\Documents\\GitHub\\Climb-or-Die\\Climb or Die\\Assets\\Scripts\\FPSController.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\FPSController.cs",
+              "ToolTip": "C:\\Users\\gwhse\\OneDrive\\Documents\\GitHub\\Climb-or-Die\\Climb or Die\\Assets\\Scripts\\FPSController.cs",
+              "RelativeToolTip": "Assets\\Scripts\\FPSController.cs",
+              "ViewState": "AgIAAAECAAAAAAAAAAAAAEQCAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-01T16:03:30.745Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "GameState.cs",
+              "DocumentMoniker": "C:\\Users\\gwhse\\OneDrive\\Documents\\GitHub\\Climb-or-Die\\Climb or Die\\Assets\\Scripts\\PauseControls\\GameState.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\PauseControls\\GameState.cs",
+              "ToolTip": "C:\\Users\\gwhse\\OneDrive\\Documents\\GitHub\\Climb-or-Die\\Climb or Die\\Assets\\Scripts\\PauseControls\\GameState.cs",
+              "RelativeToolTip": "Assets\\Scripts\\PauseControls\\GameState.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-10T16:42:52.256Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
               "Title": "PlayWind.cs",
               "DocumentMoniker": "C:\\Users\\gwhse\\OneDrive\\Documents\\GitHub\\Climb-or-Die\\Climb or Die\\Assets\\Scripts\\PlayWind.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\PlayWind.cs",
@@ -197,20 +243,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "FPSController.cs",
-              "DocumentMoniker": "C:\\Users\\gwhse\\OneDrive\\Documents\\GitHub\\Climb-or-Die\\Climb or Die\\Assets\\Scripts\\FPSController.cs",
-              "RelativeDocumentMoniker": "Assets\\Scripts\\FPSController.cs",
-              "ToolTip": "C:\\Users\\gwhse\\OneDrive\\Documents\\GitHub\\Climb-or-Die\\Climb or Die\\Assets\\Scripts\\FPSController.cs",
-              "RelativeToolTip": "Assets\\Scripts\\FPSController.cs",
-              "ViewState": "AgIAAM4AAAAAAAAAAAAYwNEAAABqAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-01T16:03:30.745Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 12,
+              "DocumentIndex": 14,
               "Title": "CameraWake.cs",
               "DocumentMoniker": "C:\\Users\\gwhse\\OneDrive\\Documents\\GitHub\\Climb-or-Die\\Climb or Die\\Assets\\Scripts\\CameraWake.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\CameraWake.cs",
@@ -222,7 +255,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 14,
+              "DocumentIndex": 16,
               "Title": "EnemyAI.cs",
               "DocumentMoniker": "C:\\Users\\gwhse\\OneDrive\\Documents\\GitHub\\Climb-or-Die\\Climb or Die\\Assets\\Scripts\\EnemyAI.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\EnemyAI.cs",
@@ -234,7 +267,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 7,
               "Title": "KillPlayer.cs",
               "DocumentMoniker": "C:\\Users\\gwhse\\OneDrive\\Documents\\GitHub\\Climb-or-Die\\Climb or Die\\Assets\\Scripts\\KillPlayer.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\KillPlayer.cs",
@@ -246,7 +279,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 11,
+              "DocumentIndex": 13,
               "Title": "TerrainMeshGenerator.cs",
               "DocumentMoniker": "C:\\Users\\gwhse\\OneDrive\\Documents\\GitHub\\Climb-or-Die\\Climb or Die\\Assets\\Scripts\\TerrainMeshGenerator.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\TerrainMeshGenerator.cs",
@@ -258,7 +291,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 13,
+              "DocumentIndex": 15,
               "Title": "PlayWendigoSounds.cs",
               "DocumentMoniker": "C:\\Users\\gwhse\\OneDrive\\Documents\\GitHub\\Climb-or-Die\\Climb or Die\\Assets\\Scripts\\PlayWendigoSounds.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\PlayWendigoSounds.cs",
@@ -270,7 +303,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
+              "DocumentIndex": 12,
               "Title": "MainMenuScript.cs",
               "DocumentMoniker": "C:\\Users\\gwhse\\OneDrive\\Documents\\GitHub\\Climb-or-Die\\Climb or Die\\Assets\\Scripts\\MainMenuScript.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\MainMenuScript.cs",
@@ -282,7 +315,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 15,
+              "DocumentIndex": 17,
               "Title": "Skybox.shader",
               "DocumentMoniker": "C:\\Users\\gwhse\\OneDrive\\Documents\\GitHub\\Climb-or-Die\\Climb or Die\\Assets\\Skybox.shader",
               "RelativeDocumentMoniker": "Assets\\Skybox.shader",
@@ -294,7 +327,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 17,
+              "DocumentIndex": 19,
               "Title": "TMPro_FontAssetCreatorWindow.cs",
               "DocumentMoniker": "C:\\Users\\gwhse\\OneDrive\\Documents\\GitHub\\Climb-or-Die\\Climb or Die\\Library\\PackageCache\\com.unity.ugui@24b10291b18f\\Editor\\TMP\\TMPro_FontAssetCreatorWindow.cs",
               "RelativeDocumentMoniker": "Library\\PackageCache\\com.unity.ugui@24b10291b18f\\Editor\\TMP\\TMPro_FontAssetCreatorWindow.cs",
@@ -306,7 +339,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 19,
+              "DocumentIndex": 21,
               "Title": "URPProcessScene.cs",
               "DocumentMoniker": "C:\\Users\\gwhse\\OneDrive\\Documents\\GitHub\\Climb-or-Die\\Climb or Die\\Library\\PackageCache\\com.unity.render-pipelines.universal@a394fe607f89\\Editor\\BuildProcessors\\URPProcessScene.cs",
               "RelativeDocumentMoniker": "Library\\PackageCache\\com.unity.render-pipelines.universal@a394fe607f89\\Editor\\BuildProcessors\\URPProcessScene.cs",
@@ -318,7 +351,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 16,
+              "DocumentIndex": 18,
               "Title": "CanvasWake.cs",
               "DocumentMoniker": "C:\\Users\\gwhse\\OneDrive\\Documents\\GitHub\\Climb-or-Die\\Climb or Die\\Assets\\CanvasWake.cs",
               "RelativeDocumentMoniker": "Assets\\CanvasWake.cs",
@@ -330,7 +363,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 20,
+              "DocumentIndex": 22,
               "Title": "PlayWendigoSounds.cs",
               "DocumentMoniker": "C:\\Users\\gwhse\\OneDrive\\Documents\\GitHub\\Climb-or-Die\\Climb or Die\\Assets\\PlayWendigoSounds.cs",
               "RelativeDocumentMoniker": "Assets\\PlayWendigoSounds.cs",
@@ -342,7 +375,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 18,
+              "DocumentIndex": 20,
               "Title": "CameraWake.cs",
               "DocumentMoniker": "C:\\Users\\gwhse\\OneDrive\\Documents\\GitHub\\Climb-or-Die\\Climb or Die\\Assets\\CameraWake.cs",
               "RelativeDocumentMoniker": "Assets\\CameraWake.cs",
