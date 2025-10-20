@@ -211,6 +211,11 @@ public class FPSController : MonoBehaviour
 
     private void Update()
     {
+        if (lockCursor)
+        {
+            Cursor.lockState = CursorLockMode.Locked;
+        }
+        crosshairObject.gameObject.SetActive(true);
         rb.constraints = RigidbodyConstraints.None;
         rb.constraints = RigidbodyConstraints.FreezeRotation;
         RaycastHit hit;
@@ -586,7 +591,23 @@ public class FPSController : MonoBehaviour
     private void OnGameStateChanged(GameState newGameState)
     {
         if (newGameState != GameState.Gameplay)
+        {
+            crosshairObject.gameObject.SetActive(false);
             rb.constraints = RigidbodyConstraints.FreezePosition | RigidbodyConstraints.FreezeRotation;
+            if (lockCursor)
+            {
+                Cursor.lockState = CursorLockMode.None;
+            }
+        }
+           
+        else
+        {
+            if (lockCursor)
+            {
+                Cursor.lockState = CursorLockMode.Locked;
+                Debug.Log("Locking Cursor");
+            }
+        }
 
         enabled = newGameState == GameState.Gameplay;
     }
