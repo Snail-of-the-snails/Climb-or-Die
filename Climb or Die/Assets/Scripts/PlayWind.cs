@@ -17,8 +17,10 @@ public class PlayWind : MonoBehaviour
         }
     }
     private void OnGameStateChanged(GameState newGameState)
-    {
+    {    
         transform.GetComponent<AudioSource>().Pause();
         enabled = newGameState == GameState.Gameplay;
     }
+
+
 }
