@@ -156,6 +156,10 @@ public class FPSController : MonoBehaviour
 
         GameStateManager.Instance.OnGameStateChanged += OnGameStateChanged;
     }
+    void OnDestroy()
+    {
+        GameStateManager.Instance.OnGameStateChanged -= OnGameStateChanged;
+    }
 
     void Start()
     {
@@ -211,6 +215,10 @@ public class FPSController : MonoBehaviour
 
     private void Update()
     {
+        if(isDead)
+        {
+            return;
+        }
         if (lockCursor)
         {
             Cursor.lockState = CursorLockMode.Locked;
@@ -592,6 +600,7 @@ public class FPSController : MonoBehaviour
     {
         if (newGameState != GameState.Gameplay)
         {
+            Debug.Log("Disabling FPS Controller");
             crosshairObject.gameObject.SetActive(false);
             rb.constraints = RigidbodyConstraints.FreezePosition | RigidbodyConstraints.FreezeRotation;
             if (lockCursor)
@@ -611,10 +620,7 @@ public class FPSController : MonoBehaviour
 
         enabled = newGameState == GameState.Gameplay;
     }
-    void OnDestroy()
-    {
-        GameStateManager.Instance.OnGameStateChanged -= OnGameStateChanged;
-    }
+
 
 }
 

@@ -10,6 +10,15 @@ public class TreeBehaviour : MonoBehaviour
     void Start()
     {
         objectName = gameObject.name;
+       
+    }
+    void Awake()
+    {
+        GameStateManager.Instance.OnGameStateChanged += OnGameStateChanged;
+    }
+    private void OnDestroy()
+    {
+        GameStateManager.Instance.OnGameStateChanged -= OnGameStateChanged;
     }
     // Update is called once per frame
     void Update()

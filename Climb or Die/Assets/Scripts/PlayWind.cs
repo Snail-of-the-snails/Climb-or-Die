@@ -3,11 +3,14 @@ using UnityEngine;
 public class PlayWind : MonoBehaviour
 {
     // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
+    void Awake()
     {
         GameStateManager.Instance.OnGameStateChanged += OnGameStateChanged;
     }
-
+    void OnDestroy()
+    {
+        GameStateManager.Instance.OnGameStateChanged -= OnGameStateChanged;
+    }
     // Update is called once per frame
     void Update()
     {

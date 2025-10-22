@@ -4,25 +4,31 @@ public class PauseController : MonoBehaviour
 {
     public GameObject OptionsMenu;
     public GameObject PauseMenu;
+    public static bool isDead = false;
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Escape) )
+        isDead = KillPlayer.isDead;
+        if(!isDead)
         {
-            if (OptionsMenu.activeSelf == false)
+            if (Input.GetKeyDown(KeyCode.Escape))
             {
-                GameState currentGameState = GameStateManager.Instance.CurrentGameState;
-                GameState newGameState = currentGameState == GameState.Gameplay
-                    ? GameState.Paused
-                    : GameState.Gameplay;
+                if (OptionsMenu.activeSelf == false)
+                {
+                    GameState currentGameState = GameStateManager.Instance.CurrentGameState;
+                    GameState newGameState = currentGameState == GameState.Gameplay
+                        ? GameState.Paused
+                        : GameState.Gameplay;
 
-                GameStateManager.Instance.SetState(newGameState);
+                    GameStateManager.Instance.SetState(newGameState);
+                }
+                else
+                {
+                    OptionsMenu.SetActive(false);
+                    PauseMenu.SetActive(true);
+                }
+
             }
-            else
-            {
-                OptionsMenu.SetActive(false);
-                PauseMenu.SetActive(true);
-            }
-           
         }
+
     }
 }

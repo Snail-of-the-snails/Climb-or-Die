@@ -49,6 +49,7 @@ public class KillPlayer : MonoBehaviour
 
     void ActivateDeathScreen()
     {
+        GameStateManager.Instance.SetState(GameState.Paused);
         isDead = true;
         jeff.SetActive(false);
         Cursor.lockState = CursorLockMode.None;
@@ -80,7 +81,11 @@ public class KillPlayer : MonoBehaviour
     {
         Debug.Log("Restarting Level");
         isDead = false;
+
+
+
         UnityEngine.SceneManagement.SceneManager.LoadScene(UnityEngine.SceneManagement.SceneManager.GetActiveScene().buildIndex);
+
     }
     public void OptionsMenu()
     {
