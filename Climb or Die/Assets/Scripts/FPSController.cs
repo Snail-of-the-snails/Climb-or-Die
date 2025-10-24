@@ -215,10 +215,6 @@ public class FPSController : MonoBehaviour
 
     private void Update()
     {
-        if(isDead)
-        {
-            return;
-        }
         if (lockCursor)
         {
             Cursor.lockState = CursorLockMode.Locked;
