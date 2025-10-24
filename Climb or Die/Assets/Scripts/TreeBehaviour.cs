@@ -16,7 +16,12 @@ public class TreeBehaviour : MonoBehaviour
     {
         GameStateManager.Instance.OnGameStateChanged += OnGameStateChanged;
     }
-    private void OnDestroy()
+    private void OnGameStateChanged(GameState newGameState)
+    {
+
+        enabled = newGameState == GameState.Gameplay;
+    }
+    void OnDestroy()
     {
         GameStateManager.Instance.OnGameStateChanged -= OnGameStateChanged;
     }

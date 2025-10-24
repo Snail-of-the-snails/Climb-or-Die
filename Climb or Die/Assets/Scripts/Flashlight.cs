@@ -6,14 +6,29 @@ public class Flashlight : MonoBehaviour
     [SerializeField] private float brightness;
     private bool flashlightEnabled;
     private Light flashlight;
+    public GameObject flashlightHolder;
+    public GameObject gunHolder;
 
     void Start() {
         flashlight = transform.GetComponent<Light>();
+        flashlightHolder.SetActive(false);
+        gunHolder.SetActive(false);
     }
 
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.F))
+        if(Input.GetKeyDown(KeyCode.Alpha1))
+        {
+            flashlightHolder.SetActive(true);
+            gunHolder.SetActive(false);
+        }
+        if(Input.GetKeyDown(KeyCode.Alpha2))
+        {
+            flashlightHolder.SetActive(false);
+            gunHolder.SetActive(true);
+            flashlightEnabled = false;
+        }
+        if (Input.GetKeyDown(KeyCode.F) && flashlightHolder.activeSelf == true)
         {
             if (flashlightEnabled)
             {
