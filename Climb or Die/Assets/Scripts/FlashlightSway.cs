@@ -5,6 +5,7 @@ public class FlashlightSway : MonoBehaviour
     private Vector3 vectorOffset;
     public GameObject playerCamera;
     [SerializeField] private float speed = 3.0f;
+    private bool doSway = true;
 
     void Start()
     {
@@ -15,13 +16,15 @@ public class FlashlightSway : MonoBehaviour
 
     void Update()
     {
-        transform.position = playerCamera.transform.position + vectorOffset;
-        transform.rotation = Quaternion.Slerp(transform.transform.rotation, playerCamera.transform.rotation, speed * Time.deltaTime);
+        if (doSway)
+        {
+            transform.position = playerCamera.transform.position + vectorOffset;
+            transform.rotation = Quaternion.Slerp(transform.transform.rotation, playerCamera.transform.rotation, speed * Time.deltaTime);
+        }
     }
     private void OnGameStateChanged(GameState newGameState)
     {
-
-        enabled = newGameState == GameState.Gameplay;
+        doSway = newGameState == GameState.Gameplay;
     }
     void OnDestroy()
     {
