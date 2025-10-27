@@ -19,9 +19,10 @@ public class FPSController : MonoBehaviour
     public bool isDead;
     private Vector3 position;
 
+    public GameObject flashlightHolder;
+    public GameObject shotgunHolder;
 
 
-    
     #region Camera Movement Variables
 
     public Camera playerCamera;
@@ -207,7 +208,8 @@ public class FPSController : MonoBehaviour
             sprintBarBG.gameObject.SetActive(false);
             sprintBar.gameObject.SetActive(false);
         }
-
+        flashlightHolder.SetActive(false);
+        shotgunHolder.SetActive(false);
         #endregion
     }
 
@@ -215,10 +217,6 @@ public class FPSController : MonoBehaviour
 
     private void Update()
     {
-        if(isDead)
-        {
-            return;
-        }
         if (lockCursor)
         {
             Cursor.lockState = CursorLockMode.Locked;
@@ -256,6 +254,16 @@ public class FPSController : MonoBehaviour
                 if (!paused)
                 {
         */
+        if (Input.GetKeyDown(KeyCode.Alpha1))
+        {
+            flashlightHolder.SetActive(true);
+            shotgunHolder.SetActive(false);
+        }
+        if (Input.GetKeyDown(KeyCode.Alpha2))
+        {
+            flashlightHolder.SetActive(false);
+            shotgunHolder.SetActive(true);
+        }
         #region Camera
 
 
@@ -660,7 +668,8 @@ public class FPSController : MonoBehaviour
         fpc.fov = EditorGUILayout.Slider(new GUIContent("Field of View", "The camera’s view angle. Changes the player camera directly."), fpc.fov, fpc.zoomFOV, 179f);
         fpc.cameraCanMove = EditorGUILayout.ToggleLeft(new GUIContent("Enable Camera Rotation", "Determines if the camera is allowed to move."), fpc.cameraCanMove);
         //fpc.menu = (GameObject)EditorGUILayout.ObjectField(new GUIContent("Menu", "Menu object that is toggled when pressing the escape key."), fpc.menu, typeof(GameObject), true);
-
+        fpc.flashlightHolder = (GameObject)EditorGUILayout.ObjectField(new GUIContent("Flashlight Holder", "the flashlight holder dumbass"), fpc.flashlightHolder, typeof(GameObject), true);
+        fpc.shotgunHolder = (GameObject)EditorGUILayout.ObjectField(new GUIContent("Shotgun Holder", "the fucking shotgun holder fucking fuckface"), fpc.shotgunHolder, typeof(GameObject), true);
         GUI.enabled = fpc.cameraCanMove;
         fpc.invertCamera = EditorGUILayout.ToggleLeft(new GUIContent("Invert Camera Rotation", "Inverts the up and down movement of the camera."), fpc.invertCamera);
         fpc.mouseSensitivity = EditorGUILayout.Slider(new GUIContent("Look Sensitivity", "Determines how sensitive the mouse movement is."), fpc.mouseSensitivity, .1f, 10f);
