@@ -5,11 +5,9 @@ public class SelectItem : MonoBehaviour
 {
     public GameObject gunModel;
     public GameObject flashLightModel;
-    public GameObject flashLightLight;
 
     private void Start()
     {
-        flashLightLight.SetActive(true);
         flashLightModel.SetActive(true);
         gunModel.SetActive(false);
     }
@@ -17,13 +15,11 @@ public class SelectItem : MonoBehaviour
     private void Update() {
         if (Input.GetKeyDown(KeyCode.Alpha1))
         {
-            flashLightLight.SetActive(true);
             flashLightModel.SetActive(true);
             gunModel.SetActive(false);
         }
         else if (Input.GetKeyDown(KeyCode.Alpha2))
         {
-            flashLightLight.SetActive(false);
             flashLightModel.SetActive(false);
             gunModel.SetActive(true);
         }

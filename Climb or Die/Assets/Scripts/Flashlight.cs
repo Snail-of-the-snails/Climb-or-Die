@@ -6,18 +6,17 @@ public class Flashlight : MonoBehaviour
     [SerializeField] private float brightness;
     private bool flashlightEnabled;
     private Light flashlight;
-    public GameObject flashlightHolder;
-    public GameObject gunHolder;
+    private AudioSource audioSource;
 
     void Start() {
         flashlight = transform.GetComponent<Light>();
-
+        audioSource = transform.GetComponent<AudioSource>();
     }
 
     void Update()
     {
 
-        if (Input.GetKeyDown(KeyCode.F) && flashlightHolder.activeSelf == true)
+        if (Input.GetKeyDown(KeyCode.F) && gameObject.activeInHierarchy)
         {
             if (flashlightEnabled)
             {
@@ -27,6 +26,8 @@ public class Flashlight : MonoBehaviour
             {
                 flashlightEnabled = true;
             }
+
+            audioSource.Play();
         }
 
         HandleFlashlight();
