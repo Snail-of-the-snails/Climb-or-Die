@@ -5,10 +5,12 @@ public class PauseController : MonoBehaviour
     public GameObject OptionsMenu;
     public GameObject PauseMenu;
     public static bool isDead = false;
+
     void Update()
     {
         isDead = KillPlayer.isDead;
-        if(!isDead)
+
+        if (!isDead)
         {
             if (Input.GetKeyDown(KeyCode.Escape))
             {
@@ -19,6 +21,9 @@ public class PauseController : MonoBehaviour
                         ? GameState.Paused
                         : GameState.Gameplay;
 
+                    
+                    
+                    
                     GameStateManager.Instance.SetState(newGameState);
                 }
                 else

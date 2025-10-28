@@ -160,10 +160,6 @@ public class FPSController : MonoBehaviour
 
     void Start()
     {
-        if (lockCursor)
-        {
-            Cursor.lockState = CursorLockMode.Locked;
-        }
 
         if (crosshair)
         {
@@ -213,6 +209,7 @@ public class FPSController : MonoBehaviour
         if (lockCursor)
         {
             Cursor.lockState = CursorLockMode.Locked;
+            Cursor.visible = false;
         }
         crosshairObject.gameObject.SetActive(true);
         rb.constraints = RigidbodyConstraints.None;
