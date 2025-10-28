@@ -193,7 +193,7 @@ public struct MeshGenerator : IJobParallelFor
     }
 }
 
-[Serializable]
+    [Serializable]
 public struct TerrainMeshVariables
 {
     [Range(1, 1000)]

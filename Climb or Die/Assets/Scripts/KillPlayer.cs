@@ -16,6 +16,8 @@ public class KillPlayer : MonoBehaviour
     public GameObject jeff;
     public float volume = MainMenuScript.volume;
     public static bool isDead = false;
+    public GameObject pauseMenu;
+    public GameObject optionsMenu;
 
     void Start()
     {
@@ -26,6 +28,7 @@ public class KillPlayer : MonoBehaviour
         button.interactable = false;
         audioMixer.SetFloat("volume",volume);
         Debug.Log(volume);
+        optionsMenu.SetActive(false);
     }
 
     void Update()
@@ -46,6 +49,7 @@ public class KillPlayer : MonoBehaviour
 
     void ActivateDeathScreen()
     {
+        GameStateManager.Instance.SetState(GameState.Paused);
         isDead = true;
         jeff.SetActive(false);
         Cursor.lockState = CursorLockMode.None;
@@ -78,5 +82,11 @@ public class KillPlayer : MonoBehaviour
         Debug.Log("Restarting Level");
         isDead = false;
         UnityEngine.SceneManagement.SceneManager.LoadScene(UnityEngine.SceneManagement.SceneManager.GetActiveScene().buildIndex);
+
+    }
+    public void OptionsMenu()
+    {
+        optionsMenu.SetActive(true);
+        pauseMenu.SetActive(false);
     }
 }

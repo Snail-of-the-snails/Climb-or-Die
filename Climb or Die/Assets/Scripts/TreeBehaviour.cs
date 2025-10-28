@@ -10,6 +10,20 @@ public class TreeBehaviour : MonoBehaviour
     void Start()
     {
         objectName = gameObject.name;
+       
+    }
+    void Awake()
+    {
+        GameStateManager.Instance.OnGameStateChanged += OnGameStateChanged;
+    }
+    private void OnGameStateChanged(GameState newGameState)
+    {
+
+        enabled = newGameState == GameState.Gameplay;
+    }
+    void OnDestroy()
+    {
+        GameStateManager.Instance.OnGameStateChanged -= OnGameStateChanged;
     }
     // Update is called once per frame
     void Update()
@@ -24,7 +38,7 @@ public class TreeBehaviour : MonoBehaviour
         if (hitGround && (terrain.name == objectName))
         {
             GetComponent<TerrainCollider>().enabled = true;
-            Debug.Log("Enabled collider on " + objectName);
+
         }
         else
         {

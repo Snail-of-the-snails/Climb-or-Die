@@ -17,6 +17,7 @@ public class FPSController : MonoBehaviour
  //   public GameObject menu;
  //   private bool paused = false;
     public bool isDead;
+    private Vector3 position;
 
     #region Camera Movement Variables
 
@@ -149,15 +150,16 @@ public class FPSController : MonoBehaviour
             sprintRemaining = sprintDuration;
             sprintCooldownReset = sprintCooldown;
         }
+
+        GameStateManager.Instance.OnGameStateChanged += OnGameStateChanged;
+    }
+    void OnDestroy()
+    {
+        GameStateManager.Instance.OnGameStateChanged -= OnGameStateChanged;
     }
 
     void Start()
     {
-    //    menu.SetActive(false);
-        if (lockCursor)
-        {
-            Cursor.lockState = CursorLockMode.Locked;
-        }
 
         if (crosshair)
         {
@@ -168,7 +170,7 @@ public class FPSController : MonoBehaviour
         {
             crosshairObject.gameObject.SetActive(false);
         }
-
+        
         #region Sprint Bar
 
         sprintBarCG = GetComponentInChildren<CanvasGroup>();
@@ -197,7 +199,6 @@ public class FPSController : MonoBehaviour
             sprintBarBG.gameObject.SetActive(false);
             sprintBar.gameObject.SetActive(false);
         }
-
         #endregion
     }
 
@@ -205,6 +206,14 @@ public class FPSController : MonoBehaviour
 
     private void Update()
     {
+        if (lockCursor)
+        {
+            Cursor.lockState = CursorLockMode.Locked;
+            Cursor.visible = false;
+        }
+        crosshairObject.gameObject.SetActive(true);
+        rb.constraints = RigidbodyConstraints.None;
+        rb.constraints = RigidbodyConstraints.FreezeRotation;
         RaycastHit hit;
         hitGround = Physics.Raycast(transform.position, transform.TransformDirection(Vector3.down), out hit, Mathf.Infinity);
         Debug.DrawRay(transform.position, transform.TransformDirection(Vector3.down) * 1000, Color.green);
@@ -398,7 +407,6 @@ public class FPSController : MonoBehaviour
             {
                 HeadBob();
             }
-        //}
     }
 
     void FixedUpdate()
@@ -574,10 +582,32 @@ public class FPSController : MonoBehaviour
         }
     }
 
+    // Enables or disables the script based on game state (Pause menu stuff)
     private void OnGameStateChanged(GameState newGameState)
     {
+        if (newGameState != GameState.Gameplay)
+        {
+            Debug.Log("Disabling FPS Controller");
+            crosshairObject.gameObject.SetActive(false);
+            rb.constraints = RigidbodyConstraints.FreezePosition | RigidbodyConstraints.FreezeRotation;
+            if (lockCursor)
+            {
+                Cursor.lockState = CursorLockMode.None;
+            }
+        }
+           
+        else
+        {
+            if (lockCursor)
+            {
+                Cursor.lockState = CursorLockMode.Locked;
+                Debug.Log("Locking Cursor");
+            }
+        }
+
         enabled = newGameState == GameState.Gameplay;
     }
+
 
 }
 
@@ -617,7 +647,6 @@ public class FPSController : MonoBehaviour
         fpc.fov = EditorGUILayout.Slider(new GUIContent("Field of View", "The camera’s view angle. Changes the player camera directly."), fpc.fov, fpc.zoomFOV, 179f);
         fpc.cameraCanMove = EditorGUILayout.ToggleLeft(new GUIContent("Enable Camera Rotation", "Determines if the camera is allowed to move."), fpc.cameraCanMove);
         //fpc.menu = (GameObject)EditorGUILayout.ObjectField(new GUIContent("Menu", "Menu object that is toggled when pressing the escape key."), fpc.menu, typeof(GameObject), true);
-
         GUI.enabled = fpc.cameraCanMove;
         fpc.invertCamera = EditorGUILayout.ToggleLeft(new GUIContent("Invert Camera Rotation", "Inverts the up and down movement of the camera."), fpc.invertCamera);
         fpc.mouseSensitivity = EditorGUILayout.Slider(new GUIContent("Look Sensitivity", "Determines how sensitive the mouse movement is."), fpc.mouseSensitivity, .1f, 10f);
