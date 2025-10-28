@@ -7,6 +7,7 @@ public class EnemyAI : MonoBehaviour
     public GameObject player;
     private Rigidbody rb;
     private NavMeshAgent agent;
+    private bool setDestination = false;
     public LightingManager lightingManager;
 
     enum AIState
@@ -19,11 +20,17 @@ public class EnemyAI : MonoBehaviour
         Waiting
     }
 
+    void Start()
+    {
+        agent = transform.GetComponent<NavMeshAgent>();
+        setDestination = false;
+    }
+
     AIState state;
 
     void Update ()
     {
-        state = SetAIState();
+        state = AIState.Stalking; //SetAIState();
         AI(state);
     }
 
@@ -56,12 +63,29 @@ public class EnemyAI : MonoBehaviour
             float stalkingDistance = Random.Range(50f, 100f);
 
             Stalk(stalkingDistance);
+
+            if (!setDestination)
+            {
+                setDestination = true;
+            }
         }
     }
 
     void Stalk(float distance)
     {
-        Vector3 detination = new Vector3(player.transform.position.x - distance, player.transform.position.y, player.transform.position.z);
-        agent.SetDestination(detination);
+        Vector3 target;
+        Vector3 reletiveOffset;
+
+        if (!setDestination) {
+            reletiveOffset = new Vector3(0, 0, 0 - distance);
+            target = player.transform.TransformPoint(reletiveOffset);
+        }
+        else
+        {
+            reletiveOffset = player.transform.InverseTransformPoint(agent.destination);
+            target = player.transform.position - reletiveOffset;
+        }
+
+        agent.SetDestination(target);
     }
 }
