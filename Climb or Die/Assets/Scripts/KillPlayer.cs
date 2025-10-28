@@ -81,9 +81,6 @@ public class KillPlayer : MonoBehaviour
     {
         Debug.Log("Restarting Level");
         isDead = false;
-
-
-
         UnityEngine.SceneManagement.SceneManager.LoadScene(UnityEngine.SceneManagement.SceneManager.GetActiveScene().buildIndex);
 
     }

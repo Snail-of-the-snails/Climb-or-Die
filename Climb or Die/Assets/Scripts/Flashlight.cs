@@ -6,9 +6,11 @@ public class Flashlight : MonoBehaviour
     [SerializeField] private float brightness;
     private bool flashlightEnabled;
     private Light flashlight;
+    private AudioSource audioSource;
 
     void Start() {
         flashlight = transform.GetComponent<Light>();
+        audioSource = transform.GetComponent<AudioSource>();
     }
 
     void Update()
@@ -18,10 +20,12 @@ public class Flashlight : MonoBehaviour
             if (flashlightEnabled)
             {
                 flashlightEnabled = false;
+                audioSource.Play();
             }
             else
             {
                 flashlightEnabled = true;
+                audioSource.Play();
             }
         }
 
