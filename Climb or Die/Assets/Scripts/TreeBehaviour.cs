@@ -1,12 +1,13 @@
+using System.Diagnostics;
 using UnityEngine;
 
 public class TreeBehaviour : MonoBehaviour
 {
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
     public GameObject player;
     string objectName;
-    public bool hitGround;
-    public GameObject terrain;
+    bool hitGround;
+    GameObject terrain;
+
     void Start()
     {
         objectName = gameObject.name;
@@ -18,31 +19,17 @@ public class TreeBehaviour : MonoBehaviour
     }
     private void OnGameStateChanged(GameState newGameState)
     {
-
         enabled = newGameState == GameState.Gameplay;
     }
     void OnDestroy()
     {
         GameStateManager.Instance.OnGameStateChanged -= OnGameStateChanged;
     }
-    // Update is called once per frame
+
     void Update()
     {
         terrain = FPSController.terrain;
         hitGround = FPSController.hitGround;
-        /*if (objectName == "StartTerrain" )
-        {
-            Debug.Log(hitGround);
-        }*/
-
-        if (hitGround && (terrain.name == objectName))
-        {
-            GetComponent<TerrainCollider>().enabled = true;
-
-        }
-        else
-        {
-            GetComponent<TerrainCollider>().enabled = false;
-        }
+        transform.GetComponent<TerrainCollider>().enabled = hitGround && (terrain.name == objectName);
     }
 }

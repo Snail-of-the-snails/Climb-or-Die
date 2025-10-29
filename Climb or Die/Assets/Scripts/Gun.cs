@@ -3,7 +3,8 @@ using UnityEngine.Audio;
 public class Gun : MonoBehaviour
 {
     public GameObject shotgun;
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
+    private bool paused = false;
+
     void Awake()
     {
         GameStateManager.Instance.OnGameStateChanged += OnGameStateChanged;
@@ -12,10 +13,10 @@ public class Gun : MonoBehaviour
     {
         GameStateManager.Instance.OnGameStateChanged -= OnGameStateChanged;
     }
-    // Update is called once per frame
+
     void Update()
     {
-        if (Input.GetMouseButtonDown(0) && shotgun.activeSelf)
+        if (Input.GetMouseButtonDown(0) && shotgun.activeSelf && !paused)
         {
             transform.GetComponent<AudioSource>().Play();
 
@@ -23,8 +24,16 @@ public class Gun : MonoBehaviour
     }
     private void OnGameStateChanged(GameState newGameState)
     {
-        transform.GetComponent<AudioSource>().Pause();
-        enabled = newGameState == GameState.Gameplay;
-    }
+        AudioSource source = transform.GetComponent<AudioSource>();
+        paused = !(newGameState == GameState.Gameplay);
 
+        if (paused)
+        {
+            source.Pause();
+        }
+        else
+        {
+            source.UnPause();
+        }
+    }
 }

@@ -14,8 +14,7 @@ public class FPSController : MonoBehaviour
     public static bool hitGround;
     public static GameObject terrain;
     private Rigidbody rb;
- //   public GameObject menu;
- //   private bool paused = false;
+    
     public bool isDead;
     private Vector3 position;
 
