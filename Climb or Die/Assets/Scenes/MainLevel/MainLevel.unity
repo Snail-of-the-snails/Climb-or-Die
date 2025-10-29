@@ -178,8 +178,6 @@ GameObject:
   - component: {fileID: 19290602}
   - component: {fileID: 19290604}
   - component: {fileID: 19290603}
-  - component: {fileID: 19290605}
-  - component: {fileID: 19290606}
   m_Layer: 0
   m_Name: Terrain_(1500.00, 27.32, -1500.00)
   m_TagString: Untagged
@@ -221,7 +219,7 @@ TerrainCollider:
   m_Enabled: 1
   serializedVersion: 2
   m_TerrainData: {fileID: 15600000, guid: c00517e46607c0b4aa5df17b49c74696, type: 2}
-  m_EnableTreeColliders: 1
+  m_EnableTreeColliders: 0
 --- !u!218 &19290604
 Terrain:
   m_ObjectHideFlags: 0
@@ -262,42 +260,6 @@ Terrain:
   m_EnableHeightmapRayTracing: 1
   m_EnableTreesAndDetailsRayTracing: 0
   m_TreeMotionVectorModeOverride: 3
---- !u!114 &19290605
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 19290601}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ecebecfd8a1f4614a990cad8331acdfe, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::TreeBehaviour
-  player: {fileID: 4120915346458048542}
-  hitGround: 0
-  terrain: {fileID: 0}
---- !u!65 &19290606
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 19290601}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Size: {x: 1010, y: 0, z: 1010}
-  m_Center: {x: 500, y: -100, z: 500}
 --- !u!1 &47456858
 GameObject:
   m_ObjectHideFlags: 0
@@ -309,8 +271,6 @@ GameObject:
   - component: {fileID: 47456859}
   - component: {fileID: 47456861}
   - component: {fileID: 47456860}
-  - component: {fileID: 47456862}
-  - component: {fileID: 47456863}
   m_Layer: 0
   m_Name: Terrain_(2500.00, 27.32, -500.00)
   m_TagString: Untagged
@@ -352,7 +312,7 @@ TerrainCollider:
   m_Enabled: 1
   serializedVersion: 2
   m_TerrainData: {fileID: 15600000, guid: 819997087412fcd4ba6a6abf094fff98, type: 2}
-  m_EnableTreeColliders: 1
+  m_EnableTreeColliders: 0
 --- !u!218 &47456861
 Terrain:
   m_ObjectHideFlags: 0
@@ -393,42 +353,6 @@ Terrain:
   m_EnableHeightmapRayTracing: 1
   m_EnableTreesAndDetailsRayTracing: 0
   m_TreeMotionVectorModeOverride: 3
---- !u!114 &47456862
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 47456858}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ecebecfd8a1f4614a990cad8331acdfe, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::TreeBehaviour
-  player: {fileID: 4120915346458048542}
-  hitGround: 0
-  terrain: {fileID: 0}
---- !u!65 &47456863
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 47456858}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Size: {x: 1010, y: 0, z: 1010}
-  m_Center: {x: 500, y: -100, z: 500}
 --- !u!1 &50230293
 GameObject:
   m_ObjectHideFlags: 0
@@ -573,8 +497,6 @@ GameObject:
   - component: {fileID: 51297679}
   - component: {fileID: 51297681}
   - component: {fileID: 51297680}
-  - component: {fileID: 51297682}
-  - component: {fileID: 51297683}
   m_Layer: 0
   m_Name: Terrain_(2500.00, 27.32, 1500.00)
   m_TagString: Untagged
@@ -616,7 +538,7 @@ TerrainCollider:
   m_Enabled: 1
   serializedVersion: 2
   m_TerrainData: {fileID: 15600000, guid: 593186c51a60b364d81d314cf7c393cf, type: 2}
-  m_EnableTreeColliders: 1
+  m_EnableTreeColliders: 0
 --- !u!218 &51297681
 Terrain:
   m_ObjectHideFlags: 0
@@ -657,42 +579,6 @@ Terrain:
   m_EnableHeightmapRayTracing: 1
   m_EnableTreesAndDetailsRayTracing: 0
   m_TreeMotionVectorModeOverride: 3
---- !u!114 &51297682
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 51297678}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ecebecfd8a1f4614a990cad8331acdfe, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::TreeBehaviour
-  player: {fileID: 4120915346458048542}
-  hitGround: 0
-  terrain: {fileID: 0}
---- !u!65 &51297683
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 51297678}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Size: {x: 1010, y: 0, z: 1010}
-  m_Center: {x: 500, y: -100, z: 500}
 --- !u!1 &64853716
 GameObject:
   m_ObjectHideFlags: 0
@@ -704,8 +590,6 @@ GameObject:
   - component: {fileID: 64853717}
   - component: {fileID: 64853719}
   - component: {fileID: 64853718}
-  - component: {fileID: 64853720}
-  - component: {fileID: 64853721}
   m_Layer: 0
   m_Name: Terrain_(-500.00, 27.32, 500.00)
   m_TagString: Untagged
@@ -747,7 +631,7 @@ TerrainCollider:
   m_Enabled: 1
   serializedVersion: 2
   m_TerrainData: {fileID: 15600000, guid: 42d3a4e64c49adf4a8ec13c53394619e, type: 2}
-  m_EnableTreeColliders: 1
+  m_EnableTreeColliders: 0
 --- !u!218 &64853719
 Terrain:
   m_ObjectHideFlags: 0
@@ -788,614 +672,7 @@ Terrain:
   m_EnableHeightmapRayTracing: 1
   m_EnableTreesAndDetailsRayTracing: 0
   m_TreeMotionVectorModeOverride: 3
---- !u!114 &64853720
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 64853716}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ecebecfd8a1f4614a990cad8331acdfe, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::TreeBehaviour
-  player: {fileID: 4120915346458048542}
-  hitGround: 0
-  terrain: {fileID: 0}
---- !u!65 &64853721
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 64853716}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Size: {x: 1010, y: 0, z: 1010}
-  m_Center: {x: 500, y: -100, z: 500}
---- !u!1 &120764693
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 120764694}
-  - component: {fileID: 120764696}
-  - component: {fileID: 120764695}
-  - component: {fileID: 120764697}
-  - component: {fileID: 120764698}
-  m_Layer: 0
-  m_Name: Terrain_(-2500.00, 27.32, 1500.00)
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 2147483647
-  m_IsActive: 1
---- !u!4 &120764694
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 120764693}
-  serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -3000, y: 0, z: 1000}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 1643832301}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!154 &120764695
-TerrainCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 120764693}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_TerrainData: {fileID: 15600000, guid: 63726ff6e42dde043afd96b0addd912c, type: 2}
-  m_EnableTreeColliders: 1
---- !u!218 &120764696
-Terrain:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 120764693}
-  m_Enabled: 1
-  serializedVersion: 6
-  m_TerrainData: {fileID: 15600000, guid: 63726ff6e42dde043afd96b0addd912c, type: 2}
-  m_TreeDistance: 5000
-  m_TreeBillboardDistance: 50
-  m_TreeCrossFadeLength: 5
-  m_TreeMaximumFullLODCount: 50
-  m_DetailObjectDistance: 80
-  m_DetailObjectDensity: 1
-  m_HeightmapPixelError: 5
-  m_SplatMapDistance: 1000
-  m_HeightmapMinimumLODSimplification: 0
-  m_HeightmapMaximumLOD: 0
-  m_ShadowCastingMode: 2
-  m_DrawHeightmap: 1
-  m_DrawInstanced: 0
-  m_DrawTreesAndFoliage: 1
-  m_StaticShadowCaster: 0
-  m_IgnoreQualitySettings: 0
-  m_ReflectionProbeUsage: 1
-  m_MaterialTemplate: {fileID: 2100000, guid: 594ea882c5a793440b60ff72d896021e, type: 2}
-  m_BakeLightProbesForTrees: 1
-  m_PreserveTreePrototypeLayers: 0
-  m_DeringLightProbesForTrees: 1
-  m_ReceiveGI: 1
-  m_ScaleInLightmap: 0.0256
-  m_LightmapParameters: {fileID: 15203, guid: 0000000000000000f000000000000000, type: 0}
-  m_GroupingID: 0
-  m_RenderingLayerMask: 1
-  m_AllowAutoConnect: 1
-  m_EnableHeightmapRayTracing: 1
-  m_EnableTreesAndDetailsRayTracing: 0
-  m_TreeMotionVectorModeOverride: 3
---- !u!114 &120764697
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 120764693}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ecebecfd8a1f4614a990cad8331acdfe, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::TreeBehaviour
-  player: {fileID: 4120915346458048542}
-  hitGround: 0
-  terrain: {fileID: 0}
---- !u!65 &120764698
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 120764693}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Size: {x: 1010, y: 0, z: 1010}
-  m_Center: {x: 500, y: -100, z: 500}
---- !u!1 &139287631
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 139287632}
-  - component: {fileID: 139287634}
-  - component: {fileID: 139287633}
-  - component: {fileID: 139287635}
-  - component: {fileID: 139287636}
-  m_Layer: 0
-  m_Name: Terrain_(-500.00, 27.32, 3500.00)
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 2147483647
-  m_IsActive: 1
---- !u!4 &139287632
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 139287631}
-  serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -1000, y: 0, z: 3000}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 1643832301}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!154 &139287633
-TerrainCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 139287631}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_TerrainData: {fileID: 15600000, guid: a2e56a3bdc4975e43aa71fe5db5b0f33, type: 2}
-  m_EnableTreeColliders: 1
---- !u!218 &139287634
-Terrain:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 139287631}
-  m_Enabled: 1
-  serializedVersion: 6
-  m_TerrainData: {fileID: 15600000, guid: a2e56a3bdc4975e43aa71fe5db5b0f33, type: 2}
-  m_TreeDistance: 5000
-  m_TreeBillboardDistance: 50
-  m_TreeCrossFadeLength: 5
-  m_TreeMaximumFullLODCount: 50
-  m_DetailObjectDistance: 80
-  m_DetailObjectDensity: 1
-  m_HeightmapPixelError: 5
-  m_SplatMapDistance: 1000
-  m_HeightmapMinimumLODSimplification: 0
-  m_HeightmapMaximumLOD: 0
-  m_ShadowCastingMode: 2
-  m_DrawHeightmap: 1
-  m_DrawInstanced: 0
-  m_DrawTreesAndFoliage: 1
-  m_StaticShadowCaster: 0
-  m_IgnoreQualitySettings: 0
-  m_ReflectionProbeUsage: 1
-  m_MaterialTemplate: {fileID: 2100000, guid: 594ea882c5a793440b60ff72d896021e, type: 2}
-  m_BakeLightProbesForTrees: 1
-  m_PreserveTreePrototypeLayers: 0
-  m_DeringLightProbesForTrees: 1
-  m_ReceiveGI: 1
-  m_ScaleInLightmap: 0.0256
-  m_LightmapParameters: {fileID: 15203, guid: 0000000000000000f000000000000000, type: 0}
-  m_GroupingID: 0
-  m_RenderingLayerMask: 1
-  m_AllowAutoConnect: 1
-  m_EnableHeightmapRayTracing: 1
-  m_EnableTreesAndDetailsRayTracing: 0
-  m_TreeMotionVectorModeOverride: 3
---- !u!114 &139287635
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 139287631}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ecebecfd8a1f4614a990cad8331acdfe, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::TreeBehaviour
-  player: {fileID: 4120915346458048542}
-  hitGround: 0
-  terrain: {fileID: 0}
---- !u!65 &139287636
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 139287631}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Size: {x: 1010, y: 0, z: 1010}
-  m_Center: {x: 500, y: -100, z: 500}
---- !u!1 &179073095
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 179073097}
-  - component: {fileID: 179073096}
-  m_Layer: 0
-  m_Name: Flashlight Holder
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &179073096
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 179073095}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 05373f290ce047445bf28ff8a1fbc5e5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  playerCamera: {fileID: 225150172}
-  speed: 10
---- !u!4 &179073097
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 179073095}
-  serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 3909, y: 176.81, z: 109.21107}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children:
-  - {fileID: 1849972642}
-  m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &196646993
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 196646994}
-  - component: {fileID: 196646996}
-  - component: {fileID: 196646995}
-  - component: {fileID: 196646997}
-  - component: {fileID: 196646998}
-  m_Layer: 0
-  m_Name: Terrain_(500.00, 27.32, 3500.00)
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 2147483647
-  m_IsActive: 1
---- !u!4 &196646994
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 196646993}
-  serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 3000}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 1643832301}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!154 &196646995
-TerrainCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 196646993}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_TerrainData: {fileID: 15600000, guid: cb1fdd2cfbb179747a00da194b0364c6, type: 2}
-  m_EnableTreeColliders: 1
---- !u!218 &196646996
-Terrain:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 196646993}
-  m_Enabled: 1
-  serializedVersion: 6
-  m_TerrainData: {fileID: 15600000, guid: cb1fdd2cfbb179747a00da194b0364c6, type: 2}
-  m_TreeDistance: 5000
-  m_TreeBillboardDistance: 50
-  m_TreeCrossFadeLength: 5
-  m_TreeMaximumFullLODCount: 50
-  m_DetailObjectDistance: 80
-  m_DetailObjectDensity: 1
-  m_HeightmapPixelError: 5
-  m_SplatMapDistance: 1000
-  m_HeightmapMinimumLODSimplification: 0
-  m_HeightmapMaximumLOD: 0
-  m_ShadowCastingMode: 2
-  m_DrawHeightmap: 1
-  m_DrawInstanced: 0
-  m_DrawTreesAndFoliage: 1
-  m_StaticShadowCaster: 0
-  m_IgnoreQualitySettings: 0
-  m_ReflectionProbeUsage: 1
-  m_MaterialTemplate: {fileID: 2100000, guid: 594ea882c5a793440b60ff72d896021e, type: 2}
-  m_BakeLightProbesForTrees: 1
-  m_PreserveTreePrototypeLayers: 0
-  m_DeringLightProbesForTrees: 1
-  m_ReceiveGI: 1
-  m_ScaleInLightmap: 0.0256
-  m_LightmapParameters: {fileID: 15203, guid: 0000000000000000f000000000000000, type: 0}
-  m_GroupingID: 0
-  m_RenderingLayerMask: 1
-  m_AllowAutoConnect: 1
-  m_EnableHeightmapRayTracing: 1
-  m_EnableTreesAndDetailsRayTracing: 0
-  m_TreeMotionVectorModeOverride: 3
---- !u!114 &196646997
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 196646993}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ecebecfd8a1f4614a990cad8331acdfe, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::TreeBehaviour
-  player: {fileID: 4120915346458048542}
-  hitGround: 0
-  terrain: {fileID: 0}
---- !u!65 &196646998
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 196646993}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Size: {x: 1010, y: 0, z: 1010}
-  m_Center: {x: 500, y: -100, z: 500}
---- !u!1 &198124800
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 198124801}
-  - component: {fileID: 198124803}
-  - component: {fileID: 198124802}
-  - component: {fileID: 198124804}
-  - component: {fileID: 198124805}
-  m_Layer: 0
-  m_Name: Terrain_(-2500.00, 27.32, 3500.00)
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 2147483647
-  m_IsActive: 1
---- !u!4 &198124801
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 198124800}
-  serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -3000, y: 0, z: 3000}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 1643832301}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!154 &198124802
-TerrainCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 198124800}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_TerrainData: {fileID: 15600000, guid: 912f9054c9d17f7459d12aef415ff7a7, type: 2}
-  m_EnableTreeColliders: 1
---- !u!218 &198124803
-Terrain:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 198124800}
-  m_Enabled: 1
-  serializedVersion: 6
-  m_TerrainData: {fileID: 15600000, guid: 912f9054c9d17f7459d12aef415ff7a7, type: 2}
-  m_TreeDistance: 5000
-  m_TreeBillboardDistance: 50
-  m_TreeCrossFadeLength: 5
-  m_TreeMaximumFullLODCount: 50
-  m_DetailObjectDistance: 80
-  m_DetailObjectDensity: 1
-  m_HeightmapPixelError: 5
-  m_SplatMapDistance: 1000
-  m_HeightmapMinimumLODSimplification: 0
-  m_HeightmapMaximumLOD: 0
-  m_ShadowCastingMode: 2
-  m_DrawHeightmap: 1
-  m_DrawInstanced: 0
-  m_DrawTreesAndFoliage: 1
-  m_StaticShadowCaster: 0
-  m_IgnoreQualitySettings: 0
-  m_ReflectionProbeUsage: 1
-  m_MaterialTemplate: {fileID: 2100000, guid: 594ea882c5a793440b60ff72d896021e, type: 2}
-  m_BakeLightProbesForTrees: 1
-  m_PreserveTreePrototypeLayers: 0
-  m_DeringLightProbesForTrees: 1
-  m_ReceiveGI: 1
-  m_ScaleInLightmap: 0.0256
-  m_LightmapParameters: {fileID: 15203, guid: 0000000000000000f000000000000000, type: 0}
-  m_GroupingID: 0
-  m_RenderingLayerMask: 1
-  m_AllowAutoConnect: 1
-  m_EnableHeightmapRayTracing: 1
-  m_EnableTreesAndDetailsRayTracing: 0
-  m_TreeMotionVectorModeOverride: 3
---- !u!114 &198124804
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 198124800}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ecebecfd8a1f4614a990cad8331acdfe, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::TreeBehaviour
-  player: {fileID: 4120915346458048542}
-  hitGround: 0
-  terrain: {fileID: 0}
---- !u!65 &198124805
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 198124800}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Size: {x: 1010, y: 0, z: 1010}
-  m_Center: {x: 500, y: -100, z: 500}
---- !u!43 &220879708
+--- !u!43 &111142137
 Mesh:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1573,6 +850,425 @@ Mesh:
       - serializedVersion: 1
         m_IndexStart: 0
         m_IndexCount: 0
+--- !u!1 &120764693
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 120764694}
+  - component: {fileID: 120764696}
+  - component: {fileID: 120764695}
+  m_Layer: 0
+  m_Name: Terrain_(-2500.00, 27.32, 1500.00)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 2147483647
+  m_IsActive: 1
+--- !u!4 &120764694
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 120764693}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -3000, y: 0, z: 1000}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1643832301}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!154 &120764695
+TerrainCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 120764693}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_TerrainData: {fileID: 15600000, guid: 63726ff6e42dde043afd96b0addd912c, type: 2}
+  m_EnableTreeColliders: 0
+--- !u!218 &120764696
+Terrain:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 120764693}
+  m_Enabled: 1
+  serializedVersion: 6
+  m_TerrainData: {fileID: 15600000, guid: 63726ff6e42dde043afd96b0addd912c, type: 2}
+  m_TreeDistance: 5000
+  m_TreeBillboardDistance: 50
+  m_TreeCrossFadeLength: 5
+  m_TreeMaximumFullLODCount: 50
+  m_DetailObjectDistance: 80
+  m_DetailObjectDensity: 1
+  m_HeightmapPixelError: 5
+  m_SplatMapDistance: 1000
+  m_HeightmapMinimumLODSimplification: 0
+  m_HeightmapMaximumLOD: 0
+  m_ShadowCastingMode: 2
+  m_DrawHeightmap: 1
+  m_DrawInstanced: 0
+  m_DrawTreesAndFoliage: 1
+  m_StaticShadowCaster: 0
+  m_IgnoreQualitySettings: 0
+  m_ReflectionProbeUsage: 1
+  m_MaterialTemplate: {fileID: 2100000, guid: 594ea882c5a793440b60ff72d896021e, type: 2}
+  m_BakeLightProbesForTrees: 1
+  m_PreserveTreePrototypeLayers: 0
+  m_DeringLightProbesForTrees: 1
+  m_ReceiveGI: 1
+  m_ScaleInLightmap: 0.0256
+  m_LightmapParameters: {fileID: 15203, guid: 0000000000000000f000000000000000, type: 0}
+  m_GroupingID: 0
+  m_RenderingLayerMask: 1
+  m_AllowAutoConnect: 1
+  m_EnableHeightmapRayTracing: 1
+  m_EnableTreesAndDetailsRayTracing: 0
+  m_TreeMotionVectorModeOverride: 3
+--- !u!1 &139287631
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 139287632}
+  - component: {fileID: 139287634}
+  - component: {fileID: 139287633}
+  m_Layer: 0
+  m_Name: Terrain_(-500.00, 27.32, 3500.00)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 2147483647
+  m_IsActive: 1
+--- !u!4 &139287632
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 139287631}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -1000, y: 0, z: 3000}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1643832301}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!154 &139287633
+TerrainCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 139287631}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_TerrainData: {fileID: 15600000, guid: a2e56a3bdc4975e43aa71fe5db5b0f33, type: 2}
+  m_EnableTreeColliders: 0
+--- !u!218 &139287634
+Terrain:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 139287631}
+  m_Enabled: 1
+  serializedVersion: 6
+  m_TerrainData: {fileID: 15600000, guid: a2e56a3bdc4975e43aa71fe5db5b0f33, type: 2}
+  m_TreeDistance: 5000
+  m_TreeBillboardDistance: 50
+  m_TreeCrossFadeLength: 5
+  m_TreeMaximumFullLODCount: 50
+  m_DetailObjectDistance: 80
+  m_DetailObjectDensity: 1
+  m_HeightmapPixelError: 5
+  m_SplatMapDistance: 1000
+  m_HeightmapMinimumLODSimplification: 0
+  m_HeightmapMaximumLOD: 0
+  m_ShadowCastingMode: 2
+  m_DrawHeightmap: 1
+  m_DrawInstanced: 0
+  m_DrawTreesAndFoliage: 1
+  m_StaticShadowCaster: 0
+  m_IgnoreQualitySettings: 0
+  m_ReflectionProbeUsage: 1
+  m_MaterialTemplate: {fileID: 2100000, guid: 594ea882c5a793440b60ff72d896021e, type: 2}
+  m_BakeLightProbesForTrees: 1
+  m_PreserveTreePrototypeLayers: 0
+  m_DeringLightProbesForTrees: 1
+  m_ReceiveGI: 1
+  m_ScaleInLightmap: 0.0256
+  m_LightmapParameters: {fileID: 15203, guid: 0000000000000000f000000000000000, type: 0}
+  m_GroupingID: 0
+  m_RenderingLayerMask: 1
+  m_AllowAutoConnect: 1
+  m_EnableHeightmapRayTracing: 1
+  m_EnableTreesAndDetailsRayTracing: 0
+  m_TreeMotionVectorModeOverride: 3
+--- !u!1 &179073095
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 179073097}
+  - component: {fileID: 179073096}
+  m_Layer: 0
+  m_Name: Flashlight Holder
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &179073096
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 179073095}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 05373f290ce047445bf28ff8a1fbc5e5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playerCamera: {fileID: 225150172}
+  speed: 10
+--- !u!4 &179073097
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 179073095}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 3909, y: 176.81, z: 109.21107}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 1849972642}
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &196646993
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 196646994}
+  - component: {fileID: 196646996}
+  - component: {fileID: 196646995}
+  m_Layer: 0
+  m_Name: Terrain_(500.00, 27.32, 3500.00)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 2147483647
+  m_IsActive: 1
+--- !u!4 &196646994
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 196646993}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 3000}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1643832301}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!154 &196646995
+TerrainCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 196646993}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_TerrainData: {fileID: 15600000, guid: cb1fdd2cfbb179747a00da194b0364c6, type: 2}
+  m_EnableTreeColliders: 0
+--- !u!218 &196646996
+Terrain:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 196646993}
+  m_Enabled: 1
+  serializedVersion: 6
+  m_TerrainData: {fileID: 15600000, guid: cb1fdd2cfbb179747a00da194b0364c6, type: 2}
+  m_TreeDistance: 5000
+  m_TreeBillboardDistance: 50
+  m_TreeCrossFadeLength: 5
+  m_TreeMaximumFullLODCount: 50
+  m_DetailObjectDistance: 80
+  m_DetailObjectDensity: 1
+  m_HeightmapPixelError: 5
+  m_SplatMapDistance: 1000
+  m_HeightmapMinimumLODSimplification: 0
+  m_HeightmapMaximumLOD: 0
+  m_ShadowCastingMode: 2
+  m_DrawHeightmap: 1
+  m_DrawInstanced: 0
+  m_DrawTreesAndFoliage: 1
+  m_StaticShadowCaster: 0
+  m_IgnoreQualitySettings: 0
+  m_ReflectionProbeUsage: 1
+  m_MaterialTemplate: {fileID: 2100000, guid: 594ea882c5a793440b60ff72d896021e, type: 2}
+  m_BakeLightProbesForTrees: 1
+  m_PreserveTreePrototypeLayers: 0
+  m_DeringLightProbesForTrees: 1
+  m_ReceiveGI: 1
+  m_ScaleInLightmap: 0.0256
+  m_LightmapParameters: {fileID: 15203, guid: 0000000000000000f000000000000000, type: 0}
+  m_GroupingID: 0
+  m_RenderingLayerMask: 1
+  m_AllowAutoConnect: 1
+  m_EnableHeightmapRayTracing: 1
+  m_EnableTreesAndDetailsRayTracing: 0
+  m_TreeMotionVectorModeOverride: 3
+--- !u!1 &198124800
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 198124801}
+  - component: {fileID: 198124803}
+  - component: {fileID: 198124802}
+  m_Layer: 0
+  m_Name: Terrain_(-2500.00, 27.32, 3500.00)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 2147483647
+  m_IsActive: 1
+--- !u!4 &198124801
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 198124800}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -3000, y: 0, z: 3000}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1643832301}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!154 &198124802
+TerrainCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 198124800}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_TerrainData: {fileID: 15600000, guid: 912f9054c9d17f7459d12aef415ff7a7, type: 2}
+  m_EnableTreeColliders: 0
+--- !u!218 &198124803
+Terrain:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 198124800}
+  m_Enabled: 1
+  serializedVersion: 6
+  m_TerrainData: {fileID: 15600000, guid: 912f9054c9d17f7459d12aef415ff7a7, type: 2}
+  m_TreeDistance: 5000
+  m_TreeBillboardDistance: 50
+  m_TreeCrossFadeLength: 5
+  m_TreeMaximumFullLODCount: 50
+  m_DetailObjectDistance: 80
+  m_DetailObjectDensity: 1
+  m_HeightmapPixelError: 5
+  m_SplatMapDistance: 1000
+  m_HeightmapMinimumLODSimplification: 0
+  m_HeightmapMaximumLOD: 0
+  m_ShadowCastingMode: 2
+  m_DrawHeightmap: 1
+  m_DrawInstanced: 0
+  m_DrawTreesAndFoliage: 1
+  m_StaticShadowCaster: 0
+  m_IgnoreQualitySettings: 0
+  m_ReflectionProbeUsage: 1
+  m_MaterialTemplate: {fileID: 2100000, guid: 594ea882c5a793440b60ff72d896021e, type: 2}
+  m_BakeLightProbesForTrees: 1
+  m_PreserveTreePrototypeLayers: 0
+  m_DeringLightProbesForTrees: 1
+  m_ReceiveGI: 1
+  m_ScaleInLightmap: 0.0256
+  m_LightmapParameters: {fileID: 15203, guid: 0000000000000000f000000000000000, type: 0}
+  m_GroupingID: 0
+  m_RenderingLayerMask: 1
+  m_AllowAutoConnect: 1
+  m_EnableHeightmapRayTracing: 1
+  m_EnableTreesAndDetailsRayTracing: 0
+  m_TreeMotionVectorModeOverride: 3
 --- !u!1 &225150172
 GameObject:
   m_ObjectHideFlags: 0
@@ -2011,9 +1707,6 @@ GameObject:
   - component: {fileID: 240831357}
   - component: {fileID: 240831359}
   - component: {fileID: 240831358}
-  - component: {fileID: 240831361}
-  - component: {fileID: 240831360}
-  - component: {fileID: 240831362}
   m_Layer: 0
   m_Name: Terrain_(-2500.00, 27.32, -1500.00)
   m_TagString: Untagged
@@ -2055,7 +1748,7 @@ TerrainCollider:
   m_Enabled: 1
   serializedVersion: 2
   m_TerrainData: {fileID: 15600000, guid: e9fffb1d4fcfed543805e16ec939af74, type: 2}
-  m_EnableTreeColliders: 1
+  m_EnableTreeColliders: 0
 --- !u!218 &240831359
 Terrain:
   m_ObjectHideFlags: 0
@@ -2096,57 +1789,6 @@ Terrain:
   m_EnableHeightmapRayTracing: 1
   m_EnableTreesAndDetailsRayTracing: 0
   m_TreeMotionVectorModeOverride: 3
---- !u!114 &240831360
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 240831356}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ecebecfd8a1f4614a990cad8331acdfe, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::TreeBehaviour
-  player: {fileID: 0}
-  hitGround: 0
-  terrain: {fileID: 0}
---- !u!114 &240831361
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 240831356}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ecebecfd8a1f4614a990cad8331acdfe, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::TreeBehaviour
-  player: {fileID: 4120915346458048542}
-  hitGround: 0
-  terrain: {fileID: 0}
---- !u!65 &240831362
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 240831356}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Size: {x: 1010, y: 0, z: 1010}
-  m_Center: {x: 500, y: -100, z: 500}
 --- !u!1 &291441136
 GameObject:
   m_ObjectHideFlags: 0
@@ -2256,8 +1898,6 @@ GameObject:
   - component: {fileID: 313667207}
   - component: {fileID: 313667209}
   - component: {fileID: 313667208}
-  - component: {fileID: 313667210}
-  - component: {fileID: 313667211}
   m_Layer: 0
   m_Name: Terrain_(-500.00, 27.32, -1500.00)
   m_TagString: Untagged
@@ -2299,7 +1939,7 @@ TerrainCollider:
   m_Enabled: 1
   serializedVersion: 2
   m_TerrainData: {fileID: 15600000, guid: 6a3680400aaaa4649b15d58b60635f5b, type: 2}
-  m_EnableTreeColliders: 1
+  m_EnableTreeColliders: 0
 --- !u!218 &313667209
 Terrain:
   m_ObjectHideFlags: 0
@@ -2340,42 +1980,6 @@ Terrain:
   m_EnableHeightmapRayTracing: 1
   m_EnableTreesAndDetailsRayTracing: 0
   m_TreeMotionVectorModeOverride: 3
---- !u!114 &313667210
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 313667206}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ecebecfd8a1f4614a990cad8331acdfe, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::TreeBehaviour
-  player: {fileID: 4120915346458048542}
-  hitGround: 0
-  terrain: {fileID: 0}
---- !u!65 &313667211
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 313667206}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Size: {x: 1010, y: 0, z: 1010}
-  m_Center: {x: 500, y: -100, z: 500}
 --- !u!1 &317427759
 GameObject:
   m_ObjectHideFlags: 0
@@ -2419,8 +2023,6 @@ GameObject:
   - component: {fileID: 387480837}
   - component: {fileID: 387480839}
   - component: {fileID: 387480838}
-  - component: {fileID: 387480840}
-  - component: {fileID: 387480841}
   m_Layer: 0
   m_Name: Terrain_(-2500.00, 27.32, 500.00)
   m_TagString: Untagged
@@ -2462,7 +2064,7 @@ TerrainCollider:
   m_Enabled: 1
   serializedVersion: 2
   m_TerrainData: {fileID: 15600000, guid: 41b8f0885f2608c41b531c8a386630a1, type: 2}
-  m_EnableTreeColliders: 1
+  m_EnableTreeColliders: 0
 --- !u!218 &387480839
 Terrain:
   m_ObjectHideFlags: 0
@@ -2503,42 +2105,6 @@ Terrain:
   m_EnableHeightmapRayTracing: 1
   m_EnableTreesAndDetailsRayTracing: 0
   m_TreeMotionVectorModeOverride: 3
---- !u!114 &387480840
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 387480836}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ecebecfd8a1f4614a990cad8331acdfe, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::TreeBehaviour
-  player: {fileID: 4120915346458048542}
-  hitGround: 0
-  terrain: {fileID: 0}
---- !u!65 &387480841
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 387480836}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Size: {x: 1010, y: 0, z: 1010}
-  m_Center: {x: 500, y: -100, z: 500}
 --- !u!1 &391980729
 GameObject:
   m_ObjectHideFlags: 0
@@ -2661,8 +2227,6 @@ GameObject:
   - component: {fileID: 406829992}
   - component: {fileID: 406829994}
   - component: {fileID: 406829993}
-  - component: {fileID: 406829995}
-  - component: {fileID: 406829996}
   m_Layer: 0
   m_Name: Terrain_(3500.00, 27.32, -2500.00)
   m_TagString: Untagged
@@ -2704,7 +2268,7 @@ TerrainCollider:
   m_Enabled: 1
   serializedVersion: 2
   m_TerrainData: {fileID: 15600000, guid: a14eaf2582eb9104b83601023fce9141, type: 2}
-  m_EnableTreeColliders: 1
+  m_EnableTreeColliders: 0
 --- !u!218 &406829994
 Terrain:
   m_ObjectHideFlags: 0
@@ -2745,42 +2309,6 @@ Terrain:
   m_EnableHeightmapRayTracing: 1
   m_EnableTreesAndDetailsRayTracing: 0
   m_TreeMotionVectorModeOverride: 3
---- !u!114 &406829995
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 406829991}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ecebecfd8a1f4614a990cad8331acdfe, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::TreeBehaviour
-  player: {fileID: 4120915346458048542}
-  hitGround: 0
-  terrain: {fileID: 0}
---- !u!65 &406829996
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 406829991}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Size: {x: 1010, y: 0, z: 1010}
-  m_Center: {x: 500, y: -100, z: 500}
 --- !u!1 &410087039
 GameObject:
   m_ObjectHideFlags: 0
@@ -2919,8 +2447,6 @@ GameObject:
   - component: {fileID: 421215257}
   - component: {fileID: 421215259}
   - component: {fileID: 421215258}
-  - component: {fileID: 421215260}
-  - component: {fileID: 421215261}
   m_Layer: 0
   m_Name: Terrain_(-1500.00, 27.32, 2500.00)
   m_TagString: Untagged
@@ -2962,7 +2488,7 @@ TerrainCollider:
   m_Enabled: 1
   serializedVersion: 2
   m_TerrainData: {fileID: 15600000, guid: 1e2fabc397c7bce4e9ed2c1861add896, type: 2}
-  m_EnableTreeColliders: 1
+  m_EnableTreeColliders: 0
 --- !u!218 &421215259
 Terrain:
   m_ObjectHideFlags: 0
@@ -3003,42 +2529,6 @@ Terrain:
   m_EnableHeightmapRayTracing: 1
   m_EnableTreesAndDetailsRayTracing: 0
   m_TreeMotionVectorModeOverride: 3
---- !u!114 &421215260
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 421215256}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ecebecfd8a1f4614a990cad8331acdfe, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::TreeBehaviour
-  player: {fileID: 4120915346458048542}
-  hitGround: 0
-  terrain: {fileID: 0}
---- !u!65 &421215261
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 421215256}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Size: {x: 1010, y: 0, z: 1010}
-  m_Center: {x: 500, y: -100, z: 500}
 --- !u!1 &438674447
 GameObject:
   m_ObjectHideFlags: 0
@@ -3050,8 +2540,6 @@ GameObject:
   - component: {fileID: 438674448}
   - component: {fileID: 438674450}
   - component: {fileID: 438674449}
-  - component: {fileID: 438674451}
-  - component: {fileID: 438674452}
   m_Layer: 0
   m_Name: Terrain_(-1500.00, 27.32, 3500.00)
   m_TagString: Untagged
@@ -3093,7 +2581,7 @@ TerrainCollider:
   m_Enabled: 1
   serializedVersion: 2
   m_TerrainData: {fileID: 15600000, guid: 79ade1e069f47b340873ad68811a20f1, type: 2}
-  m_EnableTreeColliders: 1
+  m_EnableTreeColliders: 0
 --- !u!218 &438674450
 Terrain:
   m_ObjectHideFlags: 0
@@ -3134,42 +2622,6 @@ Terrain:
   m_EnableHeightmapRayTracing: 1
   m_EnableTreesAndDetailsRayTracing: 0
   m_TreeMotionVectorModeOverride: 3
---- !u!114 &438674451
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 438674447}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ecebecfd8a1f4614a990cad8331acdfe, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::TreeBehaviour
-  player: {fileID: 4120915346458048542}
-  hitGround: 0
-  terrain: {fileID: 0}
---- !u!65 &438674452
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 438674447}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Size: {x: 1010, y: 0, z: 1010}
-  m_Center: {x: 500, y: -100, z: 500}
 --- !u!1 &447758222
 GameObject:
   m_ObjectHideFlags: 0
@@ -3392,8 +2844,6 @@ GameObject:
   - component: {fileID: 510332868}
   - component: {fileID: 510332870}
   - component: {fileID: 510332869}
-  - component: {fileID: 510332871}
-  - component: {fileID: 510332872}
   m_Layer: 0
   m_Name: Terrain_(500.00, 27.32, -500.00)
   m_TagString: Untagged
@@ -3435,7 +2885,7 @@ TerrainCollider:
   m_Enabled: 1
   serializedVersion: 2
   m_TerrainData: {fileID: 15600000, guid: e818bff9d168ff74bb453550c035109d, type: 2}
-  m_EnableTreeColliders: 1
+  m_EnableTreeColliders: 0
 --- !u!218 &510332870
 Terrain:
   m_ObjectHideFlags: 0
@@ -3476,42 +2926,6 @@ Terrain:
   m_EnableHeightmapRayTracing: 1
   m_EnableTreesAndDetailsRayTracing: 0
   m_TreeMotionVectorModeOverride: 3
---- !u!114 &510332871
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 510332867}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ecebecfd8a1f4614a990cad8331acdfe, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::TreeBehaviour
-  player: {fileID: 4120915346458048542}
-  hitGround: 0
-  terrain: {fileID: 0}
---- !u!65 &510332872
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 510332867}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Size: {x: 1010, y: 0, z: 1010}
-  m_Center: {x: 500, y: -100, z: 500}
 --- !u!1 &516719100
 GameObject:
   m_ObjectHideFlags: 0
@@ -3523,8 +2937,6 @@ GameObject:
   - component: {fileID: 516719101}
   - component: {fileID: 516719103}
   - component: {fileID: 516719102}
-  - component: {fileID: 516719104}
-  - component: {fileID: 516719105}
   m_Layer: 0
   m_Name: Terrain_(-1500.00, 27.32, -500.00)
   m_TagString: Untagged
@@ -3566,7 +2978,7 @@ TerrainCollider:
   m_Enabled: 1
   serializedVersion: 2
   m_TerrainData: {fileID: 15600000, guid: 4989b70dc9c12024f95c919c13c4e211, type: 2}
-  m_EnableTreeColliders: 1
+  m_EnableTreeColliders: 0
 --- !u!218 &516719103
 Terrain:
   m_ObjectHideFlags: 0
@@ -3607,42 +3019,6 @@ Terrain:
   m_EnableHeightmapRayTracing: 1
   m_EnableTreesAndDetailsRayTracing: 0
   m_TreeMotionVectorModeOverride: 3
---- !u!114 &516719104
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 516719100}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ecebecfd8a1f4614a990cad8331acdfe, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::TreeBehaviour
-  player: {fileID: 4120915346458048542}
-  hitGround: 0
-  terrain: {fileID: 0}
---- !u!65 &516719105
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 516719100}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Size: {x: 1010, y: 0, z: 1010}
-  m_Center: {x: 500, y: -100, z: 500}
 --- !u!1 &540693502
 GameObject:
   m_ObjectHideFlags: 0
@@ -4011,8 +3387,6 @@ GameObject:
   - component: {fileID: 644672021}
   - component: {fileID: 644672023}
   - component: {fileID: 644672022}
-  - component: {fileID: 644672024}
-  - component: {fileID: 644672025}
   m_Layer: 0
   m_Name: Terrain_(3500.00, 27.32, -1500.00)
   m_TagString: Untagged
@@ -4054,7 +3428,7 @@ TerrainCollider:
   m_Enabled: 1
   serializedVersion: 2
   m_TerrainData: {fileID: 15600000, guid: f6e68e3e6536e674db2914b095c5c2c7, type: 2}
-  m_EnableTreeColliders: 1
+  m_EnableTreeColliders: 0
 --- !u!218 &644672023
 Terrain:
   m_ObjectHideFlags: 0
@@ -4095,42 +3469,6 @@ Terrain:
   m_EnableHeightmapRayTracing: 1
   m_EnableTreesAndDetailsRayTracing: 0
   m_TreeMotionVectorModeOverride: 3
---- !u!114 &644672024
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 644672020}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ecebecfd8a1f4614a990cad8331acdfe, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::TreeBehaviour
-  player: {fileID: 4120915346458048542}
-  hitGround: 0
-  terrain: {fileID: 0}
---- !u!65 &644672025
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 644672020}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Size: {x: 1010, y: 0, z: 1010}
-  m_Center: {x: 500, y: -100, z: 500}
 --- !u!1 &665485737
 GameObject:
   m_ObjectHideFlags: 0
@@ -4340,8 +3678,6 @@ GameObject:
   - component: {fileID: 743575374}
   - component: {fileID: 743575376}
   - component: {fileID: 743575375}
-  - component: {fileID: 743575377}
-  - component: {fileID: 743575378}
   m_Layer: 0
   m_Name: Terrain_(3500.00, 27.32, 3500.00)
   m_TagString: Untagged
@@ -4383,7 +3719,7 @@ TerrainCollider:
   m_Enabled: 1
   serializedVersion: 2
   m_TerrainData: {fileID: 15600000, guid: 468c28fda0656424d8e9fe4078b012bc, type: 2}
-  m_EnableTreeColliders: 1
+  m_EnableTreeColliders: 0
 --- !u!218 &743575376
 Terrain:
   m_ObjectHideFlags: 0
@@ -4424,42 +3760,6 @@ Terrain:
   m_EnableHeightmapRayTracing: 1
   m_EnableTreesAndDetailsRayTracing: 0
   m_TreeMotionVectorModeOverride: 3
---- !u!114 &743575377
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 743575373}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ecebecfd8a1f4614a990cad8331acdfe, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::TreeBehaviour
-  player: {fileID: 4120915346458048542}
-  hitGround: 0
-  terrain: {fileID: 0}
---- !u!65 &743575378
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 743575373}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Size: {x: 1010, y: 0, z: 1010}
-  m_Center: {x: 500, y: -100, z: 500}
 --- !u!1 &770151309
 GameObject:
   m_ObjectHideFlags: 0
@@ -4471,8 +3771,6 @@ GameObject:
   - component: {fileID: 770151310}
   - component: {fileID: 770151312}
   - component: {fileID: 770151311}
-  - component: {fileID: 770151313}
-  - component: {fileID: 770151314}
   m_Layer: 0
   m_Name: Terrain_(-2500.00, 27.32, -500.00)
   m_TagString: Untagged
@@ -4514,7 +3812,7 @@ TerrainCollider:
   m_Enabled: 1
   serializedVersion: 2
   m_TerrainData: {fileID: 15600000, guid: c0557764efabfc149bf34f67e07ad517, type: 2}
-  m_EnableTreeColliders: 1
+  m_EnableTreeColliders: 0
 --- !u!218 &770151312
 Terrain:
   m_ObjectHideFlags: 0
@@ -4555,42 +3853,6 @@ Terrain:
   m_EnableHeightmapRayTracing: 1
   m_EnableTreesAndDetailsRayTracing: 0
   m_TreeMotionVectorModeOverride: 3
---- !u!114 &770151313
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 770151309}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ecebecfd8a1f4614a990cad8331acdfe, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::TreeBehaviour
-  player: {fileID: 4120915346458048542}
-  hitGround: 0
-  terrain: {fileID: 0}
---- !u!65 &770151314
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 770151309}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Size: {x: 1010, y: 0, z: 1010}
-  m_Center: {x: 500, y: -100, z: 500}
 --- !u!1 &770966052
 GameObject:
   m_ObjectHideFlags: 0
@@ -5036,8 +4298,6 @@ GameObject:
   - component: {fileID: 880698357}
   - component: {fileID: 880698359}
   - component: {fileID: 880698358}
-  - component: {fileID: 880698360}
-  - component: {fileID: 880698361}
   m_Layer: 0
   m_Name: Terrain_(500.00, 27.32, -2500.00)
   m_TagString: Untagged
@@ -5079,7 +4339,7 @@ TerrainCollider:
   m_Enabled: 1
   serializedVersion: 2
   m_TerrainData: {fileID: 15600000, guid: fc272d9cb50e4764d90feb20f50cd8d7, type: 2}
-  m_EnableTreeColliders: 1
+  m_EnableTreeColliders: 0
 --- !u!218 &880698359
 Terrain:
   m_ObjectHideFlags: 0
@@ -5120,42 +4380,6 @@ Terrain:
   m_EnableHeightmapRayTracing: 1
   m_EnableTreesAndDetailsRayTracing: 0
   m_TreeMotionVectorModeOverride: 3
---- !u!114 &880698360
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 880698356}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ecebecfd8a1f4614a990cad8331acdfe, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::TreeBehaviour
-  player: {fileID: 4120915346458048542}
-  hitGround: 0
-  terrain: {fileID: 0}
---- !u!65 &880698361
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 880698356}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Size: {x: 1010, y: 0, z: 1010}
-  m_Center: {x: 500, y: -100, z: 500}
 --- !u!1 &892553965
 GameObject:
   m_ObjectHideFlags: 0
@@ -5323,8 +4547,6 @@ GameObject:
   - component: {fileID: 903113880}
   - component: {fileID: 903113882}
   - component: {fileID: 903113881}
-  - component: {fileID: 903113883}
-  - component: {fileID: 903113884}
   m_Layer: 0
   m_Name: Terrain_(500.00, 27.32, 2500.00)
   m_TagString: Untagged
@@ -5366,7 +4588,7 @@ TerrainCollider:
   m_Enabled: 1
   serializedVersion: 2
   m_TerrainData: {fileID: 15600000, guid: 7750e5f726d3d8949928c176011508af, type: 2}
-  m_EnableTreeColliders: 1
+  m_EnableTreeColliders: 0
 --- !u!218 &903113882
 Terrain:
   m_ObjectHideFlags: 0
@@ -5407,42 +4629,6 @@ Terrain:
   m_EnableHeightmapRayTracing: 1
   m_EnableTreesAndDetailsRayTracing: 0
   m_TreeMotionVectorModeOverride: 3
---- !u!114 &903113883
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 903113879}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ecebecfd8a1f4614a990cad8331acdfe, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::TreeBehaviour
-  player: {fileID: 4120915346458048542}
-  hitGround: 0
-  terrain: {fileID: 0}
---- !u!65 &903113884
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 903113879}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Size: {x: 1010, y: 0, z: 1010}
-  m_Center: {x: 500, y: -100, z: 500}
 --- !u!1 &924649809
 GameObject:
   m_ObjectHideFlags: 0
@@ -6294,8 +5480,6 @@ GameObject:
   - component: {fileID: 1111327883}
   - component: {fileID: 1111327885}
   - component: {fileID: 1111327884}
-  - component: {fileID: 1111327886}
-  - component: {fileID: 1111327887}
   m_Layer: 0
   m_Name: Terrain_(1500.00, 27.32, -2500.00)
   m_TagString: Untagged
@@ -6337,7 +5521,7 @@ TerrainCollider:
   m_Enabled: 1
   serializedVersion: 2
   m_TerrainData: {fileID: 15600000, guid: b79234d228003744694c0f7b9ffae2c2, type: 2}
-  m_EnableTreeColliders: 1
+  m_EnableTreeColliders: 0
 --- !u!218 &1111327885
 Terrain:
   m_ObjectHideFlags: 0
@@ -6378,42 +5562,6 @@ Terrain:
   m_EnableHeightmapRayTracing: 1
   m_EnableTreesAndDetailsRayTracing: 0
   m_TreeMotionVectorModeOverride: 3
---- !u!114 &1111327886
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1111327882}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ecebecfd8a1f4614a990cad8331acdfe, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::TreeBehaviour
-  player: {fileID: 4120915346458048542}
-  hitGround: 0
-  terrain: {fileID: 0}
---- !u!65 &1111327887
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1111327882}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Size: {x: 1010, y: 0, z: 1010}
-  m_Center: {x: 500, y: -100, z: 500}
 --- !u!1 &1120108922
 GameObject:
   m_ObjectHideFlags: 0
@@ -6425,8 +5573,6 @@ GameObject:
   - component: {fileID: 1120108923}
   - component: {fileID: 1120108925}
   - component: {fileID: 1120108924}
-  - component: {fileID: 1120108926}
-  - component: {fileID: 1120108927}
   m_Layer: 0
   m_Name: Terrain_(3500.00, 27.32, 500.00)
   m_TagString: Untagged
@@ -6468,7 +5614,7 @@ TerrainCollider:
   m_Enabled: 1
   serializedVersion: 2
   m_TerrainData: {fileID: 15600000, guid: e3e0ee332c7105f4e990740857f64e4c, type: 2}
-  m_EnableTreeColliders: 1
+  m_EnableTreeColliders: 0
 --- !u!218 &1120108925
 Terrain:
   m_ObjectHideFlags: 0
@@ -6509,42 +5655,6 @@ Terrain:
   m_EnableHeightmapRayTracing: 1
   m_EnableTreesAndDetailsRayTracing: 0
   m_TreeMotionVectorModeOverride: 3
---- !u!114 &1120108926
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1120108922}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ecebecfd8a1f4614a990cad8331acdfe, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::TreeBehaviour
-  player: {fileID: 4120915346458048542}
-  hitGround: 0
-  terrain: {fileID: 0}
---- !u!65 &1120108927
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1120108922}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Size: {x: 1010, y: 0, z: 1010}
-  m_Center: {x: 500, y: -100, z: 500}
 --- !u!1 &1123271566
 GameObject:
   m_ObjectHideFlags: 0
@@ -6556,8 +5666,6 @@ GameObject:
   - component: {fileID: 1123271567}
   - component: {fileID: 1123271569}
   - component: {fileID: 1123271568}
-  - component: {fileID: 1123271570}
-  - component: {fileID: 1123271571}
   m_Layer: 0
   m_Name: Terrain_(2500.00, 27.32, 500.00)
   m_TagString: Untagged
@@ -6599,7 +5707,7 @@ TerrainCollider:
   m_Enabled: 1
   serializedVersion: 2
   m_TerrainData: {fileID: 15600000, guid: a242726b6417eff47b2a44eda0527a09, type: 2}
-  m_EnableTreeColliders: 1
+  m_EnableTreeColliders: 0
 --- !u!218 &1123271569
 Terrain:
   m_ObjectHideFlags: 0
@@ -6640,42 +5748,6 @@ Terrain:
   m_EnableHeightmapRayTracing: 1
   m_EnableTreesAndDetailsRayTracing: 0
   m_TreeMotionVectorModeOverride: 3
---- !u!114 &1123271570
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1123271566}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ecebecfd8a1f4614a990cad8331acdfe, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::TreeBehaviour
-  player: {fileID: 4120915346458048542}
-  hitGround: 0
-  terrain: {fileID: 0}
---- !u!65 &1123271571
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1123271566}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Size: {x: 1010, y: 0, z: 1010}
-  m_Center: {x: 500, y: -100, z: 500}
 --- !u!1 &1136678254
 GameObject:
   m_ObjectHideFlags: 0
@@ -6687,8 +5759,6 @@ GameObject:
   - component: {fileID: 1136678255}
   - component: {fileID: 1136678257}
   - component: {fileID: 1136678256}
-  - component: {fileID: 1136678258}
-  - component: {fileID: 1136678259}
   m_Layer: 0
   m_Name: Terrain_(-500.00, 27.32, 2500.00)
   m_TagString: Untagged
@@ -6730,7 +5800,7 @@ TerrainCollider:
   m_Enabled: 1
   serializedVersion: 2
   m_TerrainData: {fileID: 15600000, guid: 02763d432fac95642950d002d5a58509, type: 2}
-  m_EnableTreeColliders: 1
+  m_EnableTreeColliders: 0
 --- !u!218 &1136678257
 Terrain:
   m_ObjectHideFlags: 0
@@ -6771,42 +5841,6 @@ Terrain:
   m_EnableHeightmapRayTracing: 1
   m_EnableTreesAndDetailsRayTracing: 0
   m_TreeMotionVectorModeOverride: 3
---- !u!114 &1136678258
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1136678254}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ecebecfd8a1f4614a990cad8331acdfe, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::TreeBehaviour
-  player: {fileID: 4120915346458048542}
-  hitGround: 0
-  terrain: {fileID: 0}
---- !u!65 &1136678259
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1136678254}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Size: {x: 1010, y: 0, z: 1010}
-  m_Center: {x: 500, y: -100, z: 500}
 --- !u!1 &1166949111
 GameObject:
   m_ObjectHideFlags: 0
@@ -7023,7 +6057,7 @@ MeshFilter:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1172568469}
-  m_Mesh: {fileID: 220879708}
+  m_Mesh: {fileID: 111142137}
 --- !u!23 &1172568473
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -7195,8 +6229,6 @@ GameObject:
   - component: {fileID: 1228974369}
   - component: {fileID: 1228974371}
   - component: {fileID: 1228974370}
-  - component: {fileID: 1228974372}
-  - component: {fileID: 1228974373}
   m_Layer: 0
   m_Name: Terrain_(-1500.00, 27.32, 1500.00)
   m_TagString: Untagged
@@ -7238,7 +6270,7 @@ TerrainCollider:
   m_Enabled: 1
   serializedVersion: 2
   m_TerrainData: {fileID: 15600000, guid: 1a11c6a16aa175a4aadc84fe7c4a472e, type: 2}
-  m_EnableTreeColliders: 1
+  m_EnableTreeColliders: 0
 --- !u!218 &1228974371
 Terrain:
   m_ObjectHideFlags: 0
@@ -7279,42 +6311,6 @@ Terrain:
   m_EnableHeightmapRayTracing: 1
   m_EnableTreesAndDetailsRayTracing: 0
   m_TreeMotionVectorModeOverride: 3
---- !u!114 &1228974372
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1228974368}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ecebecfd8a1f4614a990cad8331acdfe, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::TreeBehaviour
-  player: {fileID: 4120915346458048542}
-  hitGround: 0
-  terrain: {fileID: 0}
---- !u!65 &1228974373
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1228974368}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Size: {x: 1010, y: 0, z: 1010}
-  m_Center: {x: 500, y: -100, z: 500}
 --- !u!1 &1232887908
 GameObject:
   m_ObjectHideFlags: 0
@@ -7326,8 +6322,6 @@ GameObject:
   - component: {fileID: 1232887909}
   - component: {fileID: 1232887911}
   - component: {fileID: 1232887910}
-  - component: {fileID: 1232887912}
-  - component: {fileID: 1232887913}
   m_Layer: 0
   m_Name: Terrain_(-2500.00, 27.32, -2500.00)
   m_TagString: Untagged
@@ -7369,7 +6363,7 @@ TerrainCollider:
   m_Enabled: 1
   serializedVersion: 2
   m_TerrainData: {fileID: 15600000, guid: dc4aaac32cfd372488bb1ef592fe9591, type: 2}
-  m_EnableTreeColliders: 1
+  m_EnableTreeColliders: 0
 --- !u!218 &1232887911
 Terrain:
   m_ObjectHideFlags: 0
@@ -7410,42 +6404,6 @@ Terrain:
   m_EnableHeightmapRayTracing: 1
   m_EnableTreesAndDetailsRayTracing: 0
   m_TreeMotionVectorModeOverride: 3
---- !u!114 &1232887912
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1232887908}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ecebecfd8a1f4614a990cad8331acdfe, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::TreeBehaviour
-  player: {fileID: 4120915346458048542}
-  hitGround: 0
-  terrain: {fileID: 0}
---- !u!65 &1232887913
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1232887908}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Size: {x: 1010, y: 0, z: 1010}
-  m_Center: {x: 500, y: -100, z: 500}
 --- !u!1 &1242339867
 GameObject:
   m_ObjectHideFlags: 0
@@ -7643,8 +6601,6 @@ GameObject:
   - component: {fileID: 1250037871}
   - component: {fileID: 1250037873}
   - component: {fileID: 1250037872}
-  - component: {fileID: 1250037874}
-  - component: {fileID: 1250037875}
   m_Layer: 0
   m_Name: Terrain_(2500.00, 27.32, 2500.00)
   m_TagString: Untagged
@@ -7686,7 +6642,7 @@ TerrainCollider:
   m_Enabled: 1
   serializedVersion: 2
   m_TerrainData: {fileID: 15600000, guid: c48e142dd3d1683479979109ca256da6, type: 2}
-  m_EnableTreeColliders: 1
+  m_EnableTreeColliders: 0
 --- !u!218 &1250037873
 Terrain:
   m_ObjectHideFlags: 0
@@ -7727,42 +6683,6 @@ Terrain:
   m_EnableHeightmapRayTracing: 1
   m_EnableTreesAndDetailsRayTracing: 0
   m_TreeMotionVectorModeOverride: 3
---- !u!114 &1250037874
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1250037870}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ecebecfd8a1f4614a990cad8331acdfe, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::TreeBehaviour
-  player: {fileID: 4120915346458048542}
-  hitGround: 0
-  terrain: {fileID: 0}
---- !u!65 &1250037875
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1250037870}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Size: {x: 1010, y: 0, z: 1010}
-  m_Center: {x: 500, y: -100, z: 500}
 --- !u!1 &1302109604
 GameObject:
   m_ObjectHideFlags: 0
@@ -8363,8 +7283,6 @@ GameObject:
   - component: {fileID: 1319079414}
   - component: {fileID: 1319079416}
   - component: {fileID: 1319079415}
-  - component: {fileID: 1319079417}
-  - component: {fileID: 1319079418}
   m_Layer: 0
   m_Name: Terrain_(2500.00, 27.32, 3500.00)
   m_TagString: Untagged
@@ -8406,7 +7324,7 @@ TerrainCollider:
   m_Enabled: 1
   serializedVersion: 2
   m_TerrainData: {fileID: 15600000, guid: ecd9ef3b0179b764a95b63b69b352243, type: 2}
-  m_EnableTreeColliders: 1
+  m_EnableTreeColliders: 0
 --- !u!218 &1319079416
 Terrain:
   m_ObjectHideFlags: 0
@@ -8447,42 +7365,6 @@ Terrain:
   m_EnableHeightmapRayTracing: 1
   m_EnableTreesAndDetailsRayTracing: 0
   m_TreeMotionVectorModeOverride: 3
---- !u!114 &1319079417
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1319079413}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ecebecfd8a1f4614a990cad8331acdfe, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::TreeBehaviour
-  player: {fileID: 4120915346458048542}
-  hitGround: 0
-  terrain: {fileID: 0}
---- !u!65 &1319079418
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1319079413}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Size: {x: 1010, y: 0, z: 1010}
-  m_Center: {x: 500, y: -100, z: 500}
 --- !u!1 &1375278175
 GameObject:
   m_ObjectHideFlags: 0
@@ -8494,8 +7376,6 @@ GameObject:
   - component: {fileID: 1375278176}
   - component: {fileID: 1375278178}
   - component: {fileID: 1375278177}
-  - component: {fileID: 1375278179}
-  - component: {fileID: 1375278180}
   m_Layer: 0
   m_Name: Terrain_(-500.00, 27.32, -2500.00)
   m_TagString: Untagged
@@ -8537,7 +7417,7 @@ TerrainCollider:
   m_Enabled: 1
   serializedVersion: 2
   m_TerrainData: {fileID: 15600000, guid: 905f1b9e750bf154a801c3e1df0e3dae, type: 2}
-  m_EnableTreeColliders: 1
+  m_EnableTreeColliders: 0
 --- !u!218 &1375278178
 Terrain:
   m_ObjectHideFlags: 0
@@ -8578,42 +7458,6 @@ Terrain:
   m_EnableHeightmapRayTracing: 1
   m_EnableTreesAndDetailsRayTracing: 0
   m_TreeMotionVectorModeOverride: 3
---- !u!114 &1375278179
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1375278175}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ecebecfd8a1f4614a990cad8331acdfe, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::TreeBehaviour
-  player: {fileID: 4120915346458048542}
-  hitGround: 0
-  terrain: {fileID: 0}
---- !u!65 &1375278180
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1375278175}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Size: {x: 1010, y: 0, z: 1010}
-  m_Center: {x: 500, y: -100, z: 500}
 --- !u!1 &1440512792
 GameObject:
   m_ObjectHideFlags: 0
@@ -8625,8 +7469,6 @@ GameObject:
   - component: {fileID: 1440512793}
   - component: {fileID: 1440512795}
   - component: {fileID: 1440512794}
-  - component: {fileID: 1440512796}
-  - component: {fileID: 1440512797}
   m_Layer: 0
   m_Name: Terrain_(2500.00, 27.32, -2500.00)
   m_TagString: Untagged
@@ -8668,7 +7510,7 @@ TerrainCollider:
   m_Enabled: 1
   serializedVersion: 2
   m_TerrainData: {fileID: 15600000, guid: d93012d7e8e02394fbbb24d1cc6930e9, type: 2}
-  m_EnableTreeColliders: 1
+  m_EnableTreeColliders: 0
 --- !u!218 &1440512795
 Terrain:
   m_ObjectHideFlags: 0
@@ -8709,42 +7551,6 @@ Terrain:
   m_EnableHeightmapRayTracing: 1
   m_EnableTreesAndDetailsRayTracing: 0
   m_TreeMotionVectorModeOverride: 3
---- !u!114 &1440512796
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1440512792}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ecebecfd8a1f4614a990cad8331acdfe, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::TreeBehaviour
-  player: {fileID: 4120915346458048542}
-  hitGround: 0
-  terrain: {fileID: 0}
---- !u!65 &1440512797
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1440512792}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Size: {x: 1010, y: 0, z: 1010}
-  m_Center: {x: 500, y: -100, z: 500}
 --- !u!1 &1444337553 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: cbefdb3c730038843b5ab2f20b3cbb65, type: 3}
@@ -8886,8 +7692,6 @@ GameObject:
   - component: {fileID: 1463374415}
   - component: {fileID: 1463374417}
   - component: {fileID: 1463374416}
-  - component: {fileID: 1463374418}
-  - component: {fileID: 1463374419}
   m_Layer: 0
   m_Name: Terrain_(-500.00, 27.32, -500.00)
   m_TagString: Untagged
@@ -8929,7 +7733,7 @@ TerrainCollider:
   m_Enabled: 1
   serializedVersion: 2
   m_TerrainData: {fileID: 15600000, guid: 3544c6a7f410ea24ab1a2243d6f849c5, type: 2}
-  m_EnableTreeColliders: 1
+  m_EnableTreeColliders: 0
 --- !u!218 &1463374417
 Terrain:
   m_ObjectHideFlags: 0
@@ -8970,42 +7774,6 @@ Terrain:
   m_EnableHeightmapRayTracing: 1
   m_EnableTreesAndDetailsRayTracing: 0
   m_TreeMotionVectorModeOverride: 3
---- !u!114 &1463374418
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1463374414}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ecebecfd8a1f4614a990cad8331acdfe, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::TreeBehaviour
-  player: {fileID: 4120915346458048542}
-  hitGround: 0
-  terrain: {fileID: 0}
---- !u!65 &1463374419
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1463374414}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Size: {x: 1010, y: 0, z: 1010}
-  m_Center: {x: 500, y: -100, z: 500}
 --- !u!1 &1470675873
 GameObject:
   m_ObjectHideFlags: 0
@@ -9540,8 +8308,6 @@ GameObject:
   - component: {fileID: 1547874554}
   - component: {fileID: 1547874556}
   - component: {fileID: 1547874555}
-  - component: {fileID: 1547874557}
-  - component: {fileID: 1547874558}
   m_Layer: 0
   m_Name: Terrain_(2500.00, 27.32, -1500.00)
   m_TagString: Untagged
@@ -9583,7 +8349,7 @@ TerrainCollider:
   m_Enabled: 1
   serializedVersion: 2
   m_TerrainData: {fileID: 15600000, guid: a95dcb4690e5c334d8dcd2d5e701e92c, type: 2}
-  m_EnableTreeColliders: 1
+  m_EnableTreeColliders: 0
 --- !u!218 &1547874556
 Terrain:
   m_ObjectHideFlags: 0
@@ -9624,42 +8390,6 @@ Terrain:
   m_EnableHeightmapRayTracing: 1
   m_EnableTreesAndDetailsRayTracing: 0
   m_TreeMotionVectorModeOverride: 3
---- !u!114 &1547874557
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1547874553}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ecebecfd8a1f4614a990cad8331acdfe, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::TreeBehaviour
-  player: {fileID: 4120915346458048542}
-  hitGround: 0
-  terrain: {fileID: 0}
---- !u!65 &1547874558
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1547874553}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Size: {x: 1010, y: 0, z: 1010}
-  m_Center: {x: 500, y: -100, z: 500}
 --- !u!1 &1556327597
 GameObject:
   m_ObjectHideFlags: 0
@@ -9671,8 +8401,6 @@ GameObject:
   - component: {fileID: 1556327598}
   - component: {fileID: 1556327600}
   - component: {fileID: 1556327599}
-  - component: {fileID: 1556327601}
-  - component: {fileID: 1556327602}
   m_Layer: 0
   m_Name: Terrain_(500.00, 27.32, 1500.00)
   m_TagString: Untagged
@@ -9714,7 +8442,7 @@ TerrainCollider:
   m_Enabled: 1
   serializedVersion: 2
   m_TerrainData: {fileID: 15600000, guid: 0ffd5eb7b56af1d43a5b848536cb3cda, type: 2}
-  m_EnableTreeColliders: 1
+  m_EnableTreeColliders: 0
 --- !u!218 &1556327600
 Terrain:
   m_ObjectHideFlags: 0
@@ -9755,42 +8483,6 @@ Terrain:
   m_EnableHeightmapRayTracing: 1
   m_EnableTreesAndDetailsRayTracing: 0
   m_TreeMotionVectorModeOverride: 3
---- !u!114 &1556327601
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1556327597}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ecebecfd8a1f4614a990cad8331acdfe, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::TreeBehaviour
-  player: {fileID: 4120915346458048542}
-  hitGround: 0
-  terrain: {fileID: 0}
---- !u!65 &1556327602
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1556327597}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Size: {x: 1010, y: 0, z: 1010}
-  m_Center: {x: 500, y: -100, z: 500}
 --- !u!1 &1563678546
 GameObject:
   m_ObjectHideFlags: 0
@@ -10026,8 +8718,6 @@ GameObject:
   - component: {fileID: 1584895426}
   - component: {fileID: 1584895428}
   - component: {fileID: 1584895427}
-  - component: {fileID: 1584895429}
-  - component: {fileID: 1584895430}
   m_Layer: 0
   m_Name: Terrain_(-1500.00, 27.32, -1500.00)
   m_TagString: Untagged
@@ -10069,7 +8759,7 @@ TerrainCollider:
   m_Enabled: 1
   serializedVersion: 2
   m_TerrainData: {fileID: 15600000, guid: 85d45966950bdc74e9550b38d5f4a95f, type: 2}
-  m_EnableTreeColliders: 1
+  m_EnableTreeColliders: 0
 --- !u!218 &1584895428
 Terrain:
   m_ObjectHideFlags: 0
@@ -10110,42 +8800,6 @@ Terrain:
   m_EnableHeightmapRayTracing: 1
   m_EnableTreesAndDetailsRayTracing: 0
   m_TreeMotionVectorModeOverride: 3
---- !u!114 &1584895429
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1584895425}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ecebecfd8a1f4614a990cad8331acdfe, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::TreeBehaviour
-  player: {fileID: 4120915346458048542}
-  hitGround: 0
-  terrain: {fileID: 0}
---- !u!65 &1584895430
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1584895425}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Size: {x: 1010, y: 0, z: 1010}
-  m_Center: {x: 500, y: -100, z: 500}
 --- !u!1 &1588384174
 GameObject:
   m_ObjectHideFlags: 0
@@ -10611,8 +9265,6 @@ GameObject:
   - component: {fileID: 1603042922}
   - component: {fileID: 1603042921}
   - component: {fileID: 1603042923}
-  - component: {fileID: 1603042924}
-  - component: {fileID: 1603042925}
   m_Layer: 0
   m_Name: Terrain
   m_TagString: Untagged
@@ -10654,7 +9306,7 @@ TerrainCollider:
   m_Enabled: 1
   serializedVersion: 2
   m_TerrainData: {fileID: 15600000, guid: de00ab9146abde248bd03dc2e9b24c45, type: 2}
-  m_EnableTreeColliders: 1
+  m_EnableTreeColliders: 0
 --- !u!218 &1603042922
 Terrain:
   m_ObjectHideFlags: 0
@@ -10727,42 +9379,6 @@ MonoBehaviour:
   m_MinRegionArea: 2
   m_NavMeshData: {fileID: 23800000, guid: a97fd52bbf0b40a47b791ff9fcfd82f1, type: 2}
   m_BuildHeightMesh: 0
---- !u!114 &1603042924
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1603042919}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ecebecfd8a1f4614a990cad8331acdfe, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::TreeBehaviour
-  player: {fileID: 4120915346458048542}
-  hitGround: 0
-  terrain: {fileID: 0}
---- !u!65 &1603042925
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1603042919}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Size: {x: 1010, y: 0, z: 1010}
-  m_Center: {x: 500, y: -100, z: 500}
 --- !u!1 &1608963147
 GameObject:
   m_ObjectHideFlags: 0
@@ -10774,8 +9390,6 @@ GameObject:
   - component: {fileID: 1608963148}
   - component: {fileID: 1608963150}
   - component: {fileID: 1608963149}
-  - component: {fileID: 1608963151}
-  - component: {fileID: 1608963152}
   m_Layer: 0
   m_Name: Terrain_(-1500.00, 27.32, 500.00)
   m_TagString: Untagged
@@ -10817,7 +9431,7 @@ TerrainCollider:
   m_Enabled: 1
   serializedVersion: 2
   m_TerrainData: {fileID: 15600000, guid: 9a5859f03d568a249b070452704b7a68, type: 2}
-  m_EnableTreeColliders: 1
+  m_EnableTreeColliders: 0
 --- !u!218 &1608963150
 Terrain:
   m_ObjectHideFlags: 0
@@ -10858,42 +9472,6 @@ Terrain:
   m_EnableHeightmapRayTracing: 1
   m_EnableTreesAndDetailsRayTracing: 0
   m_TreeMotionVectorModeOverride: 3
---- !u!114 &1608963151
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1608963147}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ecebecfd8a1f4614a990cad8331acdfe, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::TreeBehaviour
-  player: {fileID: 4120915346458048542}
-  hitGround: 0
-  terrain: {fileID: 0}
---- !u!65 &1608963152
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1608963147}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Size: {x: 1010, y: 0, z: 1010}
-  m_Center: {x: 500, y: -100, z: 500}
 --- !u!1 &1609274276
 GameObject:
   m_ObjectHideFlags: 0
@@ -10905,8 +9483,6 @@ GameObject:
   - component: {fileID: 1609274277}
   - component: {fileID: 1609274279}
   - component: {fileID: 1609274278}
-  - component: {fileID: 1609274280}
-  - component: {fileID: 1609274281}
   m_Layer: 0
   m_Name: Terrain_(-2500.00, 27.32, 2500.00)
   m_TagString: Untagged
@@ -10948,7 +9524,7 @@ TerrainCollider:
   m_Enabled: 1
   serializedVersion: 2
   m_TerrainData: {fileID: 15600000, guid: b46887b54af52324185ad41d461ab8c3, type: 2}
-  m_EnableTreeColliders: 1
+  m_EnableTreeColliders: 0
 --- !u!218 &1609274279
 Terrain:
   m_ObjectHideFlags: 0
@@ -10989,42 +9565,6 @@ Terrain:
   m_EnableHeightmapRayTracing: 1
   m_EnableTreesAndDetailsRayTracing: 0
   m_TreeMotionVectorModeOverride: 3
---- !u!114 &1609274280
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1609274276}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ecebecfd8a1f4614a990cad8331acdfe, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::TreeBehaviour
-  player: {fileID: 4120915346458048542}
-  hitGround: 0
-  terrain: {fileID: 0}
---- !u!65 &1609274281
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1609274276}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Size: {x: 1010, y: 0, z: 1010}
-  m_Center: {x: 500, y: -100, z: 500}
 --- !u!1 &1624820090
 GameObject:
   m_ObjectHideFlags: 0
@@ -11036,8 +9576,6 @@ GameObject:
   - component: {fileID: 1624820091}
   - component: {fileID: 1624820093}
   - component: {fileID: 1624820092}
-  - component: {fileID: 1624820094}
-  - component: {fileID: 1624820095}
   m_Layer: 0
   m_Name: Terrain_(1500.00, 27.32, 500.00)
   m_TagString: Untagged
@@ -11079,7 +9617,7 @@ TerrainCollider:
   m_Enabled: 1
   serializedVersion: 2
   m_TerrainData: {fileID: 15600000, guid: bb20c197649aa0a419253add7cc10727, type: 2}
-  m_EnableTreeColliders: 1
+  m_EnableTreeColliders: 0
 --- !u!218 &1624820093
 Terrain:
   m_ObjectHideFlags: 0
@@ -11120,42 +9658,6 @@ Terrain:
   m_EnableHeightmapRayTracing: 1
   m_EnableTreesAndDetailsRayTracing: 0
   m_TreeMotionVectorModeOverride: 3
---- !u!114 &1624820094
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1624820090}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ecebecfd8a1f4614a990cad8331acdfe, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::TreeBehaviour
-  player: {fileID: 4120915346458048542}
-  hitGround: 0
-  terrain: {fileID: 0}
---- !u!65 &1624820095
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1624820090}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Size: {x: 1010, y: 0, z: 1010}
-  m_Center: {x: 500, y: -100, z: 500}
 --- !u!1 &1643832300
 GameObject:
   m_ObjectHideFlags: 0
@@ -11506,8 +10008,6 @@ GameObject:
   - component: {fileID: 1667719303}
   - component: {fileID: 1667719305}
   - component: {fileID: 1667719304}
-  - component: {fileID: 1667719306}
-  - component: {fileID: 1667719307}
   m_Layer: 0
   m_Name: Terrain_(3500.00, 27.32, 2500.00)
   m_TagString: Untagged
@@ -11549,7 +10049,7 @@ TerrainCollider:
   m_Enabled: 1
   serializedVersion: 2
   m_TerrainData: {fileID: 15600000, guid: cda7332000d465d41ba3749ab2321b90, type: 2}
-  m_EnableTreeColliders: 1
+  m_EnableTreeColliders: 0
 --- !u!218 &1667719305
 Terrain:
   m_ObjectHideFlags: 0
@@ -11590,42 +10090,6 @@ Terrain:
   m_EnableHeightmapRayTracing: 1
   m_EnableTreesAndDetailsRayTracing: 0
   m_TreeMotionVectorModeOverride: 3
---- !u!114 &1667719306
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1667719302}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ecebecfd8a1f4614a990cad8331acdfe, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::TreeBehaviour
-  player: {fileID: 4120915346458048542}
-  hitGround: 0
-  terrain: {fileID: 0}
---- !u!65 &1667719307
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1667719302}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Size: {x: 1010, y: 0, z: 1010}
-  m_Center: {x: 500, y: -100, z: 500}
 --- !u!1 &1671241105
 GameObject:
   m_ObjectHideFlags: 0
@@ -11637,8 +10101,6 @@ GameObject:
   - component: {fileID: 1671241106}
   - component: {fileID: 1671241108}
   - component: {fileID: 1671241107}
-  - component: {fileID: 1671241109}
-  - component: {fileID: 1671241110}
   m_Layer: 0
   m_Name: Terrain_(1500.00, 27.32, 1500.00)
   m_TagString: Untagged
@@ -11680,7 +10142,7 @@ TerrainCollider:
   m_Enabled: 1
   serializedVersion: 2
   m_TerrainData: {fileID: 15600000, guid: 517d9d4513382a345829cc915a3ab9b6, type: 2}
-  m_EnableTreeColliders: 1
+  m_EnableTreeColliders: 0
 --- !u!218 &1671241108
 Terrain:
   m_ObjectHideFlags: 0
@@ -11721,42 +10183,6 @@ Terrain:
   m_EnableHeightmapRayTracing: 1
   m_EnableTreesAndDetailsRayTracing: 0
   m_TreeMotionVectorModeOverride: 3
---- !u!114 &1671241109
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1671241105}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ecebecfd8a1f4614a990cad8331acdfe, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::TreeBehaviour
-  player: {fileID: 4120915346458048542}
-  hitGround: 0
-  terrain: {fileID: 0}
---- !u!65 &1671241110
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1671241105}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Size: {x: 1010, y: 0, z: 1010}
-  m_Center: {x: 500, y: -100, z: 500}
 --- !u!1 &1692644906
 GameObject:
   m_ObjectHideFlags: 0
@@ -11768,8 +10194,6 @@ GameObject:
   - component: {fileID: 1692644907}
   - component: {fileID: 1692644909}
   - component: {fileID: 1692644908}
-  - component: {fileID: 1692644910}
-  - component: {fileID: 1692644911}
   m_Layer: 0
   m_Name: Terrain_(1500.00, 27.32, -500.00)
   m_TagString: Untagged
@@ -11811,7 +10235,7 @@ TerrainCollider:
   m_Enabled: 1
   serializedVersion: 2
   m_TerrainData: {fileID: 15600000, guid: b02d38ac0507fb64f9c60c8cc9feb6e3, type: 2}
-  m_EnableTreeColliders: 1
+  m_EnableTreeColliders: 0
 --- !u!218 &1692644909
 Terrain:
   m_ObjectHideFlags: 0
@@ -11852,42 +10276,6 @@ Terrain:
   m_EnableHeightmapRayTracing: 1
   m_EnableTreesAndDetailsRayTracing: 0
   m_TreeMotionVectorModeOverride: 3
---- !u!114 &1692644910
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1692644906}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ecebecfd8a1f4614a990cad8331acdfe, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::TreeBehaviour
-  player: {fileID: 4120915346458048542}
-  hitGround: 0
-  terrain: {fileID: 0}
---- !u!65 &1692644911
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1692644906}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Size: {x: 1010, y: 0, z: 1010}
-  m_Center: {x: 500, y: -100, z: 500}
 --- !u!1 &1693870369
 GameObject:
   m_ObjectHideFlags: 0
@@ -11963,7 +10351,7 @@ AudioSource:
   m_audioClip: {fileID: 0}
   m_Resource: {fileID: 8300000, guid: 1a434645ab5905045bf0199dc315dec1, type: 3}
   m_PlayOnAwake: 0
-  m_Volume: 1
+  m_Volume: 0.25
   m_Pitch: 1
   Loop: 0
   Mute: 0
@@ -11974,7 +10362,7 @@ AudioSource:
   MinDistance: 1
   MaxDistance: 500
   Pan2D: 0
-  rolloffMode: 0
+  rolloffMode: 1
   BypassEffects: 0
   BypassListenerEffects: 0
   BypassReverbZones: 0
@@ -12133,8 +10521,6 @@ GameObject:
   - component: {fileID: 1741402564}
   - component: {fileID: 1741402566}
   - component: {fileID: 1741402565}
-  - component: {fileID: 1741402567}
-  - component: {fileID: 1741402568}
   m_Layer: 0
   m_Name: Terrain_(-1500.00, 27.32, -2500.00)
   m_TagString: Untagged
@@ -12176,7 +10562,7 @@ TerrainCollider:
   m_Enabled: 1
   serializedVersion: 2
   m_TerrainData: {fileID: 15600000, guid: 85f0053806417754999f12fd16107b5c, type: 2}
-  m_EnableTreeColliders: 1
+  m_EnableTreeColliders: 0
 --- !u!218 &1741402566
 Terrain:
   m_ObjectHideFlags: 0
@@ -12217,42 +10603,6 @@ Terrain:
   m_EnableHeightmapRayTracing: 1
   m_EnableTreesAndDetailsRayTracing: 0
   m_TreeMotionVectorModeOverride: 3
---- !u!114 &1741402567
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1741402563}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ecebecfd8a1f4614a990cad8331acdfe, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::TreeBehaviour
-  player: {fileID: 4120915346458048542}
-  hitGround: 0
-  terrain: {fileID: 0}
---- !u!65 &1741402568
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1741402563}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Size: {x: 1010, y: 0, z: 1010}
-  m_Center: {x: 500, y: -100, z: 500}
 --- !u!1 &1776762262
 GameObject:
   m_ObjectHideFlags: 0
@@ -12264,8 +10614,6 @@ GameObject:
   - component: {fileID: 1776762263}
   - component: {fileID: 1776762265}
   - component: {fileID: 1776762264}
-  - component: {fileID: 1776762266}
-  - component: {fileID: 1776762267}
   m_Layer: 0
   m_Name: Terrain_(1500.00, 27.32, 2500.00)
   m_TagString: Untagged
@@ -12307,7 +10655,7 @@ TerrainCollider:
   m_Enabled: 1
   serializedVersion: 2
   m_TerrainData: {fileID: 15600000, guid: 303bfd926b51b6041b594c9fa347e7f9, type: 2}
-  m_EnableTreeColliders: 1
+  m_EnableTreeColliders: 0
 --- !u!218 &1776762265
 Terrain:
   m_ObjectHideFlags: 0
@@ -12348,42 +10696,6 @@ Terrain:
   m_EnableHeightmapRayTracing: 1
   m_EnableTreesAndDetailsRayTracing: 0
   m_TreeMotionVectorModeOverride: 3
---- !u!114 &1776762266
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1776762262}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ecebecfd8a1f4614a990cad8331acdfe, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::TreeBehaviour
-  player: {fileID: 4120915346458048542}
-  hitGround: 0
-  terrain: {fileID: 0}
---- !u!65 &1776762267
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1776762262}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Size: {x: 1010, y: 0, z: 1010}
-  m_Center: {x: 500, y: -100, z: 500}
 --- !u!1 &1786400286
 GameObject:
   m_ObjectHideFlags: 0
@@ -12860,8 +11172,6 @@ GameObject:
   - component: {fileID: 1887521467}
   - component: {fileID: 1887521469}
   - component: {fileID: 1887521468}
-  - component: {fileID: 1887521470}
-  - component: {fileID: 1887521471}
   m_Layer: 0
   m_Name: Terrain_(3500.00, 27.32, 1500.00)
   m_TagString: Untagged
@@ -12903,7 +11213,7 @@ TerrainCollider:
   m_Enabled: 1
   serializedVersion: 2
   m_TerrainData: {fileID: 15600000, guid: 802dc34d73242d44e8cc31503a4d5296, type: 2}
-  m_EnableTreeColliders: 1
+  m_EnableTreeColliders: 0
 --- !u!218 &1887521469
 Terrain:
   m_ObjectHideFlags: 0
@@ -12944,42 +11254,6 @@ Terrain:
   m_EnableHeightmapRayTracing: 1
   m_EnableTreesAndDetailsRayTracing: 0
   m_TreeMotionVectorModeOverride: 3
---- !u!114 &1887521470
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1887521466}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ecebecfd8a1f4614a990cad8331acdfe, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::TreeBehaviour
-  player: {fileID: 4120915346458048542}
-  hitGround: 0
-  terrain: {fileID: 0}
---- !u!65 &1887521471
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1887521466}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Size: {x: 1010, y: 0, z: 1010}
-  m_Center: {x: 500, y: -100, z: 500}
 --- !u!1 &1892902114
 GameObject:
   m_ObjectHideFlags: 0
@@ -13312,8 +11586,6 @@ GameObject:
   - component: {fileID: 2033011460}
   - component: {fileID: 2033011462}
   - component: {fileID: 2033011461}
-  - component: {fileID: 2033011463}
-  - component: {fileID: 2033011464}
   m_Layer: 0
   m_Name: Terrain_(1500.00, 27.32, 3500.00)
   m_TagString: Untagged
@@ -13355,7 +11627,7 @@ TerrainCollider:
   m_Enabled: 1
   serializedVersion: 2
   m_TerrainData: {fileID: 15600000, guid: 68f4ed9a50f297b40bec68f92868914e, type: 2}
-  m_EnableTreeColliders: 1
+  m_EnableTreeColliders: 0
 --- !u!218 &2033011462
 Terrain:
   m_ObjectHideFlags: 0
@@ -13396,42 +11668,6 @@ Terrain:
   m_EnableHeightmapRayTracing: 1
   m_EnableTreesAndDetailsRayTracing: 0
   m_TreeMotionVectorModeOverride: 3
---- !u!114 &2033011463
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2033011459}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ecebecfd8a1f4614a990cad8331acdfe, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::TreeBehaviour
-  player: {fileID: 4120915346458048542}
-  hitGround: 0
-  terrain: {fileID: 0}
---- !u!65 &2033011464
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2033011459}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Size: {x: 1010, y: 0, z: 1010}
-  m_Center: {x: 500, y: -100, z: 500}
 --- !u!1 &2054565206
 GameObject:
   m_ObjectHideFlags: 0
@@ -13443,8 +11679,6 @@ GameObject:
   - component: {fileID: 2054565207}
   - component: {fileID: 2054565209}
   - component: {fileID: 2054565208}
-  - component: {fileID: 2054565210}
-  - component: {fileID: 2054565211}
   m_Layer: 0
   m_Name: Terrain_(-500.00, 27.32, 1500.00)
   m_TagString: Untagged
@@ -13486,7 +11720,7 @@ TerrainCollider:
   m_Enabled: 1
   serializedVersion: 2
   m_TerrainData: {fileID: 15600000, guid: b49bc796cd0d3a540baa0ae67f33669c, type: 2}
-  m_EnableTreeColliders: 1
+  m_EnableTreeColliders: 0
 --- !u!218 &2054565209
 Terrain:
   m_ObjectHideFlags: 0
@@ -13527,42 +11761,6 @@ Terrain:
   m_EnableHeightmapRayTracing: 1
   m_EnableTreesAndDetailsRayTracing: 0
   m_TreeMotionVectorModeOverride: 3
---- !u!114 &2054565210
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2054565206}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ecebecfd8a1f4614a990cad8331acdfe, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::TreeBehaviour
-  player: {fileID: 4120915346458048542}
-  hitGround: 0
-  terrain: {fileID: 0}
---- !u!65 &2054565211
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2054565206}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Size: {x: 1010, y: 0, z: 1010}
-  m_Center: {x: 500, y: -100, z: 500}
 --- !u!1 &2062896771
 GameObject:
   m_ObjectHideFlags: 0
@@ -13712,8 +11910,6 @@ GameObject:
   - component: {fileID: 2065687576}
   - component: {fileID: 2065687578}
   - component: {fileID: 2065687577}
-  - component: {fileID: 2065687579}
-  - component: {fileID: 2065687580}
   m_Layer: 0
   m_Name: Terrain_(500.00, 27.32, -1500.00)
   m_TagString: Untagged
@@ -13755,7 +11951,7 @@ TerrainCollider:
   m_Enabled: 1
   serializedVersion: 2
   m_TerrainData: {fileID: 15600000, guid: 1cbaee8e9a8c85742859a77afa690f5b, type: 2}
-  m_EnableTreeColliders: 1
+  m_EnableTreeColliders: 0
 --- !u!218 &2065687578
 Terrain:
   m_ObjectHideFlags: 0
@@ -13796,42 +11992,6 @@ Terrain:
   m_EnableHeightmapRayTracing: 1
   m_EnableTreesAndDetailsRayTracing: 0
   m_TreeMotionVectorModeOverride: 3
---- !u!114 &2065687579
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2065687575}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ecebecfd8a1f4614a990cad8331acdfe, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::TreeBehaviour
-  player: {fileID: 4120915346458048542}
-  hitGround: 0
-  terrain: {fileID: 0}
---- !u!65 &2065687580
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2065687575}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Size: {x: 1010, y: 0, z: 1010}
-  m_Center: {x: 500, y: -100, z: 500}
 --- !u!1 &2119681544
 GameObject:
   m_ObjectHideFlags: 0
@@ -13843,8 +12003,6 @@ GameObject:
   - component: {fileID: 2119681545}
   - component: {fileID: 2119681547}
   - component: {fileID: 2119681546}
-  - component: {fileID: 2119681548}
-  - component: {fileID: 2119681549}
   m_Layer: 0
   m_Name: Terrain_(3500.00, 27.32, -500.00)
   m_TagString: Untagged
@@ -13886,7 +12044,7 @@ TerrainCollider:
   m_Enabled: 1
   serializedVersion: 2
   m_TerrainData: {fileID: 15600000, guid: 488a6be30ab337c4f83ab02c91ecf631, type: 2}
-  m_EnableTreeColliders: 1
+  m_EnableTreeColliders: 0
 --- !u!218 &2119681547
 Terrain:
   m_ObjectHideFlags: 0
@@ -13927,42 +12085,6 @@ Terrain:
   m_EnableHeightmapRayTracing: 1
   m_EnableTreesAndDetailsRayTracing: 0
   m_TreeMotionVectorModeOverride: 3
---- !u!114 &2119681548
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2119681544}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ecebecfd8a1f4614a990cad8331acdfe, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::TreeBehaviour
-  player: {fileID: 4120915346458048542}
-  hitGround: 0
-  terrain: {fileID: 0}
---- !u!65 &2119681549
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2119681544}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Size: {x: 1010, y: 0, z: 1010}
-  m_Center: {x: 500, y: -100, z: 500}
 --- !u!224 &4120915346228598304
 RectTransform:
   m_ObjectHideFlags: 0

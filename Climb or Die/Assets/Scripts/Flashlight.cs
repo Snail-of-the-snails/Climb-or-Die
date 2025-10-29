@@ -7,6 +7,7 @@ public class Flashlight : MonoBehaviour
     private bool flashlightEnabled;
     private Light flashlight;
     private AudioSource audioSource;
+    private bool paused = false;
 
     void Start() {
         flashlight = transform.GetComponent<Light>();
@@ -16,7 +17,7 @@ public class Flashlight : MonoBehaviour
     void Update()
     {
 
-        if (Input.GetKeyDown(KeyCode.F) && gameObject.activeInHierarchy)
+        if (Input.GetMouseButtonDown(0) && gameObject.activeInHierarchy && !paused)
         {
             if (flashlightEnabled)
             {
@@ -33,14 +34,25 @@ public class Flashlight : MonoBehaviour
         HandleFlashlight();
     }
 
+    void Awake()
+    {
+        GameStateManager.Instance.OnGameStateChanged += OnGameStateChanged;
+    }
+
+    void OnDestroy()
+    {
+        GameStateManager.Instance.OnGameStateChanged -= OnGameStateChanged;
+    }
+
     private void HandleFlashlight()
     {
         flashlight.enabled = flashlightEnabled;
-        
+
         if (flashlightEnabled)
         {
-            if(flashlight.intensity <= 500){
-                if (flashlight.intensity < (brightness - flickerRange) )
+            if (flashlight.intensity <= 500)
+            {
+                if (flashlight.intensity < (brightness - flickerRange))
                 {
                     flashlight.intensity += Random.Range(0, flickerRange);
                 }
@@ -57,7 +69,20 @@ public class Flashlight : MonoBehaviour
             {
                 flashlight.intensity = brightness;
             }
-           
+
+        }
+    }
+    
+    private void OnGameStateChanged(GameState newGameState)
+    {
+        paused = !(newGameState == GameState.Gameplay);
+        if (paused)
+        {
+            audioSource.Pause();
+        }
+        else
+        {
+            audioSource.UnPause();
         }
     }
 }
