@@ -6,3 +6,4 @@ Cmd: compileSnippet
   error: 1 plat 4 at Die/Library/PackageCache/com.unity.render-pipelines.universal@1e1527b3a17b/ShaderLibrary/Shadows.hlsl(310): floating point division by zero
  ok=1 outsize=2178
 
+Cmd: shutdown

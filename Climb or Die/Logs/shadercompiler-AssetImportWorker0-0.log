@@ -9,3 +9,6 @@ Cmd: compileSnippet
   error: 1 plat 4 at Die/Library/PackageCache/com.unity.render-pipelines.universal@1e1527b3a17b/ShaderLibrary/Shadows.hlsl(310): floating point division by zero
  ok=1 outsize=2674
 
+Unhandled exception: Protocol error - failed to read magic number. Error code 0x80000004 (Not connected). (transferred 0/4)
+
+Quitting shader compiler process
