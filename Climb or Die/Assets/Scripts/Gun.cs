@@ -7,9 +7,11 @@ public class Gun : MonoBehaviour
     public GameObject shotgun;
     private bool paused = false;
     private bool canShoot = true;
-
+    private AudioSource source;
     void Awake()
     {
+        source = transform.GetComponent<AudioSource>();
+
         GameStateManager.Instance.OnGameStateChanged += OnGameStateChanged;
     }
     void OnDestroy()
@@ -41,16 +43,24 @@ public class Gun : MonoBehaviour
     }
     private void OnGameStateChanged(GameState newGameState)
     {
-        AudioSource source = transform.GetComponent<AudioSource>();
+       
         paused = !(newGameState == GameState.Gameplay);
 
         if (paused)
         {
             source.Pause();
+            if(shotgun.GetComponent<Animator>().GetCurrentAnimatorStateInfo(0).IsName("ShotgunFire"))
+            {
+                shotgun.GetComponent<Animator>().speed = 0;
+
+            }
         }
         else
         {
             source.UnPause();
+            shotgun.GetComponent<Animator>().speed = 1;
+     
+
         }
     }
 }
