@@ -8,11 +8,18 @@ public class Gun : MonoBehaviour
     private bool paused = false;
     private bool canShoot = true;
     private AudioSource source;
+    private bool hitObject;
+    public float x;
+    public float y;
+    public float z;
+    private Vector3 dir;
     void Awake()
     {
         source = transform.GetComponent<AudioSource>();
 
         GameStateManager.Instance.OnGameStateChanged += OnGameStateChanged;
+
+
     }
     void OnDestroy()
     {
@@ -21,13 +28,22 @@ public class Gun : MonoBehaviour
 
     void Update()
     {
+        dir = new  Vector3(x, y, z);
+        Debug.DrawRay(transform.position, transform.TransformDirection(dir) * 1000, Color.green);
         if (Input.GetMouseButtonDown(0) && shotgun.activeSelf && !paused)
         {
             if (canShoot)
             {
                 canShoot = false;
                 StartCoroutine(fireGun());
+                RaycastHit hit;
+                hitObject = Physics.Raycast(transform.position, transform.TransformDirection(dir), out hit, Mathf.Infinity);
                 
+                if (hitObject)
+                {
+
+                }
+                    
             }
 
         }
