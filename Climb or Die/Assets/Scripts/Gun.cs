@@ -36,8 +36,12 @@ public class Gun : MonoBehaviour
     {
         transform.GetComponent<AudioSource>().Play();
         shotgun.GetComponent<Animator>().Play("ShotgunFire");
-        yield return new WaitForSeconds(0.5f);
-        shotgun.GetComponent<Animator>().Play("New State");
+        if (!paused)
+        {
+            yield return new WaitForSeconds(0.5f);
+            shotgun.GetComponent<Animator>().Play("New State");
+        }
+        
         canShoot = true;
 
     }
@@ -45,15 +49,12 @@ public class Gun : MonoBehaviour
     {
        
         paused = !(newGameState == GameState.Gameplay);
-
+        enabled = !paused;
         if (paused)
         {
             source.Pause();
-            if(shotgun.GetComponent<Animator>().GetCurrentAnimatorStateInfo(0).IsName("ShotgunFire"))
-            {
-                shotgun.GetComponent<Animator>().speed = 0;
+            shotgun.GetComponent<Animator>().speed = 0;
 
-            }
         }
         else
         {
