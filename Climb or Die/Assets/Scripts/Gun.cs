@@ -1,5 +1,6 @@
 using System;
 using System.Collections;
+
 using UnityEngine;
 using UnityEngine.Audio;
 public class Gun : MonoBehaviour
@@ -8,10 +9,14 @@ public class Gun : MonoBehaviour
     private bool paused = false;
     private bool canShoot = true;
     private AudioSource source;
+    private Animator animator;
+
+    private AnimatorStateInfo stateInfo;
     void Awake()
     {
         source = transform.GetComponent<AudioSource>();
-
+        animator = shotgun.GetComponent<Animator>();
+        stateInfo = animator.GetCurrentAnimatorStateInfo(0);
         GameStateManager.Instance.OnGameStateChanged += OnGameStateChanged;
     }
     void OnDestroy()
@@ -21,30 +26,35 @@ public class Gun : MonoBehaviour
 
     void Update()
     {
+        Debug.Log(stateInfo.IsName("New State"));
         if (Input.GetMouseButtonDown(0) && shotgun.activeSelf && !paused)
         {
             if (canShoot)
             {
                 canShoot = false;
-                StartCoroutine(fireGun());
-                
+                if (stateInfo.IsName("New State"))
+                {
+                    source.Play();
+                    animator.Play("ShotgunFire");
+
+                }
+                else
+                {
+                    canShoot = true;
+                    animator.Play("New State");
+                }
+
+
             }
 
-        }
-    }
-    IEnumerator fireGun()
-    {
-        transform.GetComponent<AudioSource>().Play();
-        shotgun.GetComponent<Animator>().Play("ShotgunFire");
-        if (!paused)
-        {
-            yield return new WaitForSeconds(0.5f);
-            shotgun.GetComponent<Animator>().Play("New State");
-        }
+        // }
+        // if(stateInfo.normalizedTime > 0f && stateInfo.IsName("ShotgunFire") && !paused)
+        // {
+        //     animator.Play("New State");
+        // }
         
-        canShoot = true;
-
     }
+
     private void OnGameStateChanged(GameState newGameState)
     {
        
@@ -53,13 +63,13 @@ public class Gun : MonoBehaviour
         if (paused)
         {
             source.Pause();
-            shotgun.GetComponent<Animator>().speed = 0;
+            animator.speed = 0;
 
         }
         else
         {
             source.UnPause();
-            shotgun.GetComponent<Animator>().speed = 1;
+            animator.speed = 1;
      
 
         }
