@@ -46,18 +46,12 @@ public class Gun : MonoBehaviour
 
 
             }
-
-        // }
-        // if(stateInfo.normalizedTime > 0f && stateInfo.IsName("ShotgunFire") && !paused)
-        // {
-        //     animator.Play("New State");
-        // }
-        
+        }
     }
-
+    
     private void OnGameStateChanged(GameState newGameState)
     {
-       
+    
         paused = !(newGameState == GameState.Gameplay);
         enabled = !paused;
         if (paused)
@@ -70,7 +64,7 @@ public class Gun : MonoBehaviour
         {
             source.UnPause();
             animator.speed = 1;
-     
+    
 
         }
     }

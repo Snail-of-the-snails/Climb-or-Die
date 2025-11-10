@@ -7,7 +7,6 @@ public class EnemyAI : MonoBehaviour
     public GameObject player;
     private Rigidbody rb;
     private NavMeshAgent agent;
-    private bool setDestination = false;
     public LightingManager lightingManager;
 
     enum AIState
@@ -23,7 +22,6 @@ public class EnemyAI : MonoBehaviour
     void Start()
     {
         agent = transform.GetComponent<NavMeshAgent>();
-        setDestination = false;
     }
 
     AIState state;
@@ -63,29 +61,34 @@ public class EnemyAI : MonoBehaviour
             float stalkingDistance = Random.Range(50f, 100f);
 
             Stalk(stalkingDistance);
-
-            if (!setDestination)
-            {
-                setDestination = true;
-            }
         }
     }
 
-    void Stalk(float distance)
+    private IEnumerator StalkPlayer()
     {
-        Vector3 target;
-        Vector3 reletiveOffset;
+        float stalkDuration = Random.Range(2f, 5f);
+        float elapsed = 0f;
+        bool lookedAt = false;
 
-        if (!setDestination) {
-            reletiveOffset = new Vector3(0, 0, 0 - distance);
-            target = player.transform.TransformPoint(reletiveOffset);
-        }
-        else
+        Vector3 relativeOffset = new Vector3(0, 0, -distance);
+
+
+        while (stalkTime < stalkingTimer && !lookedAt)
         {
-            reletiveOffset = player.transform.InverseTransformPoint(agent.destination);
-            target = player.transform.position - reletiveOffset;
-        }
+            Vector3 target = player.TransformPoint(relativeOffset);
+            agent.SetDestination(target);
 
-        agent.SetDestination(target);
+            // TODO: Add a check to see if the player is looking at the stalker
+            lookedAt = CheckIfPlayerLookingAtMe();
+
+            elapsed += Time.deltaTime;
+
+            yield return null;
+        }
+    }
+
+    private bool CheckIfPlayerLookingAtMe()
+    {
+        return false;
     }
 }
