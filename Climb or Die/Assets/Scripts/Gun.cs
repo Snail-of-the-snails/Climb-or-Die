@@ -26,7 +26,6 @@ public class Gun : MonoBehaviour
 
     void Update()
     {
-        Debug.Log(stateInfo.IsName("New State"));
         if (Input.GetMouseButtonDown(0) && shotgun.activeSelf && !paused)
         {
             if (canShoot)
