@@ -10,10 +10,9 @@ public class LightingManager : MonoBehaviour
     private bool isPaused = false;
     private void awake()
     {
-
         GameStateManager.Instance.OnGameStateChanged += OnGameStateChanged;
     }
-
+    
     private void Update()
     {
         if (Preset == null)
@@ -38,6 +37,8 @@ public class LightingManager : MonoBehaviour
         {
             isNight = false;
         }
+
+        Debug.Log(isNight);
     }
 
 

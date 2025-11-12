@@ -11,6 +11,10 @@ public class EnemyAI : MonoBehaviour
     public LightingManager lightingManager;
     bool isRunning = false;
 
+    [Header("Agent Settings")]
+    [Range(1f, 3f)] public float chaseSpeedMultiplier = 1.25f;
+    [Range(3.5f, 4.5f)] public float agentSpeed = 3.5f;
+
     enum AIState
     {
         Stalking,
@@ -24,6 +28,7 @@ public class EnemyAI : MonoBehaviour
     void Start()
     {
         agent = transform.GetComponent<NavMeshAgent>();
+        agent.speed = agentSpeed;
     }
 
     AIState state;
@@ -61,6 +66,7 @@ public class EnemyAI : MonoBehaviour
 
     IEnumerator AI (AIState aiState)
     {
+        agent.speed = agentSpeed;
         isRunning = true;
         float duration = Random.Range(20f, 50f);
 
@@ -68,10 +74,6 @@ public class EnemyAI : MonoBehaviour
         {
             float stalkingDistance = Random.Range(50f, 100f);
             yield return StartCoroutine(Stalk(stalkingDistance, duration));
-        }
-        else
-        {
-            yield return new WaitForSeconds(duration);
         }
 
         isRunning = false;
@@ -83,31 +85,29 @@ public class EnemyAI : MonoBehaviour
         bool lookedAt = false;
 
         Vector3 relativeOffset = new Vector3(0, 0, -distance);
-        transform.position = player.transform.TransformPoint(relativeOffset);
+        transform.position = player.transform.position + relativeOffset;
 
-        relativeOffset = player.transform.position - transform.position;
+        agent.speed = agentSpeed;
 
         while (elapsed < stalkDuration && !lookedAt)
         {
-            Vector3 target = player.transform.position - relativeOffset;
+            Vector3 target = player.transform.position + relativeOffset;
             agent.SetDestination(target);
 
-            lookedAt = CheckIfPlayerLookingAtMe(distance * 2);
+            lookedAt = CheckIfPlayerLookingAtMe(distance / 4);
 
             elapsed += Time.deltaTime;
 
             yield return null;
         }
 
-
-        Debug.Log(lookedAt);
         if (lookedAt && lightingManager.isNight)
         {
-            //yield return StartCoroutine(Chase());
+            yield return StartCoroutine(Chase());
         }
         else
         {
-            //yield return StartCoroutine(Flee());
+            yield return StartCoroutine(Flee());
         }
     }
 
@@ -121,10 +121,10 @@ public class EnemyAI : MonoBehaviour
         Vector3 directionToStalker = (stalkerPos - playerPos).normalized;
 
         float dot = Vector3.Dot(playerForward, directionToStalker);
-        
-        float fovThreshold = 0.85f;
+        float fovThreshold = 0.97f;
 
         float distance = Vector3.Distance(playerPos, stalkerPos);
+
 
         if (dot > fovThreshold && distance < detectionRange)
         {
@@ -138,5 +138,41 @@ public class EnemyAI : MonoBehaviour
         }
 
         return false;
+    }
+
+    private IEnumerator Flee()
+    {
+        float elapsed = 0f;
+        float fleeDuration = Random.Range(15f, 35f);
+        agent.speed = agentSpeed * chaseSpeedMultiplier;
+        agent.SetDestination(transform.forward * -1 * 100);
+
+        while (elapsed < fleeDuration)
+        {
+            agent.SetDestination(transform.forward * 100);
+
+            elapsed += Time.deltaTime;
+
+            yield return null;
+        }
+    }
+    
+    private IEnumerator Chase()
+    {
+        Debug.Log("Chasing");
+        float elapsed = 0f;
+        float chaseDuration = Random.Range(50f, 90f);
+        agent.speed = agentSpeed * chaseSpeedMultiplier;
+
+        while (elapsed < chaseDuration)
+        {
+            agent.SetDestination(player.transform.position);
+
+            elapsed += Time.deltaTime;
+
+            yield return null;
+        }
+
+        yield return StartCoroutine(Flee());
     }
 }
