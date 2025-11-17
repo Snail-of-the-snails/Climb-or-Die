@@ -37,8 +37,6 @@ public class LightingManager : MonoBehaviour
         {
             isNight = false;
         }
-
-        Debug.Log(isNight);
     }
 
 
