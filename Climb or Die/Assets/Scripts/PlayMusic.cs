@@ -5,6 +5,8 @@ public class PlayMusic : MonoBehaviour
 {
     private AudioSource audioSource;
     public AudioClip[] audioClips;
+    private bool isPlaying = true;
+    private float volume = 1f;
 
     void Start() {
         audioSource = transform.GetComponent<AudioSource>();
@@ -12,27 +14,49 @@ public class PlayMusic : MonoBehaviour
 
     public void Update() 
     {
-        StartCoroutine(playSound());
+        if (isPlaying == true) {
+            StartCoroutine(PlaySound());
+        }
+
         if (Time.timeScale == 0)
         {
-            audioSource.volume = 0.5f;
+            audioSource.volume = volume / 0.5f;
         }
         else
         {
-            audioSource.volume = 1f;
+            audioSource.volume = volume;
         }
     }
 
-    IEnumerator playSound()
+    IEnumerator PlaySound()
     {
         if (!audioSource.isPlaying)
         {
             audioSource.clip = audioClips[Random.Range(0, audioClips.Length)];
             audioSource.Play();
-            
-            
         }
 
         yield return new WaitUntil(() => !audioSource.isPlaying);
+    }
+
+    public IEnumerator StopMusic()
+    {
+        isPlaying = false;
+
+        while (volume > 0.001f)
+        {
+            volume -= 0.001f;
+
+            yield return null;
+        }
+
+        audioSource.Stop();
+    }
+
+    public void StartMusic()
+    {
+        isPlaying = true;
+        volume = 1f;
+        StartCoroutine(PlaySound());
     }
 }

@@ -15,6 +15,9 @@ public class EnemyAI : MonoBehaviour
     [Range(1f, 3f)] public float chaseSpeedMultiplier = 1.25f;
     [Range(3.5f, 4.5f)] public float agentSpeed = 3.5f;
 
+    [Header("Music Settings")]
+    public PlayMusic gameMusic;
+    public ChaseMusic chaseMusic;
     enum AIState
     {
         Stalking,
@@ -37,7 +40,7 @@ public class EnemyAI : MonoBehaviour
     {
         if (!isRunning)
         {
-            state = AIState.Stalking; //SetAIState();
+            state = SetAIState();
             StartCoroutine(AI(state));
         }
     }
@@ -52,7 +55,14 @@ public class EnemyAI : MonoBehaviour
         }
         else if (randomNum <= 20f)
         {
-            return AIState.Wandering;
+            if (lightingManager.isNight && randomNum <= 15f)
+            {
+                return AIState.Chasing;
+            }
+            else
+            {
+                return AIState.Wandering;
+            }
         }
         else if (randomNum <= 40f)
         {
@@ -72,19 +82,37 @@ public class EnemyAI : MonoBehaviour
 
         if (aiState == AIState.Stalking)
         {
-            float stalkingDistance = Random.Range(50f, 100f);
+            float stalkingDistance = Random.Range(25f, 50f);
             yield return StartCoroutine(Stalk(stalkingDistance, duration));
+        }
+        else if (aiState == AIState.Wandering)
+        {
+            // Wandering behavior can be implemented here
+        }
+        else if (aiState == AIState.Following)
+        {
+            // Following behavior can be implemented here
+        }
+        else if (aiState == AIState.Waiting)
+        {
+            yield return new WaitForSeconds(duration);
+        }
+        else if (aiState == AIState.Chasing)
+        {
+            yield return StartCoroutine(Chase());
         }
 
         isRunning = false;
     }
 
+
+    // AI Behaviors
     private IEnumerator Stalk(float distance, float stalkDuration)
     {
         float elapsed = 0f;
         bool lookedAt = false;
 
-        Vector3 relativeOffset = new Vector3(0, 0, -distance);
+        Vector3 relativeOffset = -player.transform.forward * distance;
         transform.position = player.transform.position + relativeOffset;
 
         agent.speed = agentSpeed;
@@ -142,27 +170,25 @@ public class EnemyAI : MonoBehaviour
 
     private IEnumerator Flee()
     {
-        float elapsed = 0f;
-        float fleeDuration = Random.Range(15f, 35f);
         agent.speed = agentSpeed * chaseSpeedMultiplier;
-        agent.SetDestination(transform.forward * -1 * 100);
 
-        while (elapsed < fleeDuration)
+        while (Vector3.Distance(transform.position, player.transform.position) < 150f)
         {
-            agent.SetDestination(transform.forward * 100);
+            Vector3 fleeDir = (transform.position - player.transform.position).normalized;
+            Vector3 fleeTarget = transform.position + fleeDir * 20f;
 
-            elapsed += Time.deltaTime;
-
+            agent.SetDestination(fleeTarget);
             yield return null;
         }
     }
     
     private IEnumerator Chase()
     {
-        Debug.Log("Chasing");
         float elapsed = 0f;
         float chaseDuration = Random.Range(50f, 90f);
         agent.speed = agentSpeed * chaseSpeedMultiplier;
+        StartCoroutine(gameMusic.StopMusic());
+        StartCoroutine(chaseMusic.Play());
 
         while (elapsed < chaseDuration)
         {
@@ -173,6 +199,8 @@ public class EnemyAI : MonoBehaviour
             yield return null;
         }
 
+        chaseMusic.StopPlaying();
+        gameMusic.StartMusic();
         yield return StartCoroutine(Flee());
     }
 }

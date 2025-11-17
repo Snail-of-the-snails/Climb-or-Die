@@ -37,42 +37,33 @@ public class ChaseMusic : MonoBehaviour
         stopPlaying = true;
     }
     
-    private IEnumerator Play()
+    public IEnumerator Play()
     {
-        Debug.Log("Coroutine started");
-
-        volume = 100f;
+        volume = 1f;
         audioSource.loop = false;
         audioSource.clip = startClip;
         audioSource.Play();
 
         yield return new WaitUntil(() => !audioSource.isPlaying);
 
-        Debug.Log("Start clip finished");
-
         audioSource.clip = endClip;
         audioSource.loop = true;
         audioSource.Play();
 
-        Debug.Log("Waiting for stopPlaying...");
-
         stopPlaying = false;
         yield return new WaitUntil(() => stopPlaying);
 
-        Debug.Log("stopPlaying was set to TRUE, starting fade...");
-
-        while (volume > 0.05f)
+        while (volume > 0.001f)
         {
-            Debug.Log("Volume now: " + volume);
-
-            volume -= 0.05f;
+            volume -= 0.001f;
 
             yield return null;
         }
 
+        volume = 0f;
+
         audioSource.Stop();
 
         stopPlaying = false;
-        Debug.Log("Audio stopped.");
     }
 }
