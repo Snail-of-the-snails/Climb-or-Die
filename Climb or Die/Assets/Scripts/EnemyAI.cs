@@ -12,6 +12,7 @@ public class EnemyAI : MonoBehaviour
     bool isRunning = false;
     public GameObject entityObj;
     private BoxCollider collider;
+    private bool paused = false;
 
     [Header("Agent Settings")]
     [Range(1f, 3f)] public float chaseSpeedMultiplier = 1.25f;
@@ -39,14 +40,27 @@ public class EnemyAI : MonoBehaviour
         agent.speed = agentSpeed;
     }
 
+    void OnDestroy()
+    {
+        GameStateManager.Instance.OnGameStateChanged -= OnGameStateChanged;
+    }
+
+    void Awake()
+    {
+        GameStateManager.Instance.OnGameStateChanged += OnGameStateChanged;
+    }
+
     AIState state;
 
     void Update ()
     {
         if (!isRunning)
         {
-            state = SetAIState();
-            StartCoroutine(AI(state));
+            if (!paused)
+            {
+                state = AIState.Wandering; //SetAIState();
+                StartCoroutine(AI(state));
+            }
         }
     }
 
@@ -121,7 +135,8 @@ public class EnemyAI : MonoBehaviour
         }
         else if (aiState == AIState.Wandering)
         {
-            // Wandering behavior can be implemented here
+            float wanderRadius = Random.Range(50f, 75f);
+            yield return StartCoroutine(Wandering(wanderRadius, duration));
         }
         else if (aiState == AIState.Following)
         {
@@ -159,6 +174,8 @@ public class EnemyAI : MonoBehaviour
             agent.SetDestination(target);
 
             lookedAt = CheckIfPlayerLookingAtMe(distance / 4);
+
+            yield return StartCoroutine(CheckIfPaused());
 
             elapsed += Time.deltaTime;
 
@@ -213,6 +230,8 @@ public class EnemyAI : MonoBehaviour
             Vector3 fleeDir = (transform.position - player.transform.position).normalized;
             Vector3 fleeTarget = transform.position + fleeDir * 20f;
 
+            yield return StartCoroutine(CheckIfPaused());
+
             agent.SetDestination(fleeTarget);
             yield return null;
         }
@@ -237,6 +256,8 @@ public class EnemyAI : MonoBehaviour
 
             elapsed += Time.deltaTime;
 
+            yield return StartCoroutine(CheckIfPaused());
+
             yield return null;
         }
 
@@ -245,11 +266,78 @@ public class EnemyAI : MonoBehaviour
         yield return StartCoroutine(Flee());
     }
 
+    private IEnumerator Wandering(float radius, float duration)
+    {
+        float elapsed = 0f;
+        Vector3 center = player.transform.forward * radius + player.transform.position;
+        transform.position = center;
+        bool closeToPlayer = false;
+
+        while (elapsed < duration)
+        {
+            Vector3 randomPoint;
+
+            if (Vector3.Distance(transform.position, agent.destination) < 5f) {
+                NavMeshHit hit;
+                if (NavMesh.SamplePosition(center + Random.insideUnitSphere * radius, out hit, radius, NavMesh.AllAreas))
+                {
+                    randomPoint = hit.position;
+                    agent.SetDestination(randomPoint);
+                }
+                else
+                {
+                    yield return null;
+                    continue;
+                }
+            }
+
+            if (Vector3.Distance(transform.position, player.transform.position) < 20f)
+            {
+                closeToPlayer = true;
+                break;
+            }
+
+            elapsed += Time.deltaTime;
+
+            yield return StartCoroutine(CheckIfPaused());
+
+            center = transform.position;
+        }
+
+        if (closeToPlayer && lightingManager.isNight)
+        {
+            yield return StartCoroutine(Chase());
+        }
+        else
+        {
+            yield return StartCoroutine(Flee());
+        }
+    }
+
     private IEnumerator BeginChase()
     {
         Vector3 offset = -player.transform.forward * 75;
         transform.position = player.transform.position + offset;
 
         yield return StartCoroutine(Chase());
+    }
+
+    // Paused State Handling
+
+    private IEnumerator CheckIfPaused()
+    {
+        Vector3 desition = agent.destination;
+        if (paused)
+        {
+            agent.destination = transform.position;
+            yield return new WaitUntil(() => !paused);
+        }
+
+        agent.destination = desition;
+    }
+
+    private void OnGameStateChanged(GameState newGameState)
+    {
+        paused = !(newGameState == GameState.Gameplay);
     }
 }

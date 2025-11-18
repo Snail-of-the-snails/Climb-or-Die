@@ -6,7 +6,7 @@ public class ChaseMusic : MonoBehaviour
     private AudioSource audioSource;
     public AudioClip startClip;
     public AudioClip endClip;
-    public bool stopPlaying = false;
+    private bool stopPlaying = false;
     private float volume = 1f;
 
     private void Start()
@@ -15,13 +15,13 @@ public class ChaseMusic : MonoBehaviour
     }
 
     private void Update() {
-        if (Input.GetKeyDown(KeyCode.H))
+        if (Time.timeScale == 0)
         {
-            StartPlaying();
+            audioSource.volume = volume / 0.5f;
         }
-        else if (Input.GetKeyDown(KeyCode.J))
+        else
         {
-            StopPlaying();
+            audioSource.volume = volume;
         }
 
         audioSource.volume = volume;
