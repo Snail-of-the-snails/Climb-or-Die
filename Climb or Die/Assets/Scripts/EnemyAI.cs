@@ -58,7 +58,7 @@ public class EnemyAI : MonoBehaviour
         {
             if (!paused)
             {
-                state = AIState.Wandering; //SetAIState();
+                state = SetAIState();
                 StartCoroutine(AI(state));
             }
         }
