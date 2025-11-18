@@ -21,7 +21,7 @@ public class FPSController : MonoBehaviour
     #region Camera Movement Variables
 
     public Camera playerCamera;
-
+    public GunController gunController; 
     public float fov = 60f;
     public bool invertCamera = false;
     public bool cameraCanMove = true;
@@ -129,6 +129,7 @@ public class FPSController : MonoBehaviour
     // Internal Variables
     private Vector3 jointOriginalPos;
     private float timer = 0;
+    private Vector2 _currentRotation;
 
     #endregion
 
@@ -219,30 +220,7 @@ public class FPSController : MonoBehaviour
         if (hitGround)
             terrain = hit.collider.gameObject;
         isDead = KillPlayer.isDead;
-        // Opens and closes menu
-        /*        if (Input.GetKeyDown(KeyCode.Escape) && (!isDead))
-                {
-                    if (Cursor.lockState == CursorLockMode.None)
-                    {
-                        Cursor.lockState = CursorLockMode.Locked;
-                        menu.SetActive(false);
-                        crosshairObject.gameObject.SetActive(true);
-                        paused = false;
-                        Time.timeScale = 1;
-                    }
-                    else
-                    {
-                        Cursor.lockState = CursorLockMode.None;
-                        menu.SetActive(true);
-                        crosshairObject.gameObject.SetActive(false);
-                        paused = true;
-                        Time.timeScale = 0;
-                    }
-                }
-
-                if (!paused)
-                {
-        */
+        
         #region Camera
 
 
@@ -250,7 +228,9 @@ public class FPSController : MonoBehaviour
 
         // Control camera movement
         if (cameraCanMove)
-            {
+        {
+                //rotation.rotation = Quaternion.AngleAxis(gunController._currentRotation.x, Vector3.up);
+
                 yaw = transform.localEulerAngles.y + Input.GetAxis("Mouse X") * mouseSensitivity;
 
                 if (!invertCamera)

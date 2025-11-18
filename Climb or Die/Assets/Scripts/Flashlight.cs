@@ -48,7 +48,7 @@ public class Flashlight : MonoBehaviour
     {
         flashlight.enabled = flashlightEnabled;
 
-        if (flashlightEnabled)
+        if (flashlightEnabled && !paused)
         {
             if (flashlight.intensity <= 500)
             {
