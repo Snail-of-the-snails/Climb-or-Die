@@ -10,6 +10,8 @@ public class EnemyAI : MonoBehaviour
     private NavMeshAgent agent;
     public LightingManager lightingManager;
     bool isRunning = false;
+    public GameObject entityObj;
+    private BoxCollider collider;
 
     [Header("Agent Settings")]
     [Range(1f, 3f)] public float chaseSpeedMultiplier = 1.25f;
@@ -18,6 +20,8 @@ public class EnemyAI : MonoBehaviour
     [Header("Music Settings")]
     public PlayMusic gameMusic;
     public ChaseMusic chaseMusic;
+    public SpawnSounds spawnSounds;
+
     enum AIState
     {
         Stalking,
@@ -31,6 +35,7 @@ public class EnemyAI : MonoBehaviour
     void Start()
     {
         agent = transform.GetComponent<NavMeshAgent>();
+        collider = transform.GetComponent<BoxCollider>();
         agent.speed = agentSpeed;
     }
 
@@ -49,33 +54,62 @@ public class EnemyAI : MonoBehaviour
     {
         float randomNum = Random.Range(0f, 100f);
 
-        if (randomNum <= 10f)
+        if (!lightingManager.isNight)
         {
-            return AIState.Following;
+            if (randomNum <= 10f)
+            {
+                return AIState.Following;
+            }
+            else if (randomNum <= 20f)
+            {
+                return AIState.Wandering;
+            }
+            else if (randomNum <= 40f)
+            {
+                return AIState.Stalking;
+            }
+            else
+            {
+                return AIState.Waiting;
+            }
         }
-        else if (randomNum <= 20f)
+        else
         {
-            if (lightingManager.isNight && randomNum <= 15f)
+            if (randomNum <= 10f)
+            {
+                return AIState.Following;
+            }
+            else if (randomNum <= 20f)
+            {
+                return AIState.Wandering;
+            }
+            else if (randomNum <= 40f)
+            {
+                return AIState.Stalking;
+            }
+            else if (randomNum <= 50f)
             {
                 return AIState.Chasing;
             }
             else
             {
-                return AIState.Wandering;
+                return AIState.Waiting;
             }
-        }
-        else if (randomNum <= 40f)
-        {
-            return AIState.Stalking;
-        }
-        else
-        {
-            return AIState.Waiting;
         }
     }
 
     IEnumerator AI (AIState aiState)
     {
+        collider.enabled = true;
+        entityObj.SetActive(true);
+
+        Debug.Log(state);
+
+        if (state != AIState.Waiting)
+        {
+            spawnSounds.PlaySpawnSound();
+        }
+
         agent.speed = agentSpeed;
         isRunning = true;
         float duration = Random.Range(20f, 50f);
@@ -95,11 +129,13 @@ public class EnemyAI : MonoBehaviour
         }
         else if (aiState == AIState.Waiting)
         {
-            yield return new WaitForSeconds(duration);
+            collider.enabled = false;
+            entityObj.SetActive(false);
+            yield return new WaitForSeconds(duration / 2);
         }
         else if (aiState == AIState.Chasing)
         {
-            yield return StartCoroutine(Chase());
+            yield return StartCoroutine(BeginChase());
         }
 
         isRunning = false;
@@ -184,6 +220,11 @@ public class EnemyAI : MonoBehaviour
     
     private IEnumerator Chase()
     {
+        if (state != AIState.Chasing)
+        {
+            state = AIState.Chasing;
+        }
+
         float elapsed = 0f;
         float chaseDuration = Random.Range(50f, 90f);
         agent.speed = agentSpeed * chaseSpeedMultiplier;
@@ -202,5 +243,13 @@ public class EnemyAI : MonoBehaviour
         chaseMusic.StopPlaying();
         gameMusic.StartMusic();
         yield return StartCoroutine(Flee());
+    }
+
+    private IEnumerator BeginChase()
+    {
+        Vector3 offset = -player.transform.forward * 75;
+        transform.position = player.transform.position + offset;
+
+        yield return StartCoroutine(Chase());
     }
 }
