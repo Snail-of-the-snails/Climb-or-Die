@@ -17,11 +17,15 @@ public class EnemyAI : MonoBehaviour
     [Header("Agent Settings")]
     [Range(1f, 3f)] public float chaseSpeedMultiplier = 1.25f;
     [Range(3.5f, 4.5f)] public float agentSpeed = 3.5f;
+    public ChaseVignette chaseVignette;
 
     [Header("Music Settings")]
     public PlayMusic gameMusic;
     public ChaseMusic chaseMusic;
     public SpawnSounds spawnSounds;
+
+    [Header("Agent Animation")]
+    public Animator animator;
 
     enum AIState
     {
@@ -29,8 +33,14 @@ public class EnemyAI : MonoBehaviour
         Wandering,
         Following,
         Chasing,
-        Searching,
-        Waiting
+        Waiting,
+    }
+
+    enum MovementState
+    {
+        Idle,
+        Walking,
+        Running
     }
 
     void Start()
@@ -38,6 +48,7 @@ public class EnemyAI : MonoBehaviour
         agent = transform.GetComponent<NavMeshAgent>();
         collider = transform.GetComponent<BoxCollider>();
         agent.speed = agentSpeed;
+        state = AIState.Waiting;
     }
 
     void OnDestroy()
@@ -51,6 +62,7 @@ public class EnemyAI : MonoBehaviour
     }
 
     AIState state;
+    MovementState movementState;
 
     void Update ()
     {
@@ -62,6 +74,8 @@ public class EnemyAI : MonoBehaviour
                 StartCoroutine(AI(state));
             }
         }
+
+        CheckToAnimate();
     }
 
     AIState SetAIState()
@@ -116,6 +130,7 @@ public class EnemyAI : MonoBehaviour
     {
         collider.enabled = true;
         entityObj.SetActive(true);
+        movementState = MovementState.Idle;
 
         Debug.Log(state);
 
@@ -168,6 +183,8 @@ public class EnemyAI : MonoBehaviour
 
         agent.speed = agentSpeed;
 
+
+
         while (elapsed < stalkDuration && !lookedAt)
         {
             Vector3 target = player.transform.position + relativeOffset;
@@ -180,6 +197,15 @@ public class EnemyAI : MonoBehaviour
             elapsed += Time.deltaTime;
 
             yield return null;
+
+            if (agent.remainingDistance <= agent.stoppingDistance)
+            {
+                movementState = MovementState.Idle;
+            }
+            else
+            {
+                movementState = MovementState.Walking;
+            }
         }
 
         if (lookedAt && lightingManager.isNight)
@@ -225,6 +251,8 @@ public class EnemyAI : MonoBehaviour
     {
         agent.speed = agentSpeed * chaseSpeedMultiplier;
 
+        movementState = MovementState.Running;
+
         while (Vector3.Distance(transform.position, player.transform.position) < 150f)
         {
             Vector3 fleeDir = (transform.position - player.transform.position).normalized;
@@ -244,8 +272,12 @@ public class EnemyAI : MonoBehaviour
             state = AIState.Chasing;
         }
 
+        movementState = MovementState.Running;
+
+        StartCoroutine(chaseVignette.FadeScreenIn());
+
         float elapsed = 0f;
-        float chaseDuration = Random.Range(50f, 90f);
+        float chaseDuration = Random.Range(30f, 50f);
         agent.speed = agentSpeed * chaseSpeedMultiplier;
         StartCoroutine(gameMusic.StopMusic());
         StartCoroutine(chaseMusic.Play());
@@ -261,6 +293,7 @@ public class EnemyAI : MonoBehaviour
             yield return null;
         }
 
+        StartCoroutine(chaseVignette.FadeScreenOut());
         chaseMusic.StopPlaying();
         gameMusic.StartMusic();
         yield return StartCoroutine(Flee());
@@ -302,6 +335,15 @@ public class EnemyAI : MonoBehaviour
             yield return StartCoroutine(CheckIfPaused());
 
             center = transform.position;
+
+            if (agent.remainingDistance <= agent.stoppingDistance)
+            {
+                movementState = MovementState.Idle;
+            }
+            else
+            {
+                movementState = MovementState.Walking;
+            }
         }
 
         if (closeToPlayer && lightingManager.isNight)
@@ -326,18 +368,37 @@ public class EnemyAI : MonoBehaviour
 
     private IEnumerator CheckIfPaused()
     {
+        MovementState prevState = movementState;
         Vector3 desition = agent.destination;
         if (paused)
         {
             agent.destination = transform.position;
             yield return new WaitUntil(() => !paused);
+            movementState = MovementState.Idle;
         }
 
+        movementState = prevState;
         agent.destination = desition;
     }
 
     private void OnGameStateChanged(GameState newGameState)
     {
         paused = !(newGameState == GameState.Gameplay);
+    }
+
+    // Animation
+
+    private void CheckToAnimate()
+    {
+        if (movementState == MovementState.Idle)
+        {
+            animator.SetBool("Idle", true);
+            animator.SetBool("Walking", false);
+        }
+        else if (movementState == MovementState.Walking || movementState == MovementState.Running)
+        {
+            animator.SetBool("Idle", false);
+            animator.SetBool("Walking", true);
+        }
     }
 }

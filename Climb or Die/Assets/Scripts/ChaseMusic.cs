@@ -4,8 +4,7 @@ using UnityEngine;
 public class ChaseMusic : MonoBehaviour
 {
     private AudioSource audioSource;
-    public AudioClip startClip;
-    public AudioClip endClip;
+    public AudioClip clip;
     private bool stopPlaying = false;
     private float volume = 1f;
 
@@ -40,17 +39,10 @@ public class ChaseMusic : MonoBehaviour
     public IEnumerator Play()
     {
         volume = 1f;
-        audioSource.loop = false;
-        audioSource.clip = startClip;
-        audioSource.Play();
-
-        yield return new WaitUntil(() => !audioSource.isPlaying);
-
-        audioSource.clip = endClip;
         audioSource.loop = true;
+        audioSource.clip = clip;
         audioSource.Play();
 
-        stopPlaying = false;
         yield return new WaitUntil(() => stopPlaying);
 
         while (volume > 0.001f)
