@@ -8,11 +8,11 @@ public class Gun : MonoBehaviour
     private bool paused = false;
     private bool canShoot = true;
     private AudioSource source;
-    private bool hitObject;
     public float x;
     public float y;
     public float z;
     private Vector3 dir;
+
     void Awake()
     {
         source = transform.GetComponent<AudioSource>();
@@ -28,8 +28,7 @@ public class Gun : MonoBehaviour
 
     void Update()
     {
-        dir = new  Vector3(x, y, z);
-        Debug.DrawRay(transform.position, transform.TransformDirection(dir) * 1000, Color.green);
+        Debug.DrawRay(transform.position, transform.forward, Color.green);
         if (Input.GetMouseButtonDown(0) && shotgun.activeSelf && !paused)
         {
             if (canShoot)
@@ -37,11 +36,17 @@ public class Gun : MonoBehaviour
                 canShoot = false;
                 StartCoroutine(fireGun());
                 RaycastHit hit;
-                hitObject = Physics.Raycast(transform.position, transform.TransformDirection(dir), out hit, Mathf.Infinity);
-                
-                if (hitObject)
-                {
 
+                if (Physics.Raycast(transform.position, transform.forward, out hit, Mathf.Infinity))
+                {
+                    if (hit.collider.gameObject.layer == LayerMask.NameToLayer("Jeff"))
+                    {
+                        EnemyAI enemy = hit.collider.gameObject.GetComponent<EnemyAI>();
+                        if (enemy != null)
+                        {
+                            enemy.FleeFromGunshot();
+                        }
+                    }
                 }
                     
             }

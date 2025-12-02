@@ -13,6 +13,7 @@ public class EnemyAI : MonoBehaviour
     public GameObject entityObj;
     private BoxCollider collider;
     private bool paused = false;
+    private bool gunshotFlee = false;
 
     [Header("Agent Settings")]
     [Range(1f, 3f)] public float chaseSpeedMultiplier = 1.25f;
@@ -185,7 +186,7 @@ public class EnemyAI : MonoBehaviour
 
 
 
-        while (elapsed < stalkDuration && !lookedAt)
+        while (elapsed < stalkDuration && !lookedAt && !gunshotFlee)
         {
             Vector3 target = player.transform.position + relativeOffset;
             agent.SetDestination(target);
@@ -208,7 +209,7 @@ public class EnemyAI : MonoBehaviour
             }
         }
 
-        if (lookedAt && lightingManager.isNight)
+        if (lookedAt && lightingManager.isNight && !gunshotFlee)
         {
             yield return StartCoroutine(Chase());
         }
@@ -282,7 +283,7 @@ public class EnemyAI : MonoBehaviour
         StartCoroutine(gameMusic.StopMusic());
         StartCoroutine(chaseMusic.Play());
 
-        while (elapsed < chaseDuration)
+        while (elapsed < chaseDuration && !gunshotFlee)
         {
             agent.SetDestination(player.transform.position);
 
@@ -310,7 +311,7 @@ public class EnemyAI : MonoBehaviour
         {
             Vector3 randomPoint;
 
-            if (Vector3.Distance(transform.position, agent.destination) < 5f) {
+            if (Vector3.Distance(transform.position, agent.destination) < 5f && !gunshotFlee) {
                 NavMeshHit hit;
                 if (NavMesh.SamplePosition(center + Random.insideUnitSphere * radius, out hit, radius, NavMesh.AllAreas))
                 {
@@ -346,7 +347,7 @@ public class EnemyAI : MonoBehaviour
             }
         }
 
-        if (closeToPlayer && lightingManager.isNight)
+        if (closeToPlayer && lightingManager.isNight && !gunshotFlee)
         {
             yield return StartCoroutine(Chase());
         }
@@ -384,6 +385,11 @@ public class EnemyAI : MonoBehaviour
     private void OnGameStateChanged(GameState newGameState)
     {
         paused = !(newGameState == GameState.Gameplay);
+    }
+
+    public void FleeFromGunshot()
+    {
+        gunshotFlee = true;
     }
 
     // Animation
