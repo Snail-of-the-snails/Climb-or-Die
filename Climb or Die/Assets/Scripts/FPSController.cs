@@ -68,7 +68,7 @@ public class FPSController : MonoBehaviour
     public bool unlimitedSprint = false;
     public KeyCode sprintKey = KeyCode.LeftShift;
     public float sprintSpeed = 7f;
-    public float sprintDuration = 5f;
+    public float sprintDuration = 10f;
     public float sprintCooldown = .5f;
     public float sprintFOV = 80f;
     public float sprintFOVStepTime = 10f;
@@ -130,6 +130,11 @@ public class FPSController : MonoBehaviour
     private Vector3 jointOriginalPos;
     private float timer = 0;
     private Vector2 _currentRotation;
+
+    #region Adrenaline
+
+    public bool enableAdrenaline = true;
+    public EnemyAI enemyAI;
 
     #endregion
 
@@ -206,6 +211,16 @@ public class FPSController : MonoBehaviour
 
     private void Update()
     {
+        #region Adrenaline
+
+        if (enableAdrenaline)
+        {
+            unlimitedSprint = enemyAI.IsChasing();
+            sprintRemaining = sprintDuration;
+        }
+
+        #endregion
+
         if (lockCursor)
         {
             Cursor.lockState = CursorLockMode.Locked;
@@ -308,7 +323,7 @@ public class FPSController : MonoBehaviour
                     // Drain sprint remaining while sprinting
                     if (!unlimitedSprint)
                     {
-                        sprintRemaining -= 1 * Time.deltaTime;
+                        sprintRemaining -= 1f * Time.deltaTime;
                         if (sprintRemaining <= 0)
                         {
                             isSprinting = false;
@@ -587,7 +602,7 @@ public class FPSController : MonoBehaviour
         enabled = newGameState == GameState.Gameplay;
     }
 
-
+    #endregion
 }
 
 
@@ -764,8 +779,18 @@ public class FPSController : MonoBehaviour
         GUI.enabled = fpc.enableCrouch;
         fpc.holdToCrouch = EditorGUILayout.ToggleLeft(new GUIContent("Hold To Crouch", "Requires the player to hold the crouch key instead if pressing to crouch and uncrouch."), fpc.holdToCrouch);
         fpc.crouchKey = (KeyCode)EditorGUILayout.EnumPopup(new GUIContent("Crouch Key", "Determines what key is used to crouch."), fpc.crouchKey);
-        fpc.crouchHeight = EditorGUILayout.Slider(new GUIContent("Crouch Height", "Determines the y scale of the player object when crouched."), fpc.crouchHeight, .1f, 1);
-        fpc.speedReduction = EditorGUILayout.Slider(new GUIContent("Speed Reduction", "Determines the percent 'Walk Speed' is reduced by. 1 being no reduction, and .5 being half."), fpc.speedReduction, .1f, 1);
+        GUI.enabled = true;
+
+        EditorGUILayout.Space();
+
+        #region Adrenaline
+
+        GUILayout.Label("Adrenaline", new GUIStyle(GUI.skin.label) { alignment = TextAnchor.MiddleLeft, fontStyle = FontStyle.Bold, fontSize = 13 }, GUILayout.ExpandWidth(true));
+
+        fpc.enableAdrenaline = EditorGUILayout.ToggleLeft(new GUIContent("Enable Adrenaline", "Determines if the player can use adrenaline."), fpc.enableAdrenaline);
+
+        GUI.enabled = fpc.enableAdrenaline;
+        fpc.enemyAI = (EnemyAI)EditorGUILayout.ObjectField(new GUIContent("Enemy AI", "References the EnemyAI script to interact with adrenaline."), fpc.enemyAI, typeof(EnemyAI), true);
         GUI.enabled = true;
 
         #endregion
@@ -787,6 +812,11 @@ public class FPSController : MonoBehaviour
         fpc.bobSpeed = EditorGUILayout.Slider(new GUIContent("Speed", "Determines how often a bob rotation is completed."), fpc.bobSpeed, 1, 20);
         fpc.bobAmount = EditorGUILayout.Vector3Field(new GUIContent("Bob Amount", "Determines the amount the joint moves in both directions on every axes."), fpc.bobAmount);
         fpc.footstepPlayer = (PlayFootsteps)EditorGUILayout.ObjectField(new GUIContent("Footstep Player", "References the script PlayFootsteps to play a footstep sound whenever the player takes a step."), fpc.footstepPlayer, typeof(PlayFootsteps), true);;
+        GUI.enabled = true;
+
+        #endregion.crouchKey = (KeyCode)EditorGUILayout.EnumPopup(new GUIContent("Crouch Key", "Determines what key is used to crouch."), fpc.crouchKey);
+        fpc.crouchHeight = EditorGUILayout.Slider(new GUIContent("Crouch Height", "Determines the y scale of the player object when crouched."), fpc.crouchHeight, .1f, 1);
+        fpc.speedReduction = EditorGUILayout.Slider(new GUIContent("Speed Reduction", "Determines the percent 'Walk Speed' is reduced by. 1 being no reduction, and .5 being half."), fpc.speedReduction, .1f, 1);
         GUI.enabled = true;
 
         #endregion

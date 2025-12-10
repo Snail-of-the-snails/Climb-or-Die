@@ -407,4 +407,9 @@ public class EnemyAI : MonoBehaviour
             animator.SetBool("Walking", true);
         }
     }
+
+    public bool IsChasing()
+    {
+        return state == AIState.Chasing;
+    }
 }
