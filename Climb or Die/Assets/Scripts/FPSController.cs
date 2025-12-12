@@ -67,7 +67,8 @@ public class FPSController : MonoBehaviour
     public bool enableSprint = true;
     public bool unlimitedSprint = false;
     public KeyCode sprintKey = KeyCode.LeftShift;
-    public float sprintSpeed = 7f;
+    public float normalSprintSpeed = 7f;
+    private float currentSprintSpeed;
     public float sprintDuration = 10f;
     public float sprintCooldown = .5f;
     public float sprintFOV = 80f;
@@ -135,6 +136,7 @@ public class FPSController : MonoBehaviour
 
     public bool enableAdrenaline = true;
     public EnemyAI enemyAI;
+    public float adrenalineSprintBoost = 0.5f;
 
     #endregion
 
@@ -216,7 +218,19 @@ public class FPSController : MonoBehaviour
         if (enableAdrenaline)
         {
             unlimitedSprint = enemyAI.IsChasing();
-            sprintRemaining = sprintDuration;
+            if (unlimitedSprint)
+            {
+                sprintRemaining = sprintDuration;
+                currentSprintSpeed = normalSprintSpeed * (1 + adrenalineSprintBoost);
+            }
+            else
+            {
+                currentSprintSpeed = normalSprintSpeed;
+            }
+        }
+        else
+        {
+            currentSprintSpeed = normalSprintSpeed;
         }
 
         #endregion
@@ -426,7 +440,7 @@ public class FPSController : MonoBehaviour
             // All movement calculations shile sprint is active
             if (enableSprint && Input.GetKey(sprintKey) && sprintRemaining > 0f && !isSprintCooldown)
             {
-                targetVelocity = transform.TransformDirection(targetVelocity) * sprintSpeed;
+                targetVelocity = transform.TransformDirection(targetVelocity) * currentSprintSpeed;
 
                 // Apply a force that attempts to reach our target velocity
                 Vector3 velocity = rb.linearVelocity;
@@ -543,7 +557,7 @@ public class FPSController : MonoBehaviour
             // Calculates HeadBob speed during sprint
             if (isSprinting)
             {
-                timer += Time.deltaTime * (bobSpeed + sprintSpeed);
+                timer += Time.deltaTime * (bobSpeed + currentSprintSpeed);
             }
             // Calculates HeadBob speed during crouched movement
             else if (isCrouched)
@@ -694,7 +708,7 @@ public class FPSController : MonoBehaviour
         fpc.playerCanMove = EditorGUILayout.ToggleLeft(new GUIContent("Enable Player Movement", "Determines if the player is allowed to move."), fpc.playerCanMove);
 
         GUI.enabled = fpc.playerCanMove;
-        fpc.walkSpeed = EditorGUILayout.Slider(new GUIContent("Walk Speed", "Determines how fast the player will move while walking."), fpc.walkSpeed, .1f, fpc.sprintSpeed);
+        fpc.walkSpeed = EditorGUILayout.Slider(new GUIContent("Walk Speed", "Determines how fast the player will move while walking."), fpc.walkSpeed, .1f, fpc.normalSprintSpeed);
         GUI.enabled = true;
 
         EditorGUILayout.Space();
@@ -708,7 +722,7 @@ public class FPSController : MonoBehaviour
         GUI.enabled = fpc.enableSprint;
         fpc.unlimitedSprint = EditorGUILayout.ToggleLeft(new GUIContent("Unlimited Sprint", "Determines if 'Sprint Duration' is enabled. Turning this on will allow for unlimited sprint."), fpc.unlimitedSprint);
         fpc.sprintKey = (KeyCode)EditorGUILayout.EnumPopup(new GUIContent("Sprint Key", "Determines what key is used to sprint."), fpc.sprintKey);
-        fpc.sprintSpeed = EditorGUILayout.Slider(new GUIContent("Sprint Speed", "Determines how fast the player will move while sprinting."), fpc.sprintSpeed, fpc.walkSpeed, 20f);
+        fpc.normalSprintSpeed = EditorGUILayout.Slider(new GUIContent("Sprint Speed", "Determines how fast the player will move while sprinting."), fpc.normalSprintSpeed, fpc.walkSpeed, 20f);
 
         //GUI.enabled = !fpc.unlimitedSprint;
         fpc.sprintDuration = EditorGUILayout.Slider(new GUIContent("Sprint Duration", "Determines how long the player can sprint while unlimited sprint is disabled."), fpc.sprintDuration, 1f, 20f);
@@ -787,10 +801,11 @@ public class FPSController : MonoBehaviour
 
         GUILayout.Label("Adrenaline", new GUIStyle(GUI.skin.label) { alignment = TextAnchor.MiddleLeft, fontStyle = FontStyle.Bold, fontSize = 13 }, GUILayout.ExpandWidth(true));
 
-        fpc.enableAdrenaline = EditorGUILayout.ToggleLeft(new GUIContent("Enable Adrenaline", "Determines if the player can use adrenaline."), fpc.enableAdrenaline);
+        fpc.enableAdrenaline = EditorGUILayout.ToggleLeft(new GUIContent("Enable Adrenaline", "Enables the adrenaline feature, which temporarily boosts sprint speed and duration when the player is in danger or under certain conditions."), fpc.enableAdrenaline);
 
         GUI.enabled = fpc.enableAdrenaline;
         fpc.enemyAI = (EnemyAI)EditorGUILayout.ObjectField(new GUIContent("Enemy AI", "References the EnemyAI script to interact with adrenaline."), fpc.enemyAI, typeof(EnemyAI), true);
+        fpc.adrenalineSprintBoost = EditorGUILayout.Slider(new GUIContent("Adrenaline Sprint Boost", "Determines the percent increase in sprint speed when adrenaline is active."), fpc.adrenalineSprintBoost, 0.1f, 1f);
         GUI.enabled = true;
 
         #endregion

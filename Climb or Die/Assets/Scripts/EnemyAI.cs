@@ -44,6 +44,7 @@ public class EnemyAI : MonoBehaviour
         Running
     }
 
+    // Miscellaneous
     void Start()
     {
         agent = transform.GetComponent<NavMeshAgent>();
@@ -65,6 +66,7 @@ public class EnemyAI : MonoBehaviour
     AIState state;
     MovementState movementState;
 
+    // AI Handling
     void Update ()
     {
         if (!isRunning)
@@ -156,7 +158,9 @@ public class EnemyAI : MonoBehaviour
         }
         else if (aiState == AIState.Following)
         {
-            // Following behavior can be implemented here
+            float minDistance = Random.Range(5f, 15f);
+            float maxDistance = minDistance + Random.Range(20f, 35f);
+            yield return StartCoroutine(Follow(minDistance, maxDistance, duration));
         }
         else if (aiState == AIState.Waiting)
         {
@@ -348,6 +352,45 @@ public class EnemyAI : MonoBehaviour
         }
 
         if (closeToPlayer && lightingManager.isNight && !gunshotFlee)
+        {
+            yield return StartCoroutine(Chase());
+        }
+        else
+        {
+            yield return StartCoroutine(Flee());
+        }
+    }
+
+    private IEnumerator Follow(float minDistance, float maxDistance, float duration)
+    {
+        float elapsed = 0f;
+        bool lookedAt = false;
+
+        Vector3 relativeOffset = -player.transform.forward * maxDistance;
+        transform.position = player.transform.position + relativeOffset;
+        relativeOffset = -player.transform.forward * minDistance;
+        Vector3 target = player.transform.position + relativeOffset;
+
+        while (elapsed < duration && !lookedAt && !gunshotFlee && agent.remainingDistance <= agent.stoppingDistance)
+        {
+            if (Vector3.Distance(target, player.transform.position) > maxDistance || Vector3.Distance(target, player.transform.position) < minDistance)
+            {
+                target = player.transform.position + relativeOffset;
+            }
+
+            target = player.transform.position + relativeOffset;
+            agent.SetDestination(target);
+            
+            lookedAt = CheckIfPlayerLookingAtMe(minDistance * 2f);
+
+            elapsed += Time.deltaTime;
+
+            yield return StartCoroutine(CheckIfPaused());
+
+            yield return null;
+        }
+
+        if ((lookedAt || agent.remainingDistance <= agent.stoppingDistance) && lightingManager.isNight && !gunshotFlee)
         {
             yield return StartCoroutine(Chase());
         }
