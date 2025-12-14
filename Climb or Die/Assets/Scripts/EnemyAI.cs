@@ -28,6 +28,14 @@ public class EnemyAI : MonoBehaviour
     [Header("Agent Animation")]
     public Animator animator;
 
+    [Header("Admin Controls")]
+    public bool adminControls = false;
+    public KeyCode stalkingKey = KeyCode.R;
+    public KeyCode wanderingKey = KeyCode.T;
+    public KeyCode followingKey = KeyCode.Y;
+    public KeyCode chasingKey = KeyCode.U;
+    public KeyCode waitingKey = KeyCode.I;
+
     enum AIState
     {
         Stalking,
@@ -35,6 +43,7 @@ public class EnemyAI : MonoBehaviour
         Following,
         Chasing,
         Waiting,
+        None
     }
 
     enum MovementState
@@ -73,8 +82,41 @@ public class EnemyAI : MonoBehaviour
         {
             if (!paused)
             {
-                state = SetAIState();
-                StartCoroutine(AI(state));
+                if (adminControls)
+                {
+                    if (Input.GetKeyDown(stalkingKey))
+                    {
+                        state = AIState.Stalking;
+                    }
+                    else if (Input.GetKeyDown(wanderingKey))
+                    {
+                        state = AIState.Wandering;
+                    }
+                    else if (Input.GetKeyDown(followingKey))
+                    {
+                        state = AIState.Following;
+                    }
+                    else if (Input.GetKeyDown(chasingKey))
+                    {
+                        state = AIState.Chasing;
+                    }
+                    else if (Input.GetKeyDown(waitingKey))
+                    {
+                        state = AIState.Waiting;
+                    }
+                    else
+                    {
+                        state = AIState.None;
+                    }
+                }
+                else
+                {
+                    state = SetAIState();
+                }
+
+                if (state != AIState.None) {
+                    StartCoroutine(AI(state));
+                }
             }
         }
 
@@ -158,7 +200,7 @@ public class EnemyAI : MonoBehaviour
         }
         else if (aiState == AIState.Following)
         {
-            float minDistance = Random.Range(5f, 15f);
+            float minDistance = Random.Range(2f, 7f);
             float maxDistance = minDistance + Random.Range(20f, 35f);
             yield return StartCoroutine(Follow(minDistance, maxDistance, duration));
         }
@@ -187,8 +229,6 @@ public class EnemyAI : MonoBehaviour
         transform.position = player.transform.position + relativeOffset;
 
         agent.speed = agentSpeed;
-
-
 
         while (elapsed < stalkDuration && !lookedAt && !gunshotFlee)
         {
@@ -365,20 +405,34 @@ public class EnemyAI : MonoBehaviour
     {
         float elapsed = 0f;
         bool lookedAt = false;
+        bool closeToPlayer = false;
 
-        Vector3 relativeOffset = -player.transform.forward * maxDistance;
-        transform.position = player.transform.position + relativeOffset;
-        relativeOffset = -player.transform.forward * minDistance;
-        Vector3 target = player.transform.position + relativeOffset;
+        Debug.Log(minDistance);
+        Debug.Log(maxDistance);
 
-        while (elapsed < duration && !lookedAt && !gunshotFlee && agent.remainingDistance <= agent.stoppingDistance)
+        Vector3 minOffset = -player.transform.forward * minDistance;
+
+        transform.position = player.transform.position + (-player.transform.forward * maxDistance);
+        Vector3 target = player.transform.position + minOffset;
+
+        Debug.Log(target);
+
+        while (elapsed < duration && !lookedAt && !gunshotFlee && !(closeToPlayer && lightingManager.isNight))
         {
-            if (Vector3.Distance(target, player.transform.position) > maxDistance || Vector3.Distance(target, player.transform.position) < minDistance)
+            if (Vector3.Distance(target, player.transform.position) > maxDistance)
             {
-                target = player.transform.position + relativeOffset;
+                target = player.transform.position + minOffset;
             }
 
-            target = player.transform.position + relativeOffset;
+            if (agent.remainingDistance <= agent.stoppingDistance)
+            {
+                closeToPlayer = true;
+            }
+            else
+            {
+                closeToPlayer = false;
+            }
+
             agent.SetDestination(target);
             
             lookedAt = CheckIfPlayerLookingAtMe(minDistance * 2f);
@@ -390,7 +444,7 @@ public class EnemyAI : MonoBehaviour
             yield return null;
         }
 
-        if ((lookedAt || agent.remainingDistance <= agent.stoppingDistance) && lightingManager.isNight && !gunshotFlee)
+        if ((lookedAt || closeToPlayer) && lightingManager.isNight && !gunshotFlee)
         {
             yield return StartCoroutine(Chase());
         }
@@ -422,7 +476,7 @@ public class EnemyAI : MonoBehaviour
         }
 
         movementState = prevState;
-        agent.destination = desition;
+        agent.SetDestination(desition);
     }
 
     private void OnGameStateChanged(GameState newGameState)
