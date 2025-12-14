@@ -308,6 +308,8 @@ public class EnemyAI : MonoBehaviour
             agent.SetDestination(fleeTarget);
             yield return null;
         }
+
+        gunshotFlee = false;
     }
     
     private IEnumerator Chase()
@@ -351,7 +353,7 @@ public class EnemyAI : MonoBehaviour
         transform.position = center;
         bool closeToPlayer = false;
 
-        while (elapsed < duration)
+        while (elapsed < duration && !gunshotFlee)
         {
             Vector3 randomPoint;
 
