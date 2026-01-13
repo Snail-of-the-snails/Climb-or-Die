@@ -415,3 +415,7 @@ Received Import Request.
 Start importing Assets/RoadArchitect/Textures/Concrete7Normal.png using Guid(d68fab7a6c68a5a428a54ba7621fccb2) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: 'ca562f38be4f0bd4af2510be262c7cfb') in 0.00522 seconds
 Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 2
 
+Editor requested this worker to shutdown with reason: Scaling down because of idle timeout
+AssetImportWorker is now disconnected from the server
+Process exiting
+Exiting without the bug reporter. Application will terminate with return code 0
