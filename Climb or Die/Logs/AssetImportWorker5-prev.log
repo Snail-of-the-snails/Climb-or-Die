@@ -1,9 +1,9 @@
 [Licensing::Module] Trying to connect to existing licensing client channel...
 Built from '6000.2/respin/6000.2.6f2-cc51a95c03' branch; Version is '6000.2.6f2 (4a4dcaec6541) revision 4869578'; Using compiler version '194234433'; Build Type 'Release'
-[Licensing::IpcConnector] Successfully connected to: "LicenseClient-gwcyb" at "2026-01-07T17:20:00.3554559Z"
-OS: 'Windows 11  (10.0.26200) 64bit Core' Language: 'en' Physical Memory: 31861 MB
+[Licensing::IpcConnector] Successfully connected to: "LicenseClient-isaac" at "2026-03-17T15:48:46.6630436Z"
+OS: 'Windows 11  (10.0.26200) 64bit Core' Language: 'en' Physical Memory: 16003 MB
 BatchMode: 1, IsHumanControllingUs: 0, StartBugReporterOnCrash: 0, Is64bit: 1
-Date: 2026-01-07T17:20:00Z
+Date: 2026-03-17T15:48:46Z
 
 COMMAND LINE ARGUMENTS:
 C:\Program Files\Unity\Hub\Editor\6000.2.6f2\Editor\Unity.exe
@@ -13,23 +13,23 @@ C:\Program Files\Unity\Hub\Editor\6000.2.6f2\Editor\Unity.exe
 -name
 AssetImportWorker5
 -projectPath
-C:/Users/gwcyb/OneDrive/Documents/GitHub/Climb-or-Die/Climb or Die
+C:/Users/isaac/Documents/GitHub/Climb-or-Die/Climb or Die
 -logFile
 Logs/AssetImportWorker5.log
 -srvPort
-58386
+63256
 -licensingIpc
-LicenseClient-gwcyb
+LicenseClient-isaac
 -job-worker-count
-7
+9
 -background-job-worker-count
 8
 -gc-helper-count
 1
 -name
 AssetImport
-Successfully changed project path to: C:/Users/gwcyb/OneDrive/Documents/GitHub/Climb-or-Die/Climb or Die
-C:/Users/gwcyb/OneDrive/Documents/GitHub/Climb-or-Die/Climb or Die
+Successfully changed project path to: C:/Users/isaac/Documents/GitHub/Climb-or-Die/Climb or Die
+C:/Users/isaac/Documents/GitHub/Climb-or-Die/Climb or Die
 [UnityMemory] Configuration Parameters - Can be set up in boot.config
     "memorysetup-allocator-temp-initial-block-size-main=262144"
     "memorysetup-allocator-temp-initial-block-size-worker=262144"
@@ -65,27 +65,29 @@ C:/Users/gwcyb/OneDrive/Documents/GitHub/Climb-or-Die/Climb or Die
     "memorysetup-temp-allocator-size-gi-baking-worker=262144"
     "memorysetup-temp-allocator-size-gi-baking-worker=262144"
     "memorysetup-temp-allocator-size-gfx=262144"
-Player connection [16608]  Target information:
+Player connection [31348]  Target information:
 
-Player connection [16608]  * "[IP] 10.192.4.25 [Port] 0 [Flags] 2 [Guid] 3734277915 [EditorId] 3734277915 [Version] 1048832 [Id] WindowsEditor(7,Cyber4) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" 
+Player connection [31348]  * "[IP] 172.16.0.2 [Port] 0 [Flags] 2 [Guid] 2230966882 [EditorId] 2230966882 [Version] 1048832 [Id] WindowsEditor(7,Isaac_Computer) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" 
 
-Player connection [16608] Host joined multi-casting on [225.0.0.222:54997]...
-Player connection [16608] Host joined alternative multi-casting on [225.0.0.222:34997]...
-JobSystem: Creating JobQueue using job-worker-count value 7
+Player connection [31348]  * "[IP] 172.20.85.58 [Port] 0 [Flags] 2 [Guid] 2230966882 [EditorId] 2230966882 [Version] 1048832 [Id] WindowsEditor(7,Isaac_Computer) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" 
+
+Player connection [31348] Host joined multi-casting on [225.0.0.222:54997]...
+Player connection [31348] Host joined alternative multi-casting on [225.0.0.222:34997]...
+JobSystem: Creating JobQueue using job-worker-count value 9
 Input System module state changed to: Initialized.
 [Physics::Module] Initialized fallback backend.
 [Physics::Module] Id: 0xdecafbad
-[Licensing::Client] Code 10 while verifying Licensing Client signature (process Id: 17756, path: "C:/Users/gwcyb/Downloads/Unity Hub/UnityLicensingClient_V1/Unity.Licensing.Client.exe")
+[Licensing::Client] Code 10 while verifying Licensing Client signature (process Id: 22912, path: "C:/Program Files/Unity Hub/UnityLicensingClient_V1/Unity.Licensing.Client.exe")
 [Licensing::Module] LicensingClient has failed validation; ignoring
 [Licensing::Client] Handshaking with LicensingClient:
   Version:                 1.17.4+4293ba1
-  Session Id:              a73c4dc0be724ba3a3ae6ac9db5930f5
-  Correlation Id:          25f83102bce4e36eea2f9b08501777aa
-  External correlation Id: 1288996620449724269
-  Machine Id:              CTPbfQBsH7Z1B9Ackj1wOw0BUbA=
-[Licensing::Module] Successfully connected to LicensingClient on channel: "LicenseClient-gwcyb" (connect: 0.00s, validation: 0.00s, handshake: 0.03s)
-[Licensing::IpcConnector] Successfully connected to: "LicenseClient-gwcyb-notifications" at "2026-01-07T17:20:00.3855045Z"
-[Licensing::Module] Licensing Background thread has ended after 0.03s
+  Session Id:              578ec9a5211a49a3a84e48b5ea9a7107
+  Correlation Id:          f078626d72d668fe80e687720a4ab38f
+  External correlation Id: 4178727641992025127
+  Machine Id:              +BnRq++5ZkRzdJ43VgmClQZ1oco=
+[Licensing::Module] Successfully connected to LicensingClient on channel: "LicenseClient-isaac" (connect: 0.00s, validation: 0.00s, handshake: 0.06s)
+[Licensing::IpcConnector] Successfully connected to: "LicenseClient-isaac-notifications" at "2026-03-17T15:48:46.7229946Z"
+[Licensing::Module] Licensing Background thread has ended after 0.06s
 Library Redirect Path: Library/
 [Physics::Module] Selected backend.
 [Physics::Module] Name: PhysX
@@ -93,59 +95,62 @@ Library Redirect Path: Library/
 [Physics::Module] SDK Version: 4.1.2
 [Physics::Module] Integration Version: 1.0.0
 [Physics::Module] Threading Mode: Multi-Threaded
-Refreshing native plugins compatible for Editor in 2.08 ms, found 3 plugins.
+Active build profile path: `Assets/Settings/Build Profiles/New Windows Profile.asset`
+Got setting from build profile YAML, name `m_BuildTarget`, value `19`
+Got setting from build profile YAML, name `m_Subtarget`, value `2`
+Refreshing native plugins compatible for Editor in 2.04 ms, found 3 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Initialize engine version: 6000.2.6f2 (4a4dcaec6541)
 [Subsystems] Discovering subsystems at path C:/Program Files/Unity/Hub/Editor/6000.2.6f2/Editor/Data/Resources/UnitySubsystems
-[Subsystems] Discovering subsystems at path C:/Users/gwcyb/OneDrive/Documents/GitHub/Climb-or-Die/Climb or Die/Assets
+[Subsystems] Discovering subsystems at path C:/Users/isaac/Documents/GitHub/Climb-or-Die/Climb or Die/Assets
 GfxDevice: creating device client; kGfxThreadingModeNonThreaded
 Direct3D:
     Version:  Direct3D 11.0 [level 11.1]
-    Renderer: NVIDIA GeForce RTX 4060 Ti (ID=0x2805)
+    Renderer: NVIDIA GeForce RTX 4060 Laptop GPU (ID=0x28e0)
     Vendor:   NVIDIA
-    VRAM:     16107 MB
-    Driver:   32.0.15.9174
+    VRAM:     7957 MB
+    Driver:   32.0.15.7216
 Initialize mono
 Mono path[0] = 'C:/Program Files/Unity/Hub/Editor/6000.2.6f2/Editor/Data/Managed'
 Mono path[1] = 'C:/Program Files/Unity/Hub/Editor/6000.2.6f2/Editor/Data/MonoBleedingEdge/lib/mono/unityjit-win32'
 Mono config path = 'C:/Program Files/Unity/Hub/Editor/6000.2.6f2/Editor/Data/MonoBleedingEdge/etc'
-Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56996
+Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56948
 Begin MonoManager ReloadAssembly
 Registering precompiled unity dll's ...
 Register platform support module: C:/Program Files/Unity/Hub/Editor/6000.2.6f2/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
-Registered in 0.001247 seconds.
-- Loaded All Assemblies, in  0.374 seconds
+Registered in 0.002120 seconds.
+- Loaded All Assemblies, in  0.465 seconds
 Native extension for WindowsStandalone target not found
 Mono: successfully reloaded assembly
-- Finished resetting the current domain, in  0.354 seconds
-Domain Reload Profiling: 727ms
-	BeginReloadAssembly (127ms)
+- Finished resetting the current domain, in  0.402 seconds
+Domain Reload Profiling: 864ms
+	BeginReloadAssembly (199ms)
 		ExecutionOrderSort (0ms)
 		DisableScriptedObjects (0ms)
 		BackupInstance (0ms)
 		ReleaseScriptingObjects (0ms)
-		CreateAndSetChildDomain (2ms)
-	RebuildCommonClasses (31ms)
-	RebuildNativeTypeToScriptingClass (13ms)
-	initialDomainReloadingComplete (46ms)
-	LoadAllAssembliesAndSetupDomain (156ms)
-		LoadAssemblies (123ms)
+		CreateAndSetChildDomain (1ms)
+	RebuildCommonClasses (35ms)
+	RebuildNativeTypeToScriptingClass (14ms)
+	initialDomainReloadingComplete (59ms)
+	LoadAllAssembliesAndSetupDomain (153ms)
+		LoadAssemblies (192ms)
 		RebuildTransferFunctionScriptingTraits (0ms)
-		AnalyzeDomain (154ms)
-			TypeCache.Refresh (152ms)
-				TypeCache.ScanAssembly (142ms)
+		AnalyzeDomain (151ms)
+			TypeCache.Refresh (150ms)
+				TypeCache.ScanAssembly (140ms)
 			BuildScriptInfoCaches (0ms)
-			ResolveRequiredComponents (1ms)
-	FinalizeReload (354ms)
+			ResolveRequiredComponents (0ms)
+	FinalizeReload (403ms)
 		ReleaseScriptCaches (0ms)
 		RebuildScriptCaches (0ms)
-		SetupLoadedEditorAssemblies (303ms)
+		SetupLoadedEditorAssemblies (350ms)
 			LogAssemblyErrors (0ms)
-			InitializePlatformSupportModulesInManaged (47ms)
-			SetLoadedEditorAssemblies (3ms)
-			BeforeProcessingInitializeOnLoad (64ms)
-			ProcessInitializeOnLoadAttributes (135ms)
-			ProcessInitializeOnLoadMethodAttributes (54ms)
+			InitializePlatformSupportModulesInManaged (52ms)
+			SetLoadedEditorAssemblies (4ms)
+			BeforeProcessingInitializeOnLoad (82ms)
+			ProcessInitializeOnLoadAttributes (150ms)
+			ProcessInitializeOnLoadMethodAttributes (62ms)
 			AfterProcessingInitializeOnLoad (0ms)
 			EditorAssembliesLoaded (0ms)
 		ExecutionOrderSort2 (0ms)
@@ -154,166 +159,89 @@ Domain Reload Profiling: 727ms
 Worker process is ready to serve import requests
 Import Worker Mode flag is 0x00
 Begin MonoManager ReloadAssembly
+Got setting from build profile YAML, name `m_Development`, value `0`
 [Licensing::Client] Successfully resolved entitlement details
 [Licensing::Module] License group:
-  Id: 1374832138238-UnityPersXXXX
+  Id: 2474795808297-UnityPersXXXX
   Product: Unity Personal
   Type: Assigned
   Expiration: Unlimited
-- Loaded All Assemblies, in  0.764 seconds
+- Loaded All Assemblies, in  0.907 seconds
 Refreshing native plugins compatible for Editor in 0.92 ms, found 3 plugins.
 Native extension for WindowsStandalone target not found
 Package Manager log level set to [2]
 [Package Manager] Failed to launch server process. Reason: Unity was launched with the -noUpm command-line argument
 [Package Manager] Unable to send message (not connected to server process).
 [Package Manager] Cannot connect to Unity Package Manager local server
+Launched and connected shader compiler UnityShaderCompiler.exe after 0.02 seconds
 Mono: successfully reloaded assembly
-- Finished resetting the current domain, in  0.737 seconds
-Domain Reload Profiling: 1499ms
-	BeginReloadAssembly (188ms)
+- Finished resetting the current domain, in  1.359 seconds
+Domain Reload Profiling: 2254ms
+	BeginReloadAssembly (298ms)
 		ExecutionOrderSort (0ms)
-		DisableScriptedObjects (5ms)
+		DisableScriptedObjects (17ms)
 		BackupInstance (0ms)
 		ReleaseScriptingObjects (0ms)
-		CreateAndSetChildDomain (45ms)
-	RebuildCommonClasses (42ms)
-	RebuildNativeTypeToScriptingClass (9ms)
-	initialDomainReloadingComplete (32ms)
+		CreateAndSetChildDomain (32ms)
+	RebuildCommonClasses (44ms)
+	RebuildNativeTypeToScriptingClass (10ms)
+	initialDomainReloadingComplete (50ms)
 	LoadAllAssembliesAndSetupDomain (491ms)
-		LoadAssemblies (336ms)
+		LoadAssemblies (380ms)
 		RebuildTransferFunctionScriptingTraits (0ms)
-		AnalyzeDomain (249ms)
-			TypeCache.Refresh (187ms)
-				TypeCache.ScanAssembly (168ms)
-			BuildScriptInfoCaches (47ms)
-			ResolveRequiredComponents (9ms)
-	FinalizeReload (738ms)
+		AnalyzeDomain (230ms)
+			TypeCache.Refresh (170ms)
+				TypeCache.ScanAssembly (159ms)
+			BuildScriptInfoCaches (43ms)
+			ResolveRequiredComponents (14ms)
+	FinalizeReload (1360ms)
 		ReleaseScriptCaches (0ms)
 		RebuildScriptCaches (0ms)
-		SetupLoadedEditorAssemblies (546ms)
+		SetupLoadedEditorAssemblies (589ms)
 			LogAssemblyErrors (0ms)
 			InitializePlatformSupportModulesInManaged (2ms)
 			SetLoadedEditorAssemblies (5ms)
-			BeforeProcessingInitializeOnLoad (131ms)
-			ProcessInitializeOnLoadAttributes (350ms)
-			ProcessInitializeOnLoadMethodAttributes (54ms)
-			AfterProcessingInitializeOnLoad (3ms)
+			BeforeProcessingInitializeOnLoad (115ms)
+			ProcessInitializeOnLoadAttributes (389ms)
+			ProcessInitializeOnLoadMethodAttributes (71ms)
+			AfterProcessingInitializeOnLoad (7ms)
 			EditorAssembliesLoaded (0ms)
 		ExecutionOrderSort2 (0ms)
-		AwakeInstancesAfterBackupRestoration (9ms)
-Launched and connected shader compiler UnityShaderCompiler.exe after 0.01 seconds
-Refreshing native plugins compatible for Editor in 0.96 ms, found 3 plugins.
+		AwakeInstancesAfterBackupRestoration (562ms)
+WARNING: Shader Unsupported: 'RoadArchitect/TranShadow' - All subshaders removed
+WARNING: Shader Did you use #pragma only_renderers and omit this platform?
+WARNING: Shader If subshaders removal was intentional, you may have forgotten turning Fallback off?
+WARNING: Shader Unsupported: 'RoadArchitect/TranShadow' - All subshaders removed
+WARNING: Shader Did you use #pragma only_renderers and omit this platform?
+WARNING: Shader If subshaders removal was intentional, you may have forgotten turning Fallback off?
+Refreshing native plugins compatible for Editor in 2.50 ms, found 3 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 14 Unused Serialized files (Serialized files now loaded: 0)
-Unloading 6158 unused Assets / (4.2 MB). Loaded Objects now: 6877.
-Memory consumption went from 134.9 MB to 130.7 MB.
-Total: 11.772200 ms (FindLiveObjects: 0.978300 ms CreateObjectMapping: 0.654300 ms MarkObjects: 6.483500 ms  DeleteObjects: 3.653800 ms)
+Unloading 15 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 6218 unused Assets / (4.7 MB). Loaded Objects now: 6977.
+Memory consumption went from 145.4 MB to 140.7 MB.
+Total: 16.900000 ms (FindLiveObjects: 0.685400 ms CreateObjectMapping: 0.559600 ms MarkObjects: 9.364300 ms  DeleteObjects: 6.289300 ms)
 
 ========================================================================
 Received Import Request.
-  Time since last request: 180945.672966 seconds.
-  path: Assets/Imports/Cabin/Models/Cabin.fbx
-  artifactKey: Guid(20d81ae8281300d4cbcb5dec6f056d6c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Imports/Cabin/Models/Cabin.fbx using Guid(20d81ae8281300d4cbcb5dec6f056d6c) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '2d15d852313668fe82961881a8ea6e71') in 0.6777545 seconds
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 11
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000061 seconds.
-  path: Assets/Imports/AllSkyFree/_AllSkyFreeDemoEnvironment/AllSky_DemoEnvironment_Light.fbx
-  artifactKey: Guid(d9ad0f74d68824711bc800186cf63d22) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Imports/AllSkyFree/_AllSkyFreeDemoEnvironment/AllSky_DemoEnvironment_Light.fbx using Guid(d9ad0f74d68824711bc800186cf63d22) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '925d405065c60b973e88692f5ece655b') in 0.0127292 seconds
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 9
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000041 seconds.
-  path: Assets/Imports/Cabin/Prefabs/Bed.prefab
-  artifactKey: Guid(df32d079362cd4d408b19a6dc52ee968) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Imports/Cabin/Prefabs/Bed.prefab using Guid(df32d079362cd4d408b19a6dc52ee968) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '12de50f7606890b819ad0deea37e4d78') in 1.8510103 seconds
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 12
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000041 seconds.
-  path: Assets/Imports/AllSkyFree/_AllSkyFreeDemoEnvironment/AllSkyFreeDemoEnvironment.prefab
-  artifactKey: Guid(e2402d4ef4fe747ae9ad59bdccad4556) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Imports/AllSkyFree/_AllSkyFreeDemoEnvironment/AllSkyFreeDemoEnvironment.prefab using Guid(e2402d4ef4fe747ae9ad59bdccad4556) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '89015ce187ac6a5b25e30bb747082ed9') in 0.0285932 seconds
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 31
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000033 seconds.
-  path: Assets/Imports/Cabin/Models/Bed.fbx
-  artifactKey: Guid(3d27964f2ea12f043b80ea427f49b2b2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Imports/Cabin/Models/Bed.fbx using Guid(3d27964f2ea12f043b80ea427f49b2b2) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '89e88722b0179f2214c6d94dc59abc95') in 0.0205491 seconds
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 11
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000025 seconds.
-  path: Assets/3D Models/PickupTruck/Assets/Prefabs/Pickup.prefab
-  artifactKey: Guid(c8b0ee0e3965acf4b9c9abc1cf684d17) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/3D Models/PickupTruck/Assets/Prefabs/Pickup.prefab using Guid(c8b0ee0e3965acf4b9c9abc1cf684d17) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: 'bde6d4985640a8997f65056f36f090ac') in 0.0597678 seconds
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 1302
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000024 seconds.
-  path: Assets/Imports/Cabin/Models/Stool.fbx
-  artifactKey: Guid(1ba8623869bbf644b848eada3e06dc33) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Imports/Cabin/Models/Stool.fbx using Guid(1ba8623869bbf644b848eada3e06dc33) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: 'e1c68b312512b258376ecc63fecabbac') in 1.5684711 seconds
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 10
-
-========================================================================
-Received Import Request.
-  Time since last request: 57.938137 seconds.
-  path: Assets/3D Models/Shotgun/textures/1_REMI_870_Roughness.jpg
-  artifactKey: Guid(7972968ebbb8ad740bfa9d498b36e4ac) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/3D Models/Shotgun/textures/1_REMI_870_Roughness.jpg using Guid(7972968ebbb8ad740bfa9d498b36e4ac) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '29fcd531d6cdf3dfd45ae9fe8acdcb6c') in 0.0355605 seconds
+  Time since last request: 147937.197901 seconds.
+  path: Assets/RoadArchitect/Materials/Markers/RoadDetailOverlay1.mat
+  artifactKey: Guid(576b30ace62aa7240bbbba9efd4d4c05) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/RoadArchitect/Materials/Markers/RoadDetailOverlay1.mat using Guid(576b30ace62aa7240bbbba9efd4d4c05) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '65a083c283904ab57b526adcd063ce5a') in 0.4877074 seconds
 Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 2
 
 ========================================================================
 Received Import Request.
-  Time since last request: 0.000018 seconds.
-  path: Assets/Imports/AllSkyFree/Night MoonBurst/AllSky_Night_MoonBurst Equirect.png
-  artifactKey: Guid(34a763168147f4182a21b9fd004d67de) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Imports/AllSkyFree/Night MoonBurst/AllSky_Night_MoonBurst Equirect.png using Guid(34a763168147f4182a21b9fd004d67de) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: 'b4dec2ca34d02f29f12ba2513112ce9d') in 0.0296709 seconds
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 1
+  Time since last request: 0.000034 seconds.
+  path: Assets/RoadArchitect/Materials/FedSigns/Diamond/General/RoadMerge3.mat
+  artifactKey: Guid(393aca8b9dbeec34ca151953a41b588a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/RoadArchitect/Materials/FedSigns/Diamond/General/RoadMerge3.mat using Guid(393aca8b9dbeec34ca151953a41b588a) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: 'aae4fbb432c20d01f120dba148c9f0bf') in 0.0111701 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 3
 
 ========================================================================
 Received Import Request.
-  Time since last request: 0.662804 seconds.
-  path: Assets/Imports/Cabin/Terrain/Tree/Bark.png
-  artifactKey: Guid(6f396d96a20b6464db3dc12070710ee5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Imports/Cabin/Terrain/Tree/Bark.png using Guid(6f396d96a20b6464db3dc12070710ee5) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: 'a5423f7c4d043174829bdd579fa15ab2') in 0.0092962 seconds
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 2
+  Time since last request: 0.000045 seconds.
+  path: Assets/RoadArchitect/Materials/Signs/RoadReflector.mat
+  artifactKey: Guid(e67279ff0abd3c74f992c018f3c66ed6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/RoadArchitect/Materials/Signs/RoadReflector.mat using Guid(e67279ff0abd3c74f992c018f3c66ed6) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '7020ca0daa2cb40be59536d4e3bae512') in 0.0076632 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 3
 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000018 seconds.
-  path: Assets/Imports/Cabin/Models/Materials/Bed_Normal.png
-  artifactKey: Guid(19a3f4d52fd62074f8457bb1181eed25) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Imports/Cabin/Models/Materials/Bed_Normal.png using Guid(19a3f4d52fd62074f8457bb1181eed25) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '7c1a1e19687f5500130734c00ec9d80e') in 0.0156185 seconds
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 2
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.602109 seconds.
-  path: Assets/Imports/Forst/Conifers [BOTD]/Sources/Textures/BODT Conifer x Stump [Normal] [AO] [Specular].tif
-  artifactKey: Guid(7292f645408434cb896aaee2fd9c2a14) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Imports/Forst/Conifers [BOTD]/Sources/Textures/BODT Conifer x Stump [Normal] [AO] [Specular].tif using Guid(7292f645408434cb896aaee2fd9c2a14) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '3b4266b02182e7cc77c6cf543d07b29d') in 0.0184001 seconds
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 2
-
-========================================================================
-Received Import Request.
-  Time since last request: 4.721309 seconds.
-  path: Assets/Imports/Cabin/Models/Materials/Cabin_Normal.png
-  artifactKey: Guid(5ccbabbd73b619b4499f29099026cd1f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Imports/Cabin/Models/Materials/Cabin_Normal.png using Guid(5ccbabbd73b619b4499f29099026cd1f) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: 'd2c8d0229ffe524155510cd137faaee1') in 0.0414336 seconds
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 2
-
-Editor requested this worker to shutdown with reason: Scaling down because of idle timeout
-AssetImportWorker is now disconnected from the server
-Process exiting
-Exiting without the bug reporter. Application will terminate with return code 0
